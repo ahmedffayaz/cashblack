@@ -1,0 +1,82 @@
+id,title,type,value,category,default
+1,Cashblack Percentage,cashback_percentage,50,general,1
+2,Store Title,store_title,Cashblack,general,1
+3,Phone Number,phone_number,123456789,general,1
+4,Email,email,support@trs.com,general,1
+5,Meta Description Coupons,meta_description_coupons,Get the best deals with online shopping coupons and discount voucher codes. Take advantage of our discounts to save while you shop!,general,1
+6,Meta Title Coupons,meta_title_coupons,Online Shopping Coupons | Discount Voucher Codes,general,1
+7,Meta Description Stores,meta_description_stores,Come shop with us and earn cash back on purchases. Visit our stores today for a great selection of products.,general,1
+8,Meta Title Stores,meta_title_stores,Earn Cashback in Store | Earn Cashback on Purchases,general,1
+9,Paypal Email,paypal_email,paypal@trs.com,general,1
+10,Info Email,info_email,info@trs.com,general,1
+11,Company Rights,company_rights,© 2021 Cashblack.,general,1
+12,Sign Up Email,sign_up_email,info@trs.com,general,1
+13,Currency,currency,1,general,1
+14,Footer Text,footer_text,© 2021 Cashblack.,general,1
+15,Meta Title,meta_title,Cashblack Websites | Earn Cashback for Online Shopping,general,1
+16,Contact Us Email,contact_us_email,contact@trs.com,general,1
+17,Website Title,website_title,Cashblack,general,1
+18,Mail Driver,mail_driver,smtp,general,1
+19,Mail Host,mail_host,smtp.sendgrid.net,general,1
+20,Mail Port,mail_port,587,general,1
+21,Mail Username,mail_username,apikey,general,1
+22,Mail Password,mail_password,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,general,1
+23,Mail Encryption,mail_encryption,TLS,general,1
+24,Mail Email,mail_email,noreply@cashblack.com,general,1
+25,Mail Name,mail_name,Cashblack Support,general,1
+26,Dashboard Logo,dashboard_logo,default.png,general,1
+27,Website Logo,website_logo,cashblack-default.png,general,1
+28,Favicon,favicon,cashblack-default.png,general,1
+29,Theme Color,theme_color,NULL,general,1
+30,Theme Skin,theme_skin,blue,general,1
+31,Dashboard Menu Type,dashboard_menu_type,top,general,1
+32,Payment Method Paypal,payment_method_paypal,1,general,1
+33,Payment Method Bank,payment_method_bank,1,general,1
+34,Min Cashout Amount,min_cashout_amount,1,general,1
+35,Welcome Bonus,welcome_bonus,2,general,1
+36,Facebook client id,facebook_client_id,3200039003655128,general,1
+37,Facebook client Secret,facebook_client_secret,74f27da5a9219d4e98a072b2cda3a465,general,1
+38,Facebook Url,facebook_url,/login/facebook/callback,general,1
+39,Google Client Id,google_client_id,7625208194-mukofel1nlmurbguafeffdbh91amothm.apps.googleusercontent.com,general,1
+40,Google Client Secret,google_client_secret,tZBziwUoyKgzbioTPKGTfYeL,general,1
+41,Google Url,google_url,/login/google/callback,general,1
+42,Mailchimp Api Key,mailchimp_api_key,d648b62b49e2fb3c5b58c5c2f83f52a5-us6,general,1
+43,Mailchimp List Id,mailchimp_list_id,23961d753f,general,1
+44,CJ Website ID,cj_website_id,100424737,general,1
+45,CJ Requestor ID,cj_requestor_id,5835313,general,1
+46,CJ Authorization Token,cj_authorization_token,7v15dz0jk80tj3wwp5kmbvyx91,general,1
+47,Webgains API Key,webgains_api_key,ef13cee1a4c5ec9ee5864d0e2d535604,general,1
+48,Webgains campaignId,webgains_campaignid,1462945,general,1
+49,Webgains User Name,webgains_user_name,khuramj,general,1
+50,Webgains Password,webgains_password,p9bXV7w2e@nqhQ2,general,1
+51,Map Key,map_key,AIzaSyAOxeH_CSvIYJQL8UCa9LnkUUi5AmVcI-c,general,1
+52,Awin Publisher ID,awin_publisher_id,740509,general,1
+53,Awin Authorization Token,awin_authorization_token,782f574c-8469-45ae-a37b-580d0c8c49c6,general,1
+54,Payment Method Charity,payment_method_charity,1,general,1
+55,Google Recaptcha Site Key,google_recaptcha_site_key,6Ldiq0AoAAAAAGXLDHpzKva3Qj_7j6K-KxwBxhBB,general,1
+56,Google Recaptcha Secret Key,google_recaptcha_secret_key,6Ldiq0AoAAAAAKlCaaXoQYwfSOw1izwAbjGDjwoK,general,1
+57,Facebook,facebook,https://www.facebook.com/CashblackHQ,general,1
+58,Twitter,twitter,https://twitter.com/CashblackHQ,general,1
+59,Instagram,instagram,https://instagram.com/CashblackHQ,general,1
+60,Linkedin,linkedin,http://www.linkedin.com/company/cashblack,general,1
+61,Tiktok,tiktok,http://www.tiktok.com/@CashblackHQ,general,1
+62,Pinterest,pinterest,https://www.pinterest.co.uk/CashblackHQ/,general,1
+63,Youtube,youtube,https://www.youtube.com/channel/UCxTrkgiu_9wIoOImumbjzwQ,general,1
+64,Local Stores Ecommerce Website ID,local_stores_ecommerce_website_id,1,general,1
+65,Local Stores Lead Generation Website ID,local_stores_lead_generation_website_id,11,general,1
+66,Awin Website ID,awin_website_id,779555,general,1
+67,Commission Junction - USD Website ID,commission_junction_usd_website_id,100458692,general,1
+68,Impact Website ID,impact_website_id,401582,general,1
+69,Partnerize Website ID,partnerize_website_id,123123,general,1
+70,Afrofiliate Website ID,afrofiliate_website_id,1907,general,1
+71,Webgains Website ID,webgains_website_id,17,general,1
+72,Next Cashout Amount,next_cashout_amount,2,general,1
+73,SendGrid API Key,sendgrid_api_key,"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",general,1
+74,SendGrid Newsletter List id,sendgrid_newsletter_list_id,"7ad5e791-0c52-4b1c-831d-c1392ee40a95",general,1
+75,SendGrid Registered List id,sendgrid_registered_list_id,"42406c33-6e15-45d7-a0f2-01989cecbe27",general,1
+76,Impact Authorization Token,impact_authorization_token,Tra5ravjvWpcmhRbrEe7FGs.Fq-FCezC,general,1
+77,Impact SID,impact_account_sid,IRezj2hNZM5Y2704577yZbxaVbr3vcwPV1,general,1
+78,Partnerize Publisher ID,partnerize_publisher_id,1011l187663,general,1
+79,Partnerize User Application Key,partnerize_application_key,p3tew145y3tag41n,general,1
+80,Partnerize User API Key,partnerize_user_api_key,U0DkkEQu,general,1
+81,Afrofiliate API Key,afrofiliate_api_key,tDaN0qSATxGVXxM9lFzZqQ,general,1

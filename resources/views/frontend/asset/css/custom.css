@@ -1,0 +1,179 @@
+@media only screen and (min-width: 240px) and (max-width: 280px){
+    .carousel-image{
+        max-height: 90px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 90px;
+    }
+}
+
+@media only screen and (min-width: 281px) and (max-width: 390px){
+    .carousel-image{
+        max-height: 119px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 125px;
+    }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 412px){
+    .carousel-image{
+        max-height: 131px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 137px;
+    }
+}
+
+@media only screen and (min-width: 413px) and (max-width: 423px){
+    .carousel-image{
+        max-height: 145px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 138px;
+    }
+}
+
+@media only screen and (min-width: 424px) and (max-width: 434px){
+    .carousel-image{
+        max-height: 141px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 141px;
+    }
+}
+
+@media only screen and (min-width: 435px) and (max-width: 579px){
+    .carousel-image{
+        max-height: 181px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 181px;
+    }
+}
+
+@media only screen and (min-width: 580px) and (max-width: 767px){
+    .carousel-image{
+        max-height: 192px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 183px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .carousel-image{
+        max-height: 259px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 246px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .carousel-image{
+        max-height: 348px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 331px;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1280px) {
+    .carousel-image{
+        max-height: 348px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 348px;
+    }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1360px){
+    .carousel-image{
+        max-height: 375px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 375px;
+    }
+}
+
+@media only screen and (min-width: 1361px) and (max-width: 1366px){
+    .carousel-image{
+        max-height: 377px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 377px;
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1400px){
+    .carousel-image{
+        max-height: 388px;
+        width:100%;
+    }
+    .carousel-inner{
+        height: 388px;
+    }
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1440px){
+    .carousel-image{
+        max-height: 398px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 398px;
+    }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1480px){
+    .carousel-image{
+        max-height: 410px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 410px;
+    }
+}
+
+@media only screen and (min-width: 1481px) and (max-width: 1600px){
+    .carousel-image{
+        max-height: 444px;
+        width: 100%;
+    }
+    .carousel-inner{
+       height: 444px;
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1680px){
+    .carousel-image{
+        max-height: 467px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 467px;
+    }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px){
+    .carousel-image{
+        max-height: 535px;
+        width: 100%;
+    }
+    .carousel-inner{
+        height: 535px;
+    }
+}

@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Slider;
+use App\Models\Slide;
+use App\Models\Store;
+use Exception;
+use Illuminate\Http\JsonResponse;
+
+class SliderController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $sliders = Slider::all();
+        return view('admin-dashboard.sliders.index',compact('sliders'));
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $slider = Slider::create($request->all());
+        flash()->success('slider created successfully');
+        return redirect()->back();
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $slider = Slider::with(['slides' => function ($slide) {
+            $slide->with(['store' => function ($store) {
+                $store->select('id', 'name', 'slug', 'created_at')->withCount('cashbacks')->get();
+            }]);
+        }])->findOrFail($id);
+        return view('admin-dashboard.sliders.edit',compact('slider'));
+    }
+
+    public function sortSlides(Request $request)
+    {
+        try {
+            foreach($request->input('slide') as $order=>$slide){
+
+                $slidex = Slide::where('id',$slide)->first();
+                $slidex->update(['order'=>$order]);
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_OK,
+                'message' => 'Slides order updated.'
+            ], JsonResponse::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => 'Something went wrong!'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+}

@@ -1,0 +1,4 @@
+﻿id,store_id,user_id,category_id,click_id,cashback_id,ticket_id,title,ticket_type,claim_type,priority,claim_amount,message,new_ticket,closing_time,closed_by,status,created_at,updated_at,deleted_at
+122,17,195,0,2429,0,RFTDWHNCVUEX,test321,claim,missing cashback,,100,where s my order,0,,,closed,2021-03-25 11:35:11,2021-03-25 11:35:11,
+131,2100,83,0,2796,0,LCQSNH1HPBHT,Test,claim,missing cashback,,12,Test ,0,,,closed,2022-03-07 05:41:09,2022-03-07 05:41:09,
+135,371,111,0,2921,0,D99VVZAC8F3Y,Missing Cashback ,claim,missing cashback,,211,This is missing Cashback test,0,,,closed,2022-04-14 09:16:50,2022-04-14 09:16:50,

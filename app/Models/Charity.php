@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\CharityType;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
+
+class Charity extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'slug',
+        'country',
+        'logo_type',
+        'logo_upload',
+        'logo_link',
+        'charity_types_id',
+        'banner_type',
+        'banner_upload',
+        'banner_link',
+        'description',
+        'status',
+    ];
+
+    public function charity_type()
+    {
+        return $this->hasOne(CharityType::class, 'id', 'charity_types_id');
+    }
+    public function Country()
+    {
+        return $this->hasOne(Country::class, 'id', 'country');
+    }
+    public function tags(): MorphToMany
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
+}

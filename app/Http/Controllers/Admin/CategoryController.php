@@ -1,0 +1,429 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Exception;
+use App\Models\Tag;
+use App\Models\Store;
+use App\Models\Category;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Validation\Rule;
+
+
+class CategoryController extends Controller
+{
+    public $imagePath = 'storage/categories/images/';
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $route = 'index';
+        $categories = Category::where('parent_id', 0)->with(['childs' => function ($query) {
+            $query->withCount('stores');
+        }])->withCount('stores')->orderBy('sort', 'desc')->get();
+        $allCategories = Category::latest()->get();
+        return view('admin-dashboard.categories.categories', compact('categories', 'allCategories', 'route'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $categories =  Category::latest()->where('parent_id', 0)->get();
+        $sort = Category::where('parent_id', 0)->orderBy('sort', 'desc')->pluck('sort')->first();
+        if (!isset($sort)) {
+            $sort = 1;
+        } else {
+            $sort += 1;
+        }
+        return view('admin-dashboard.categories.create', compact('categories', 'sort'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'logo_type' => 'required',
+            'banner_type' => 'required',
+            'status' => 'required',
+            'sort' => 'required|integer|min:1',
+            'logo_upload' => [
+                Rule::requiredIf(function() use ($request){
+                    return $request->logo_type == "upload";
+                }),
+                'nullable', 'mimes:jpeg,png,jpg,svg'
+            ],
+            'banner_upload' => [
+                Rule::requiredIf(function () use ($request){
+                    return $request->banner_type == "upload";
+                }),
+                'nullable', 'mimes:jpeg,png,jpg'
+            ],
+            'logo_link' => [
+                Rule::requiredIf(function() use ($request){
+                    return $request->logo_type == "link";
+                }),
+                'nullable', 'sometimes', 'url'
+            ],
+            'banner_link' => [
+                Rule::requiredIf(function() use ($request){
+                    return $request->banner_type == "link";
+                }),
+                'nullable', 'sometimes', 'url'
+            ]
+        ]);
+
+        if($validator->fails()){
+            if(!$request->ajax()){
+                flash()->error($validator->errors()->first());
+                return redirect()->back()->withInput();
+            }
+
+            return response()->json(['status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+            'errors' => $validator->errors()
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        try {
+            DB::beginTransaction();
+            $category = Category::create([
+                'name' => $request->input('name'),
+                'parent_id' => !empty($request->input('parent_id')) ? $request->input('parent_id') : 0,
+                'is_map_enable' => $request->input('is_map_enable') == 1 ? 1 : 0,
+                'description' => $request->input('description'),
+                'logo_type' => $request->input('logo_type') == 'upload' ? 'upload' : 'link',
+                'logo_link' => $request->input('logo_link'),
+                'banner_type' => $request->input('banner_type') == 'upload' ? 'upload' : 'link',
+                'visibility' => !empty($request->input('visibility')) ? $request->input('visibility') : null,
+                'banner_link' => $request->input('banner_link'),
+                'sort' => $request->input('sort'),
+                'status' => $request->input('status') == 1 ? 1 : 0,
+                'title' => $request->input('title'),
+                'meta_keyword' => $request->input('meta_keyword'),
+                'meta_description' => $request->input('meta_description'),
+                'meta_title' => $request->input('meta_title'),
+                'slug' => Str::slug($request->name),
+            ]);
+
+            if ($request->input('logo_type') == 'upload') {
+                if ($request->has('logo_upload')) {
+                    $imageName = Str::slug($request->input('name')) . '_logo_' . time() . '.' . $request->logo_upload->extension();
+                    $request->logo_upload->storeAs('public/categories/images', $imageName);
+
+                    $category->logo_upload = $this->imagePath . $imageName;
+                    $category->update();
+                } else {
+                    $category->logo_upload = 'category_default_logo.png';
+                    $category->update();
+                }
+            }
+            if ($request->input('banner_type') == 'upload') {
+                if ($request->has('banner_upload')) {
+                    $imageName = Str::slug($request->input('name')) . '_banner_' . time() . '.' . $request->banner_upload->extension();
+                    $request->banner_upload->storeAs('public/categories/images', $imageName);
+
+                    $category->banner_upload = $this->imagePath . $imageName;
+                    $category->update();
+                } else {
+                    $category->banner_upload = 'category_default_banner.png';
+                    $category->update();
+                }
+            }
+
+            DB::commit();
+
+            return response()->json([
+                'status' => JsonResponse::HTTP_OK,
+                'success' => 'New Category added'
+            ], JsonResponse::HTTP_OK);
+        } catch (Exception $exception) {
+            DB::rollBack();
+
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => $exception->getMessage() . 'Error while adding new category'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $route = 'index';
+        $categories = Category::latest()->paginate(20);
+        $store_categories = Category::latest()->get();
+        return view('admin-dashboard.categories.index', compact('categories', 'store_categories', 'route'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Category $category)
+    {
+        $categories = Category::latest()->where('parent_id', 0)->get();
+        $sort = Category::where('parent_id', 0)->orderBy('sort', 'desc')->pluck('sort')->first();
+        if (!isset($sort)) {
+            $sort = 1;
+        } else {
+            $sort += 1;
+        }
+        $tags = Tag::where('type', 'categories')->get();
+        return view('admin-dashboard.categories.create', compact('category', 'categories', 'tags'))->render();
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Category $category)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'status' => 'required',
+            'sort' => 'required|integer|min:1',
+            'logo_link' => [
+                Rule::requiredIf(function () use ($request){
+                    return $request->logo_type == "link";
+            }),
+            'url','sometimes','nullable'
+            ],
+            'banner_link' => [
+                Rule::requiredIf(function () use ($request){
+                    return $request->banner_type == "link";
+            }),
+            'url','sometimes','nullable'
+            ],
+            'logo_upload' => 'sometimes|mimes:jpeg,png,jpg,svg',
+            'banner_upload' => 'sometimes|mimes:jpeg,png,jpg'
+        ]);
+
+        if($validator->fails()){
+            if(!$request->ajax()){
+                flash()->error($validator->errors()->first());
+                return redirect()->back()->withInput();
+            }
+
+            return response()->json(['status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+            'errors' => $validator->errors()
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        try {
+            DB::beginTransaction();
+            $category->update([
+                'name' => $request->input('name'),
+                'parent_id' => $request->input('parent_id'),
+                'is_map_enable' => $request->input('is_map_enable') == 1 ? 1 : 0,
+                'description' => $request->input('description'),
+                'logo_type' => $request->input('logo_type'),
+                'logo_link' => $request->input('logo_link'),
+                'banner_type' => $request->input('banner_type'),
+                'banner_link' => $request->input('banner_link'),
+                'visibility' => !empty($request->input('visibility')) ? $request->input('visibility') : null,
+                'sort' => $request->input('sort'),
+                'status' => $request->input('status'),
+                'title' => $request->input('title'),
+                'meta_keyword' => $request->input('meta_keyword'),
+                'meta_description' => $request->input('meta_description'),
+                'meta_title' => $request->input('meta_title')
+
+            ]);
+            if ($request->has('tags')) {
+                $tags = Tag::whereIn('id', $request->input('tags'))->pluck('id');
+                if ($tags->count() > 0) $category->tags()->sync($tags);
+            } else {
+                $category->tags()->detach();
+            }
+            if ($request->input('logo_type') == 'upload') {
+                if ($request->has('logo_upload')) {
+                    if (File::exists(public_path($category->logo_upload))) {
+                        File::delete(public_path($category->logo_upload));
+                    }
+                    $imageName = Str::slug($request->input('name')) . '_logo_' . time() . '.' . $request->logo_upload->extension();
+                    $request->logo_upload->storeAs('public/categories/images', $imageName);
+                    $category->logo_upload = $this->imagePath . $imageName;
+                    $category->update();
+                }
+            }
+            if ($request->input('banner_type') == 'upload') {
+                if ($request->has('banner_upload')) {
+                    if (File::exists(public_path($category->banner_upload))) {
+                        File::delete(public_path($category->banner_upload));
+                    }
+                    $imageName = Str::slug($request->input('name')) . '_banner_' . time() . '.' . $request->banner_upload->extension();
+                    $request->banner_upload->storeAs('public/categories/images', $imageName);
+                    $category->banner_upload = $this->imagePath . $imageName;
+                    $category->update();
+                }
+            }
+            DB::commit();
+            return response()->json([
+                'status' => JsonResponse::HTTP_OK,
+                'success' => 'Category updated'
+            ], JsonResponse::HTTP_OK);
+        } catch (ModelNotFoundException $exception) {
+            DB::rollBack();
+            return response()->json([
+                'status' => JsonResponse::HTTP_FORBIDDEN,
+                'error' => 'Something went wrong'
+            ], JsonResponse::HTTP_FORBIDDEN);
+        } catch (Exception $exception) {
+            DB::rollBack();
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'errors' => $exception->getMessage() . 'Error while updating the category'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Category $category)
+    {
+        try {
+            DB::beginTransaction();
+            $childs = $category->childs;
+            if (count($childs)) {
+                foreach ($childs as $child) {
+                    $child->parent_id = $category->parent_id;
+                    $child->update();
+                }
+            }
+            $category->delete();
+            DB::commit();
+
+            return response()->json([
+                'status' => JsonResponse::HTTP_OK,
+                'success' => 'Category deleted successfully'
+            ], JsonResponse::HTTP_OK);
+        } catch (ModelNotFoundException $exception) {
+            DB::rollBack();
+            return response()->json([
+                'status' => JsonResponse::HTTP_NOT_FOUND,
+                'error' => 'Something went wrong'
+            ], JsonResponse::HTTP_NOT_FOUND);
+        } catch (Exception $exception) {
+            DB::rollBack();
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => $exception->getMessage() . 'Error while updating the category'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    function fetch(Request $request)
+    {
+        if ($request->ajax()) {
+            $route = 'index';
+            $categories = Category::latest()->paginate(20);
+            return view('admin-dashboard.categories.index_data', compact('categories', 'route'))->render();
+        }
+    }
+
+    public function exportCsv(Request $request)
+    {
+        try {
+            $table = Category::latest()->get();
+            $filename = "categories.csv";
+            $handle = fopen($filename, 'w+');
+            fputcsv($handle, array('Name', 'Parent Category', 'No of Stores', 'Status'));
+
+            foreach ($table as $row) {
+                fputcsv($handle, array($row->name, $row->parent->name ?? '', count($row->stores), $row->status ? 'active' : 'in-active'));
+            }
+
+            fclose($handle);
+
+            $headers = array(
+                'Content-Type' => 'text/csv',
+            );
+
+            return Response::download($filename, 'categories.csv', $headers);
+        } catch (\Throwable $th) {
+            flash()->error('Error while exporting categories');
+            return redirect()->route(getAdminPrefix() . '.categories.index');
+        }
+    }
+
+    public function searcCategories(Request $request, Category $categories)
+    {
+        $categories = $categories->newQuery();
+
+        // Search by parent.
+        if ($request->input('parent_id')) {
+            $categories->where('parent_id', $request->input('parent_id'));
+        }
+
+        // Search by name.
+        if ($request->input('title')) {
+            $categories->where('name', 'like', '%' . $request->input('title') . '%');
+        }
+
+        $categories = $categories->latest()->paginate(20);
+        $route = 'search';
+        return view('admin-dashboard.categories.index_data', compact('categories', 'route'))->render();
+    }
+
+    public function picks(Category $category)
+    {
+        $categories = Category::latest()->where('parent_id', 0)->get();
+        $stores = Store::whereStatus('active')->latest()->get();
+        return view('admin-dashboard.categories.picks-form', compact('category', 'categories', 'stores'))->render();
+    }
+    public function sortCategory(Request $request)
+    {
+
+        if ($request->category_id) {
+            $sort = Category::where('parent_id', $request->category_id)->orderBy('sort', 'desc')->pluck('sort')->first();
+            if (!isset($sort)) {
+                $sort = 1;
+            } else {
+                $sort += 1;
+            }
+            return $sort;
+        } else {
+            $sort = Category::latest()->where('parent_id', 0)->orderBy('sort', 'desc')->pluck('sort')->first();
+            if (!isset($sort)) {
+                $sort = 1;
+            } else {
+                $sort += 1;
+            }
+            return $sort;
+        }
+    }
+}

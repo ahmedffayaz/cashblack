@@ -1,0 +1,48 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCategoriesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('parent_id')->default(0);
+            $table->string('name');
+            $table->longText('slug');
+            $table->longText('description')->nullable();
+            $table->integer('sort')->default(0);
+            $table->string('logo_type')->nullable();
+            $table->string('logo_upload')->nullable();
+            $table->string('logo_link')->nullable();
+            $table->string('banner_type')->nullable();
+            $table->string('banner_upload')->nullable();
+            $table->string('banner_link')->nullable();
+            $table->boolean('status')->default(1);
+            $table->boolean('is_map_enable')->default(0);
+            $table->string('url')->nullable();
+            $table->string('meta_keyword')->nullable();
+            $table->longText('meta_description')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('categories');
+    }
+}

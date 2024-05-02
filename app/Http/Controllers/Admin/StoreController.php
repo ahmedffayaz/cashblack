@@ -1,0 +1,1089 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Exception;
+use App\Models\Tag;
+use App\Models\Store;
+use App\Models\Slider;
+use App\Models\Network;
+use App\Models\Voucher;
+use App\Models\Category;
+use App\Models\Currency;
+use App\Models\EditorPick;
+use App\Models\StoreImage;
+use App\Models\StoreReview;
+use Illuminate\Support\Str;
+use App\Models\StoreAddress;
+use App\Models\StoreSeoData;
+use App\Models\UserCashback;
+use Illuminate\Http\Request;
+use App\Models\StoreCashback;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
+class StoreController extends Controller
+{
+    private $iconPath = 'stores/cashbacks';
+    public $imagePath = 'storage/stores/images/';
+    public function __construct()
+    {
+        $this->middleware('permission:view stores', ['only' => ['index']]);
+        $this->middleware('permission:edit stores', ['only' => ['edit', 'show', 'update']]);
+        $this->middleware('permission:add stores', ['only' => ['create', 'Store']]);
+        $this->middleware('permission:delete stores', ['only' => ['destroy']]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $route = 'index';
+        $networks = Network::all();
+        $stores = Store::orderBy('id', 'desc')->withCount('cashbacks')->paginate(48);
+        $slider = Slider::where('name', 'Home')->first();
+        return view('admin-dashboard.stores.index', compact('stores', 'route', 'networks', 'slider'));
+    }
+
+    function deleteRevglueStores()
+    {
+        $chunkSize = 1000;
+        DB::beginTransaction();
+        try {
+            Store::where('network_id', 1)->chunk($chunkSize, function ($stores) {
+                foreach ($stores as $store) {
+                    $store->reviews()->forceDelete();
+                    $store->vouchers()->forceDelete();
+                    $store->cashbacks()->forceDelete();
+                    $store->storeRuleData()->forceDelete();
+                    $store->storeAddress()->forceDelete();
+                    $store->clicks()->forceDelete();
+                    $store->categories()->detach();
+                    foreach ($store->images as $images) {
+                        Storage::delete(['public/stores/images/' . $images->image]);
+                        $images->forceDelete();
+                    }
+                    $store->forceDelete();
+                }
+            });
+            $cashbacks = UserCashback::doesntHave('store')->get();
+            foreach ($cashbacks as $cashback) {
+                $deleted = $cashback->forceDelete();
+            }
+            $cashbacks = UserCashback::doesntHave('store')->get();
+            foreach ($cashbacks as $cashback) {
+                $cashback->forceDelete();
+                UserCashback::where('id', $cashback->id)->delete();
+
+            }
+
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollback();
+            dd($e->getMessage());
+        }
+    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $networks = Network::all();
+        $categories = Category::all();
+        return view('admin-dashboard.stores.create', compact('networks', 'categories'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'store_name' => 'required|max:255',
+            'network_id' => 'required',
+            'tracking_url' => ['required', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'deeplink_url' => ['nullable', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'store_url' => ['required', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'description' => 'nullable'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        try {
+            DB::beginTransaction();
+            $slug = Str::slug($request->input('store_name'));
+            $lastId = Store::orderBy('id', 'desc')->pluck('id')->first();
+            $storeSlug = Store::where('slug', $slug)->first();
+            $store = Store::create([
+                'name' => $request->input('store_name'),
+                'network_id' => $request->input('network_id'),
+                'tracking_url' => $request->input('tracking_url'),
+                'deeplink_url' => $request->input('deeplink_url'),
+                'store_url' => $request->input('store_url'),
+                'description' => $request->input('description'),
+                'status' => 'active',
+                'override_cashback' => 1,
+                'slug' =>   isset($storeSlug) ? $slug . ($lastId + 1) : $slug,
+                'is_api' => 'no',
+            ]);
+            if (($lastId + 1) !=  $store->id) {
+                $store->update([
+                    'slug' =>   isset($storeSlug) ? $slug . $store->id : $slug,
+                ]);
+            }
+            DB::commit();
+
+            flash()->success('New store added');
+            return redirect()->route(getAdminPrefix() . '.stores.show_store', 'slug=' . $store->slug);
+        } catch (Exception $e) {
+            DB::rollBack();
+            flash()->error('Error while adding new store');
+            return redirect()->back();
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Store $store)
+    {
+        $networks = Network::all();
+        $categories = Category::where('parent_id', 0)->get();
+        $stores = Store::latest()->get();
+        return view('admin-dashboard.stores.show', compact('networks', 'categories', 'store', 'stores'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Store $store)
+    {
+        $logo = StoreImage::where(['store_id' => $store->id, 'title' => 'logo'])->first();
+        if (!$logo) {
+            $logoUrl = asset('admin-dashboard/images/avatar/default-logo.png');
+        } else {
+            $logoUrl = asset($logo->image);
+        }
+        $networks = Network::all();
+        $categories = Category::all();
+        return view('admin-dashboard.stores.edit', compact('store', 'networks', 'categories', 'logoUrl'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Store $store)
+    {
+        $request->validate([
+            'store_name' => 'required|max:255',
+            'network_id' => 'required',
+            'tracking_url' => ['required', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'deeplink_url' => ['nullable', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'store_url' => ['required', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'description' => 'nullable',
+            'terms_conditions' => 'nullable',
+            'competitors' => 'nullable',
+            'custom_cashback_percentage' => 'nullable|numeric'
+        ]);
+
+        try {
+            DB::beginTransaction();
+            $slug = Str::slug($request->input('store_name'));
+            $lastId = Store::orderBy('id', 'desc')->pluck('id')->first();
+            $storeSlug = Store::where('slug', $slug)->where('id', '!=', $store->id)->first();
+            $store->update([
+                'name' => $request->input('store_name'),
+                'override_network' => $request->has('store_override_network') ? 1 : 0,
+                'network_id' => $request->input('network_id'),
+                'tracking_url' => $request->input('tracking_url'),
+                'deeplink_url' => $request->input('deeplink_url'),
+                'store_url' => $request->input('store_url'),
+                'description' => $request->input('description'),
+                'extra_info' => $request->input('extra_info'),
+                'terms_conditions' => $request->input('terms_conditions'),
+                'custom_cashback_percentage' => $request->input('custom_cashback_percentage'),
+                'status' => $request->input('status'),
+                'slug' => isset($storeSlug) ? $slug . $store->id : $slug,
+                'override_categories' => $request->has('override_categories') ? 1 : 0,
+                'override_cashback' => $request->has('override_cashback') ? 1 : 0,
+                'editor_pick' => 0,
+                'competitors' => $request->input('competitors'),
+            ]);
+
+            if ($request->has('tags')) {
+                $tags = Tag::whereIn('id', $request->input('tags'))->pluck('id');
+                if ($tags->count() > 0) $store->tags()->sync($tags);
+            } else {
+                $store->tags()->detach();
+            }
+
+            DB::commit();
+
+            if (!$request->ajax()) {
+                flash()->success('Store info updated successfully');
+                return redirect()->back();
+            } else {
+                return response()->json([
+                    'status' => JsonResponse::HTTP_OK,
+                    'message' => 'Store info updated successfully'
+                ], JsonResponse::HTTP_OK);
+            }
+        } catch (ModelNotFoundException $e) {
+            if (!$request->ajax()) {
+                flash()->error('Error while updating store');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_NOT_FOUND,
+                'error' => 'Error while updating store'
+            ], JsonResponse::HTTP_NOT_FOUND);
+        } catch (Exception $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while updating store');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => $e->getMessage() . 'Error while updating store'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Store $store)
+    {
+        $store->reviews()->delete();
+        $store->vouchers()->delete();
+        $store->cashbacks()->delete();
+        $store->delete();
+        flash()->success('store delete successfully');
+        return redirect()->back();
+    }
+
+    public function fetch(Request $request)
+    {
+        if ($request->ajax()) {
+            $route = 'index';
+            $stores = Store::orderBy('id', 'DESC')->paginate(48);
+            return view('admin-dashboard.stores.index_data', compact('stores', 'route'))->render();
+        }
+    }
+
+    public function exportCsv(Request $request)
+    {
+        try {
+            $table = Store::latest()->get();
+            $filename = "stores.csv";
+            $handle = fopen($filename, 'w+');
+            fputcsv($handle, array('Name', 'slug', 'Network', 'Cashback', 'Tracking Url', 'Store Url', 'Description', 'Terms & Conditions', 'Extra Info', 'Status'));
+            foreach ($table as $row) {
+                fputcsv($handle, array($row->name, $row->network->name, $row->network->slug, $row->cashback->sale_commission ?? 'NA', $row->cashback->click_url ?? "#", $row['store_url'], strip_tags($row['description']), $row['terms_conditions'], $row['extra_info'], $row['status']));
+            }
+            fclose($handle);
+            $headers = array(
+                'Content-Type' => 'text/csv',
+            );
+            return Response::download($filename, 'stores.csv', $headers);
+        } catch (\Throwable $th) {
+            flash()->error('Error while exporting the stores');
+            return redirect()->route(getAdminPrefix() . '.stores.index');
+        }
+    }
+
+    public function storeImages(Store $store)
+    {
+        return view('admin-dashboard.stores.images', compact('store'));
+    }
+
+    public function uploadImage(Request $request, Store $store)
+    {
+        $validation = $request->validate([
+            'image' => 'required|mimes:jpeg,jpg,png,gif|max:2048',
+        ]);
+
+        try {
+            if ($request->has('image')) {
+                $img_exist = StoreImage::where(['store_id' => $store->id, 'title' => $request->title])->first();
+                $imageName = Str::slug($store->name) . '_' . $request->title . '_' . time() . '.' . $request->image->extension();
+                $request->image->storeAs('public/stores/images', $imageName);
+
+                if ($img_exist) {
+                    $img_exist->update([
+
+                        'title' => $request->title,
+                        'image' => $this->imagePath . $imageName,
+                        'is_uploaded' => 1,
+                        'is_fake' => 0,
+
+                    ]);
+
+                    return array(
+                        'message' => 'Image uploaded successfully',
+                        'updated' => 'success'
+                    );
+                }
+                $imageName = Str::slug($store->name) . '_' . $request->title . '_' . time() . '.' . $request->image->extension();
+                $request->image->storeAs('public/stores/images', $imageName);
+
+                if ($request->title === 'logo') $imageType = 'store_logo_small';
+                elseif ($request->title === 'large logo') $imageType = 'store_logo_large';
+                elseif ($request->title === 'Cover') $imageType = 'store_banner_small';
+                elseif ($request->title === 'large cover') $imageType = 'store_banner_large';
+
+                $logo = StoreImage::create([
+                    'store_id' => $store->id,
+                    'title' => $request->title,
+                    'image' => $this->imagePath . $imageName,
+                    'image_type' => $imageType,
+                    'is_uploaded' => 1,
+
+                ]);
+
+                return response()->json([
+                    'status' => JsonResponse::HTTP_OK,
+                    'message' => 'Image uploaded successfully'
+                ], JsonResponse::HTTP_OK);
+            }
+        } catch (Exception $e) {
+            return response()->json([
+                'updated' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'message' => 'Something went wrong, try again'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function deleteImage(StoreImage $storeimage)
+    {
+        $store = Store::where('id', $storeimage->store_id)->first();
+        Storage::delete(['public/stores/images/' . $storeimage->image]);
+        $storeimage->delete();
+        flash()->success('Image deleted');
+        return redirect()->back();
+    }
+
+    public function searchStores(Request $request, Store $stores)
+    {
+        $stores = $stores->newQuery();
+
+        // Search by network.
+        if ($request->input('network_id')) {
+            $stores->where('network_id', $request->input('network_id'));
+        }
+        // Search by id.
+        if ($request->input('store')) {
+            $stores->where('id', $request->input('store'))->orWhere('name', 'like', '%' . $request->input('store') . '%');
+        }
+
+        // Search by store name.
+        if ($request->input('store_name')) {
+            $stores->where('name', 'like', '%' . $request->input('store_name') . '%');
+        }
+        // Search by store name.
+        if ($request->input('overridden')) {
+            $stores->where('override_cashback', 1)->orWhere('override_categories', 1);
+        }
+
+        // Search by status.
+        if ($request->input('status') != -1) {
+            $stores->where('status', $request->input('status'));
+        }
+
+        $stores = $stores->orderBy('id', 'DESC')->paginate(48);
+        $route = 'search';
+        return view('admin-dashboard.stores.index_data', compact('stores', 'route'))->render();
+    }
+
+    public function fetchVouchers(Request $request)
+    {
+        if ($request->ajax()) {
+            $store = Store::where('id', $request->store)->first();
+            return view('admin-dashboard.stores.vouchers', compact('store'))->render();
+        }
+    }
+
+    public function fetchCashbacks(Request $request)
+    {
+        if ($request->ajax()) {
+            $store = Store::where('id', $request->store)->first();
+            return view('admin-dashboard.stores.cashbacks', compact('store'))->render();
+        }
+    }
+
+    public function fetchReviews(Request $request)
+    {
+        if ($request->ajax()) {
+            $store = Store::with('reviews')->where('id', $request->store)->first();
+            return view('admin-dashboard.stores.reviews', compact('store'))->render();
+        }
+    }
+
+    public function editReview(Request $request, StoreReview $review)
+    {
+        return view('admin-dashboard.stores.review-form', compact('review'))->render();
+    }
+
+    public function editCashback(Request $request, StoreCashback $cashback)
+    {
+        $networks = Network::all();
+        $currencies = Currency::latest()->get();
+        return view('admin-dashboard.stores.cashback-edit', compact('cashback', 'currencies', 'networks'))->render();
+    }
+
+    public function updateCashback(Request $request, StoreCashback $cashback)
+    {
+        $request->validate([
+            'type' => 'required',
+            'sale_commission' => 'required|numeric|min:0.1',
+            'network_id' => 'nullable|integer',
+            'tracking_url' => ['nullable', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'deeplink_url' => ['nullable', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'currency' => $request->input('type') === 'fixed' ? 'required' : '',
+            'cashback_icon' => 'nullable|mimes:png,jpg,jpeg|max:2048'
+        ]);
+
+        try {
+            DB::beginTransaction();
+
+            $isDefault = isset($request->default) ? true : false;
+            $data = $request->all();
+
+            if ($request->hasFile('cashback_icon')) {
+                if (!empty($cashback->image) && Storage::exists('public/' . $cashback->image))
+                    File::delete(public_path('storage/' . $cashback->image));
+
+                $data['image'] = saveResizeImage($request->file('cashback_icon'), $this->iconPath, 200);
+            }
+
+            $data['default'] = $isDefault;
+
+            if ($isDefault)
+                setStoreDefaultCashback($request->store_id, $isDefault);
+
+            $cashback->update($data);
+
+            if (!$isDefault)
+                setStoreDefaultCashback($request->store_id, $isDefault);
+
+            DB::commit();
+            if ($request->ajax()) {
+                return array(
+                    'message' => 'Cashback Updated Successfully.',
+                    'updated' => 'success'
+                );
+            }
+            flash()->success('Cashback updated successfully');
+            if (!$request->ajax()) {
+                flash()->success('Cashback updated successfully.');
+                return redirect()->back();
+            } else {
+                return response()->json([
+                    'status' => JsonResponse::HTTP_OK,
+                    'message' => 'Cashback updated successfully.'
+                ], JsonResponse::HTTP_OK);
+            }
+        } catch (ModelNotFoundException $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while updating cashback.');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_NOT_FOUND,
+                'error' => 'Error while updating cashback.'
+            ], JsonResponse::HTTP_NOT_FOUND);
+        } catch (Exception $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while updating cashback.');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => 'Error while updating cashback.'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function deleteCashback(Request $request, StoreCashback $cashback)
+    {
+        $request->validate([
+            'storeCashbackId' => 'required'
+        ]);
+
+        try {
+            DB::beginTransaction();
+
+            if (!empty($cashback->image) && Storage::exists('public/' . $cashback->image))
+                File::delete(public_path('storage/' . $cashback->image));
+
+            $cashback->delete();
+
+            $isDefault = $cashback->default ? true : false;
+
+            setStoreDefaultCashback($cashback->store_id, $isDefault, true);
+
+            DB::commit();
+
+            if (!$request->ajax()) {
+                flash()->success('Cashback Deleted successfully.');
+                return redirect()->back();
+            }
+
+            return response()->json([
+                'status' => JsonResponse::HTTP_OK,
+                'message' => 'Cashback Deleted successfully.'
+            ], JsonResponse::HTTP_OK);
+        } catch (Exception $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while updating cashback.');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => 'Error while updating cashback.'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function cashbackForm(Request $request)
+    {
+        $storeId = decrypt($request->input('storeId'));
+        $store = Store::findOrFail($storeId);
+        $networks = Network::all();
+        $currencies = Currency::all();
+        return view('admin-dashboard.stores.cashback-edit', compact('store', 'currencies', 'networks'))->render();
+    }
+
+    public function createCashback(Request $request)
+    {
+        $request->validate([
+            'type' => 'required',
+            'sale_commission' => 'required|numeric|min:0.1',
+            'tracking_url' => ['nullable', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'deeplink_url' => ['nullable', 'regex:/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i'],
+            'currency' => $request->input('type') === 'fixed' ? 'required' : '',
+            'cashback_icon' => 'nullable|mimes:png,jpg,jpeg|max:2048'
+        ]);
+
+        try {
+            DB::beginTransaction();
+            $isDefault = isset($request->default) ? true : false;
+            $data = $request->all();
+            $data['is_api'] = 'no';
+
+            if ($request->hasFile('cashback_icon'))
+                $data['image'] = saveResizeImage($request->file('cashback_icon'), $this->iconPath, 200);
+
+            if (isset($request->default))
+                $data['default'] = isset($request->default);
+            else
+                $data['default'] = false;
+
+            if ($isDefault) {
+                setStoreDefaultCashback($request->store_id, $isDefault);
+                StoreCashback::create($data);
+            }
+
+            if (!$isDefault) {
+                StoreCashback::create($data);
+                setStoreDefaultCashback($request->store_id, $isDefault);
+            }
+
+            DB::commit();
+            if (!$request->ajax()) {
+                flash()->success('Cashback created successfully.');
+                return redirect()->back();
+            } else {
+                return response()->json([
+                    'status' => JsonResponse::HTTP_OK,
+                    'message' => 'Cashback created successfully.'
+                ], JsonResponse::HTTP_OK);
+            }
+        } catch (ModelNotFoundException $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while creating cashback.');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_NOT_FOUND,
+                'error' => 'Error while creating cashback.'
+            ], JsonResponse::HTTP_NOT_FOUND);
+        } catch (Exception $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while creating cashback.');
+                return redirect()->back();
+            }
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => 'Error while creating cashback.'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function fetchImages(Request $request)
+    {
+        if ($request->ajax()) {
+            $store = Store::where('id', $request->store)->first();
+            return view('admin-dashboard.stores.images-data', compact('store'))->render();
+        }
+    }
+
+    public function updateCategories(Request $request)
+    {
+        DB::table('category_store')->where('store_id', $request->input('store_id'))->delete();
+        if ($request->input('category_id') != null) {
+            foreach ($request->input('category_id') as $category) {
+                DB::table('category_store')->insert([
+                    'store_id' => $request->input('store_id'),
+                    'category_id' => $category,
+                ]);
+            }
+        }
+    }
+
+    public function editorPicks()
+    {
+        $route = 'index';
+        $networks = Network::all();
+        $stores = Store::latest()->get();
+        $categories = Category::where('parent_id', 0)->get();
+        $picks = Store::has('editorPicks')->latest()->paginate(32);
+
+        return view('admin-dashboard.stores.editor_picks', compact('picks', 'route', 'networks', 'stores', 'categories'));
+    }
+
+    public function fetchEditorPicks(Request $request)
+    {
+        if ($request->ajax()) {
+            $route = 'index';
+            $picks = Store::has('editorPicks')->latest()->paginate(32);
+            return view('admin-dashboard.stores.picks_data', compact('picks', 'route'))->render();
+        }
+    }
+
+    public function searchEditorPicks(Request $request, Store $picks)
+    {
+        $picks = $picks->newQuery();
+
+        // Search by network.
+        if ($request->input('network_id')) {
+            $picks->where('network_id', $request->input('network_id'));
+        }
+        // Search by id.
+        if ($request->input('store_id')) {
+            $picks->where('id', $request->input('store_id'));
+        }
+
+        // Search by store name.
+        if ($request->input('store_name')) {
+            $picks->where('name', 'like', '%' . $request->input('store_name') . '%');
+        }
+
+        // Search by status.
+        if ($request->input('status') != -1) {
+            $picks->where('status', $request->input('status'));
+        }
+
+        $picks = $picks->has('editorPicks')->latest()->paginate(32);
+        $route = 'search';
+        return view('admin-dashboard.stores.picks_data', compact('picks', 'route'))->render();
+    }
+
+    public function createEditorPick(Request $request)
+    {
+        try {
+
+            $existingPicks = EditorPick::where('category_id', $request->input('category_id'))->get();
+            DB::beginTransaction();
+            foreach ($existingPicks as $existingPick) {
+                if (!in_array($existingPick->store_id, $request->input('picks'))) {
+                    $existingPick->delete();
+                }
+            }
+            foreach ($request->input('picks') as $pick) {
+                EditorPick::firstOrCreate(
+                    [
+                        'category_id' => $request->input('category_id'),
+                        'store_id' => $pick,
+                    ],
+                    [
+                        'category_id' => $request->input('category_id'),
+                        'store_id' => $pick,
+                    ]
+                );
+            }
+            DB::commit();
+            return response()->json([
+                'status' => JsonResponse::HTTP_OK,
+                'success' => 'Category updated'
+            ], JsonResponse::HTTP_OK);
+        } catch (Exception $exception) {
+            DB::rollBack();
+            return response()->json([
+                'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
+                'error' => $exception->getMessage() . 'Error while updating the category'
+            ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function overrideCategories(Request $request, Store $store)
+    {
+        try {
+            $store->update([
+                'override_categories' => $request->has('override_categories') ? 1 : 0,
+            ]);
+            if (!$request->ajax()) {
+                flash()->success('Store info updated successfully');
+                return redirect()->back();
+            } else {
+                return true;
+            }
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function overrideCashback(Request $request, Store $store)
+    {
+        try {
+            $store->update([
+                'override_cashback' => $request->has('override_cashback') ? 1 : 0,
+            ]);
+            if (!$request->ajax()) {
+                flash()->success('Store info updated successfully');
+                return redirect()->back();
+            } else {
+                return true;
+            }
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function showStore(Request $request)
+    {
+        $store = Store::where('slug', $request->slug)->first();
+        if (!isset($store)) {
+            // handle scenario where store is not found
+            abort(404);
+        }
+        return view('admin-dashboard.stores.show');
+    }
+
+    public function fetchAddress(Request $request)
+    {
+        if ($request->ajax()) {
+            $store = Store::with('storeAddress')->where('id', $request->store)->first();
+            return view('admin-dashboard.stores.store_address', compact('store'))->render();
+        }
+    }
+
+    public function fetchSeoRules(Request $request)
+    {
+        if ($request->ajax()) {
+            $store = Store::with('storeRuleData')->where('id', $request->store)->first();
+            return view('admin-dashboard.stores.store_seo_rule', compact('store'))->render();
+        }
+    }
+
+    public function storeSeoRule(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'key' => 'required',
+            'value' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            if ($request->ajax()) {
+                return array(
+                    'message' => $validator->errors()->first(),
+                    'success' => false
+                );
+            } else {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+        }
+        try {
+            $url = url('/');
+            $store = Store::whereId($request->input('store_id'))->first();
+
+            $url = $url . '/cashback/' . $store['slug'];
+            $store = StoreSeoData::create([
+                'store_id' => $request->input('store_id'),
+                'url' => $url,
+                'type' => 'meta',
+                'key' => $request->input('key'),
+                'value' => $request->input('value'),
+            ]);
+            if ($request->ajax()) {
+                return array(
+                    'message' => 'Store Seo rule added',
+                    'success' => true
+                );
+            }
+            flash()->success('Store Seo rule added');
+            return redirect()->back();
+        } catch (Exception $exception) {
+            $message = 'Error while adding new Seo rule';
+            if ($request->ajax()) {
+                return array(
+                    'message' => $message,
+                    'success' => false
+                );
+            }
+            flash()->error($message);
+            return redirect()->back();
+        }
+    }
+
+    public function addStoreAddress(Request $request)
+    {
+        $request->validate([
+            'city' => 'required',
+            'postal_code' => 'required',
+            'latitude' => ['required', 'numeric', 'min:-90', 'max:90'],
+            'longitude' => ['required', 'numeric', 'min:-180', 'max:180'],
+            'address' => 'required',
+        ], [
+            'latitude.regex' => 'Latitude should be between -90 to 90',
+            'longitude.regex' => 'Longitude should be between -180 to 180'
+        ]);
+
+        try {
+            DB::beginTransaction();
+            StoreAddress::create([
+                'store_id' => $request->input('store_id'),
+                'city' => $request->input('city'),
+                'postal_code' => $request->input('postal_code'),
+                'address' => $request->input('address'),
+                'latitude' => $request->input('latitude'),
+                'longitude' => $request->input('longitude'),
+            ]);
+
+            DB::commit();
+
+            if (!$request->ajax()) {
+                flash()->success('store address added.');
+                return redirect()->back();
+            } else {
+                return array(
+                    'message' => 'Store Address added successfully.',
+                    'success' => true
+                );
+            }
+        } catch (Exception $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error('Error while adding store address.');
+                return redirect()->back();
+            }
+        }
+    }
+
+    public function editStoreAddress($id)
+    {
+        $address = StoreAddress::where('id', $id)->first();
+        return view('admin-dashboard.stores.address_edit_modal', compact('address'))->render();
+    }
+
+    public function updateStoreAddress(Request $request, StoreAddress $store_address)
+    {
+        $request->validate([
+            'city' => 'required',
+            'postal_code' => 'required',
+            'latitude' => ['required', 'numeric', 'min:-90', 'max:90'],
+            'longitude' => ['required', 'numeric', 'min:-180', 'max:180'],
+            'address' => 'required',
+        ], [
+            'latitude.regex' => 'Latitude should be between -90 to 90',
+            'longitude.regex' => 'Longitude should be between -180 to 180'
+        ]);
+
+        try {
+            DB::beginTransaction();
+            $address = StoreAddress::where('id', $request->input('address_id'))->update([
+                'city' => $request->input('city'),
+                'postal_code' => $request->input('postal_code'),
+                'address' => $request->input('address'),
+                'latitude' => $request->input('latitude'),
+                'longitude' => $request->input('longitude'),
+            ]);
+            DB::commit();
+
+            if (!$request->ajax()) {
+                flash()->success('Store  Address updated successfully.');
+                return redirect()->back();
+            } else {
+                return array(
+                    'message' => 'Store Address updated successfully.',
+                    'success' => true
+                );
+            }
+        } catch (Exception $e) {
+            DB::rollBack();
+            if (!$request->ajax()) {
+                flash()->error("Error while update store address.");
+                return redirect()->back();
+            }
+        }
+    }
+
+    public function deleteStoreAddress($id)
+    {
+        $storeAddress = StoreAddress::find($id);
+        if (!$storeAddress) {
+            return response()->json(['status' => 'error', 'message' => 'Store Address not found']);
+        }
+        $storeAddress->delete();
+        return response()->json(['status' => 'success', 'message' => 'Store Address deleted successfully.']);
+    }
+
+    public function editStoreSeoRule($id)
+    {
+        $storeSeoRule = StoreSeoData::where('id', $id)->first();
+        return view('admin-dashboard.stores.store_seo_edit_modal', compact('storeSeoRule'))->render();
+    }
+
+    public function updateStoreSeoRule(Request $request, StoreSeoData $Store_seo_data)
+    {
+        $validator = Validator::make($request->all(), [
+            'key' => 'required',
+            'value' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            if ($request->ajax()) {
+                return array(
+                    'message' => $validator->errors()->first(),
+                    'success' => false
+                );
+            } else {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+        }
+        try {
+            StoreSeoData::where('id', $request->input('seo_id'))->update([
+                'key' => $request->input('key'),
+                'value' => $request->input('value'),
+            ]);
+            if ($request->ajax()) {
+                return array(
+                    'message' => 'Seo rule updated successfully',
+                    'success' => true
+                );
+                flash()->success('Seo rule updated successfully');
+                return redirect()->back();
+            }
+        } catch (Exception $exception) {
+            $message = 'Error while updating  Seo rule';
+            if ($request->ajax()) {
+                return array(
+                    'message' => $message,
+                    'success' => false
+                );
+            }
+            flash()->error($message);
+            return redirect()->back();
+        }
+    }
+
+
+
+    public function deleteStoreSeoRule($id)
+    {
+        StoreSeoData::where('id', $id)->delete();
+        flash()->success('Seo rule deleted');
+    }
+
+    public function importFakeData()
+    {
+        try {
+            Artisan::call('db:seed --class=FakeStoresSeeder');
+            return flash()->success('Fake data has been imported.');
+        } catch (Exception $e) {
+            return flash()->success($e->getMessage());
+        } finally {
+            return redirect()->back();
+        }
+    }
+    public function deleteStoreVoucher($id)
+    {
+        $voucher = Voucher::find($id);
+        if (!$voucher) {
+            return response()->json(['status' => 'error', 'message' => 'Voucher not found']);
+        }
+
+        $voucher->delete();
+
+        return response()->json(['status' => 'success', 'message' => 'Voucher deleted successfully.']);
+    }
+
+    public function addImageModal(Request $request){
+
+        $store = Store::findOrFail($request->store_id);
+        return view('admin-dashboard.stores.add-image-modal', compact('store'))->render();
+    }
+
+    public function addVoucherModal(Request $request){
+        $store = Store::findOrFail($request->store_id);
+        return view('admin-dashboard.stores.add-voucher-modal', compact('store'))->render();
+    }
+
+    public function addAddressModal(Request $request){
+        $store = Store::findOrFail($request->store_id);
+        return view('admin-dashboard.stores.add-address-modal', compact('store'))->render();
+    }
+
+    public function addSEORuleModal(Request $request){
+        $store = Store::findOrFail($request->store_id);
+        return view('admin-dashboard.stores.add-seo-rule-modal', compact('store'))->render();
+    }
+
+    public function ajaxStores()
+    {
+        $stores = Store::select('id', 'name', 'slug', 'created_at')->latest()->get();
+        // Hide the appended attributes temporarily
+        $stores->each(function ($store) {
+            $store->makeHidden(['cashback_integer', 'default_cashback']);
+        });
+        return response()->json(['stores' => $stores]);
+    }
+}

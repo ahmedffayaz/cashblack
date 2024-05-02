@@ -1,0 +1,25 @@
+id,label,link,parent,sort,class,menu,depth
+1,Blogs,/blogs,0,0,null,1,0
+2,Cashblack Giveback,charities,0,1,null,1,0
+3,Tools,javascript:;,0,2,null,1,0
+4,Mobile App ,pages/apps ,3,3,null,1,1
+5,Cashblack A.F.R.O.B.O.T ,pages/extensions ,3,4,null,1,1
+6,Refer a Friend ,account/referral,3,5,null,1,1
+7,What is Cashblack? ,pages/about-us ,0,0,null,2,0
+8,FAQs ,pages/faqs ,0,1,null,2,0
+9,Blogs ,/blogs,0,2,null,2,0
+10,Categories ,categories,0,0,null,3,0
+11,Retailers ,stores,0,1,null,3,0
+12,Cashblack Giveback ,charities,0,2,null,3,0
+13,Cashblack To Your Door ,categories/cashblack-to-your-door,0,3,null,3,0
+14,Mobile App ,pages/apps ,0,0,null,4,0
+15,Cashblack A.F.R.O.B.O.T ,pages/extensions ,0,1,null,4,0
+16,Refer a Friend ,account/referral,0,2,null,4,0
+17,Contact,/contact ,0,0,null,5,0
+18,Work With Us ,pages/work-with-us ,0,1,null,5,0
+19,Media Enquiries ,pages/media-enquiries ,0,2,null,5,0
+20,Terms & Conditions ,pages/terms-conditions ,0,0,null,6,0
+21,Privacy Policy ,pages/privacy-policy ,0,1,null,6,0
+22,Cookies Policy ,pages/cookies-policy ,0,2,null,6,0
+23,Browser extension policy ,pages/browser-extension-policy ,0,3,null,6,0
+24,Vouchers,vouchers,0,1,null,3,0
