@@ -409,6 +409,8 @@ class StoreController extends Controller
     public function vouchers(Request $request)
     {
         try {
+            $page = Page::whereSlug('vouchers')->whereType('system')->whereStatus('active')->pluck('banner_image')->firstOrFail();
+
             $vouchers = Voucher::when($request->order_by == 'coupons', function ($query) {
                 $query->where('promotion_type', 'Coupon');
             })
@@ -434,17 +436,20 @@ class StoreController extends Controller
             return response()->json([
                 'status' => JsonResponse::HTTP_OK,
                 'message' => 'success',
-                'vouchers' => VoucherResource::collection($vouchers),
-                'meta_data' => [
-                    "next" => $vouchers->nextPageUrl(),
-                    "previous" => $vouchers->previousPageUrl(),
-                    "per_page" => $request->per_page,
-                    "total" => $vouchers->total(),
-                    "current_page" => $vouchers->currentPage(),
-                    "total_pages" => $vouchers->lastPage(),
-                    "first" => $vouchers->firstItem(),
-                    "last" => $vouchers->lastItem()
-                ]
+                'data' => [
+                    'main_banner_image' => getBannerImageUrl($page),
+                    'vouchers' => VoucherResource::collection($vouchers),
+                    'meta_data' => [
+                        "next" => $vouchers->nextPageUrl(),
+                        "previous" => $vouchers->previousPageUrl(),
+                        "per_page" => $request->per_page,
+                        "total" => $vouchers->total(),
+                        "current_page" => $vouchers->currentPage(),
+                        "total_pages" => $vouchers->lastPage(),
+                        "first" => $vouchers->firstItem(),
+                        "last" => $vouchers->lastItem()
+                    ]
+                ],
             ], JsonResponse::HTTP_OK);
         } catch (ModelNotFoundException $ex) { // Vouchers not found
             $data = [
