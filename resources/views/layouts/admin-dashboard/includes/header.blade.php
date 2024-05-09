@@ -108,14 +108,14 @@
                         <div class="dropdown">
                             <a href="{{ route(getAdminPrefix() . '.commissions.index') }}"
                                 class="dropbtn user-name dropdown-indicator {{ getNewIndicatorClassForAdmin('sales', 'before') }}"><em
-                                    class="icon ni ni-sign-gbp"></em> Sales</a>
+                                    class="icon ni ni-sign-mxn"></em> Sales</a>
                             <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-content">
                                 <div class="dropdown-inner px-4">
                                     <ul class="link-list">
                                         @can('view cashbacks')
                                             <li class="">
                                                 <a href="{{ route(getAdminPrefix() . '.commissions.index') }}" class="">
-                                                    <span class="nk-menu-icon"><em class="icon ni ni-sign-gbp"></em></span>
+                                                    <span class="nk-menu-icon"><em class="icon ni ni-sign-mxn"></em></span>
                                                     <span class="nk-menu-text">Cashbacks</span>
                                                 </a>
                                             </li><!-- .nk-menu-item -->

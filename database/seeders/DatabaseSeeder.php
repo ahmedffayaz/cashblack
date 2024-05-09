@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             NetworkSeeder::class,
             CashbackStatusSeeder::class,
             SettingSeeder::class,
+            CurrencySeeder::class,
             PagesSeeder::class,
             MenuSeeder::class,
             SliderSeeder::class,

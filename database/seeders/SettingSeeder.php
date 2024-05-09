@@ -57,11 +57,5 @@ class SettingSeeder extends Seeder
             'name' => 'English',
             'code' => 'en'
         ]);
-
-        Currency::create([
-            'name' => 'Pounds',
-            'short_name' => 'GBP',
-            'symbol' => '£'
-        ]);
     }
 }
