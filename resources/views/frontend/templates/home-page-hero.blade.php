@@ -6,7 +6,7 @@
             </video>
         </div>
         <div class=" ms-auto hero-form-container">
-            <h2>Join Cashblack For Free and <span>Get a £{{ !empty(getSpecificSetting('welcome_bonus')) ? getSpecificSetting('welcome_bonus') : '5' }} Sign-Up Bonus</span>
+            <h2>Join Cashblack For Free and <span>Get a ${{ !empty(getSpecificSetting('welcome_bonus')) ? getSpecificSetting('welcome_bonus') : '5' }} Sign-Up Bonus</span>
             </h2>
             <form class="signup-form" method="post" action="{{ route('register') }}">
                 @csrf
