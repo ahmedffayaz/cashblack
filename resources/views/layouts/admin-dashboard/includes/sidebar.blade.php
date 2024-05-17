@@ -117,14 +117,14 @@ d-xl-none
                     @canany(['view cashbacks', 'add cashbacks', 'view cashouts'])
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon {{ getNewIndicatorClassForAdmin('sales') }}"> <em class="icon ni ni-sign-gbp"></em></span>
+                            <span class="nk-menu-icon {{ getNewIndicatorClassForAdmin('sales') }}"> <em class="icon ni ni-sign-mxn"></em></span>
                             <span class="nk-menu-text">Sales</span>
                         </a>
                         <ul class="nk-menu-sub">
                             @can('view cashbacks')
                             <li class="nk-menu-item">
                                 <a href="{{ route(getAdminPrefix() . '.commissions.index') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-sign-gbp"></em></span>
+                                    <span class="nk-menu-icon"><em class="icon ni ni-sign-mxn"></em></span>
                                     <span class="nk-menu-text">Cashbacks</span>
                                 </a>
                             </li><!-- .nk-menu-item -->
@@ -176,7 +176,7 @@ d-xl-none
                             @can('view earnings')
                             <li class="nk-menu-item">
                                 <a href="{{ route(getAdminPrefix() . '.reports.earnings') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-coin-gbp"></em></span>
+                                    <span class="nk-menu-icon"><em class="icon ni ni-sign-usdc"></em></span>
                                     <span class="nk-menu-text">Earnings</span>
                                 </a>
                             </li><!-- .nk-menu-item -->

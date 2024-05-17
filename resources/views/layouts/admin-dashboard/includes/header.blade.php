@@ -164,7 +164,7 @@
                                         @can('view earnings')
                                             <li class="">
                                                 <a href="{{ route(getAdminPrefix() . '.reports.earnings') }}" class="">
-                                                    <span class="nk-menu-icon"><em class="icon ni ni-coin-gbp"></em></span>
+                                                    <span class="nk-menu-icon"><em class="icon ni ni-sign-usdc"></em></span>
                                                     <span class="nk-menu-text">Earnings</span>
                                                 </a>
                                             </li><!-- .nk-menu-item -->
