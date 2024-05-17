@@ -23,7 +23,7 @@
                 <span>{{ optional($charity->charity_type)->title }}</span>
             </div>
             <div class="nk-tb-col">
-                <span>{{ $charity->Country->name }}</span>
+                <span>{{ optional($charity->Country)->name }}</span>
             </div>
             <div class="nk-tb-col text-center">
                 {!!$charity->status ==1  ? '<span class="tb-status badge badge-success">Active</span>' : '<span class="tb-status badge badge-warning">In-active</span>'!!}
