@@ -96,35 +96,6 @@
                                 </div>
                             </li>
                         @endif
-
-                        @if (SiteSetting()['payment_method_bank'])
-                            <li class="list-item li-items">
-                                <div class="category-item__logo" style="margin: auto;">
-                                    <h5>Bank Transfer</h5>
-                                </div>
-                                <div class="category-item__detail">
-                                    <div class="brand-name">
-                                        <span>Free & Secure</span>
-                                        <span class="upto-offer">Minimum withdrawal {{ currency(getMinimumCashoutAmount()) }}</span>
-                                    </div>
-                                    <form action="{{ route('account.cashout') }}" class="m-auto" id="bank_withdraw_form" method="post">
-                                        @csrf
-                                        <div class="d-flex align-items-center">
-                                            <div class="text-center">
-                                                <button class="btn btn-primary btn-lg {{ isWithdrawalAllowed() == 2 ? 'withdraw_submit bank' : 'disabled' }}">
-                                                    Withdraw
-                                                </button>
-                                                @if (isWithdrawalAllowed() != 2)
-                                                    <div class="mt-2 mb-0 pb-0 text-danger">{{ isWithdrawalAllowed() }}</div>
-                                                @endif
-
-                                            </div>
-                                        </div>
-                                        <input type="hidden" name="payment_method" value="bank">
-                                    </form>
-                                </div>
-                            </li>
-                        @endif
                         @if (SiteSetting()['payment_method_charity'] && getImporterYMLSettings(config('app.charity_yaml_path')))
                             <li class="list-item li-items">
                                 <div class="category-item__logo" style="margin: auto;">
