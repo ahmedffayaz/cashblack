@@ -608,7 +608,8 @@ function currency($number, $withSymbol = true)
     if (isset($settings['currency'])) {
         $currencySymbol = getCurrencySymbol();
     }
-    $number = number_format((float)$number, 2, '.', '');
+    $decimalPlaces = ($number >= 1000) ? 0 : 2;
+    $number = number_format((float)$number, $decimalPlaces, '.', ',');
     return $withSymbol ? $currencySymbol . $number : $number;
 }
 

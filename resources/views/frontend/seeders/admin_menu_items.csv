@@ -22,4 +22,3 @@ id,label,link,parent,sort,class,menu,depth
 21,Privacy Policy ,pages/privacy-policy ,0,1,null,6,0
 22,Cookies Policy ,pages/cookies-policy ,0,2,null,6,0
 23,Browser extension policy ,pages/browser-extension-policy ,0,3,null,6,0
-24,Vouchers,vouchers,0,1,null,3,0

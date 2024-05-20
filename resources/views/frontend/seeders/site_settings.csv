@@ -9,10 +9,10 @@ id,title,type,value,category,default
 8,Meta Title Stores,meta_title_stores,Earn Cashback in Store | Earn Cashback on Purchases,general,1
 9,Paypal Email,paypal_email,paypal@trs.com,general,1
 10,Info Email,info_email,info@trs.com,general,1
-11,Company Rights,company_rights,© 2021 Cashblack.,general,1
+11,Company Rights,company_rights,© 2024 Cashblack.,general,1
 12,Sign Up Email,sign_up_email,info@trs.com,general,1
 13,Currency,currency,2,general,1
-14,Footer Text,footer_text,© 2021 Cashblack.,general,1
+14,Footer Text,footer_text,© 2024 Cashblack.,general,1
 15,Meta Title,meta_title,Cashblack Websites | Earn Cashback for Online Shopping,general,1
 16,Contact Us Email,contact_us_email,contact@trs.com,general,1
 17,Website Title,website_title,Cashblack,general,1
