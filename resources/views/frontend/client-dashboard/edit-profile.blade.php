@@ -645,8 +645,6 @@
                         $("#phoneNumber").val(phoneNumber);
                     }
                 }
-                console.log(phoneNumber);
-
             }
             input.addEventListener('change', handleChange);
             input.addEventListener('keyup', handleChange);
