@@ -65,7 +65,7 @@ class DashboardController extends Controller
         $request->validate([
             'firstname' => 'required|regex:/^[A-Za-z ]+$/',
             'lastname' => 'required|regex:/^[A-Za-z ]+$/',
-            'phoneNumber' => 'nullable|regex:/^\+44\d{10}$/',
+            'phoneNumber' => ['nullable', 'regex:/^(\+1)?[-. ]?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/'],
             'appeal_id' => 'nullable|integer'
         ], [
             'firstname.required' => 'First name is required.',

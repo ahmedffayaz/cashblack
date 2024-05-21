@@ -329,7 +329,7 @@
         }
 
         function checkValidPhone() {
-            var regex = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/;
+            var regex = /^(\+1)?[-. ]?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/;
             $('#profile-phone').next(".error-message").remove();
             if (!regex.test($('#profile-phone').val())) {
                 if (!$('#profile-phone').next(".error-message").length) {
@@ -629,7 +629,7 @@
             flatpickrInstance.setDate(selectedDate, false);
             var input = document.querySelector("#profile-phone");
             const iti = window.intlTelInput(input, ({
-                onlyCountries: ["gb"],
+                onlyCountries: ["us"],
                 nationalMode:true,
                 preferredCountries: [],
                 utilsScript: "{{ asset('admin-dashboard/telephone-dropdown/js/utils.js') }}",
@@ -645,6 +645,8 @@
                         $("#phoneNumber").val(phoneNumber);
                     }
                 }
+                console.log(phoneNumber);
+
             }
             input.addEventListener('change', handleChange);
             input.addEventListener('keyup', handleChange);
