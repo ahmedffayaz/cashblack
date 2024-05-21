@@ -45,7 +45,6 @@
                                 <select class="form-control payment_method" name="payment_method">
                                     <option value="">All Payment Method</option>
                                     <option value="paypal">Paypal</option>
-                                    <option value="bank">Bank</option>
                                     @if (getImporterYMLSettings(config('app.charity_yaml_path')))
                                         <option value="charity">Chairty</option>
                                     @endif
