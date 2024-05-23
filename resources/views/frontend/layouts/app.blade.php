@@ -23,6 +23,7 @@
             @include('frontend.client-dashboard.side-menu')
         </div>
     @endauth
+    @include('frontend.layouts.includes.web-platform-modal')
 
     <script>
         function __debounce(func, wait, immediate) {

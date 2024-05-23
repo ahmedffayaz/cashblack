@@ -1,4 +1,25 @@
 $(document).ready(function () {
+    // Check if the current route is the home page
+    if (window.location.pathname === "/") {
+        $("#select-web-platform-modal").modal("show");
+
+        // Close modal when close button or X button is clicked
+        $(
+            '#select-web-platform-modal .close, #select-web-platform-modal [data-dismiss="modal"]'
+        ).click(function () {
+            $("#select-web-platform-modal").modal("hide");
+            $("#select-web-platform-modal").on("click", function (e) {
+                if (e.target === this) {
+                    $("#select-web-platform-modal").modal("hide");
+                }
+            });
+        });
+    }
+});
+
+
+
+$(document).ready(function () {
     $("#request-cashout").appendTo("body");
     $(".image_modal").appendTo("body");
     $(".btn-navbar-close").click(function () {
@@ -34,7 +55,6 @@ $(document).ready(function () {
     });
 
     $(".acc-after-login").on("click", function (e) {
-
         if (!$(".sidebar").hasClass("show")) {
             $(".sidebar").addClass("show");
         }
@@ -627,7 +647,10 @@ $(document).on("click", ".fav-icon", function (e) {
                         },
                         success: function (data) {
                             $(ele).removeClass("liked");
-                            $(ele).notify(data.message, { position:"left middle", className: data.type });
+                            $(ele).notify(data.message, {
+                                position: "left middle",
+                                className: data.type,
+                            });
                         },
                     });
                 } else {
@@ -644,7 +667,10 @@ $(document).on("click", ".fav-icon", function (e) {
                     _token: csrfToken,
                 },
                 success: function (data) {
-                    $(ele).notify(data.message, { position:"left middle", className: data.type });
+                    $(ele).notify(data.message, {
+                        position: "left middle",
+                        className: data.type,
+                    });
                 },
             });
         }
@@ -679,7 +705,10 @@ $(document).on("click", ".store-detail-fav-icon", function (e) {
                         },
                         success: function (data) {
                             $(ele).removeClass("liked");
-                            $(ele).notify(data.message, { position:"bottom center", className: data.type });
+                            $(ele).notify(data.message, {
+                                position: "bottom center",
+                                className: data.type,
+                            });
                         },
                     });
                 } else {
@@ -696,7 +725,10 @@ $(document).on("click", ".store-detail-fav-icon", function (e) {
                     _token: csrfToken,
                 },
                 success: function (data) {
-                    $(ele).notify(data.message, { position:"bottom center", className: data.type });
+                    $(ele).notify(data.message, {
+                        position: "bottom center",
+                        className: data.type,
+                    });
                 },
             });
         }
@@ -983,9 +1015,13 @@ $(document).on("click", ".like-action-remove", function () {
                     ele.removeClass("liked");
                     if (data.type) {
                         $(ele).parents("li").remove();
-                        swal(storeTitle + " has been removed from the favorite stores list.", {
-                            icon: "success",
-                          });
+                        swal(
+                            storeTitle +
+                                " has been removed from the favorite stores list.",
+                            {
+                                icon: "success",
+                            }
+                        );
                     }
                 },
             });
@@ -1289,38 +1325,42 @@ if (cookie_consent != "") {
 /*Cookie Consent Popup End*/
 function showLogoutConfirmation() {
     swal({
-      title: 'Logout',
-      text: 'Are you sure you want to logout?',
-      icon: 'info',
-      buttons: {
-        cancel: {
-          text: 'Cancel',
-          value: null,
-          visible: true,
-          className: '',
-          closeModal: true,
+        title: "Logout",
+        text: "Are you sure you want to logout?",
+        icon: "info",
+        buttons: {
+            cancel: {
+                text: "Cancel",
+                value: null,
+                visible: true,
+                className: "",
+                closeModal: true,
+            },
+            confirm: {
+                text: "Logout",
+                value: true,
+                visible: true,
+                className: "",
+                closeModal: true,
+            },
         },
-        confirm: {
-          text: 'Logout',
-          value: true,
-          visible: true,
-          className: '',
-          closeModal: true
-        }
-      },
-      closeOnClickOutside: false,
-      closeOnEsc: false
+        closeOnClickOutside: false,
+        closeOnEsc: false,
     }).then((result) => {
-      if (result) {
-        document.getElementById('logout-form').submit();
-      }
+        if (result) {
+            document.getElementById("logout-form").submit();
+        }
     });
-  }
+}
 
 function addButtonSpinner(submitBtn, submitBtnHtml) {
-    return submitBtn.attr('disabled', 'disabled').html(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>&nbsp;${submitBtnHtml}`);
+    return submitBtn
+        .attr("disabled", "disabled")
+        .html(
+            `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>&nbsp;${submitBtnHtml}`
+        );
 }
 
 function removeBtnDisabledClass(submitBtn, submitBtnHtml) {
-    return submitBtn.removeAttr('disabled').html(`${submitBtnHtml}`);
+    return submitBtn.removeAttr("disabled").html(`${submitBtnHtml}`);
 }
