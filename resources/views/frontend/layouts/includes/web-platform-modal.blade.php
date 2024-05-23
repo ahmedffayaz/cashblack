@@ -18,12 +18,12 @@
                 </div>
                 <div class="d-flex justify-content-around">
                     <div>
-                        <a href="{{ "https://us.cashblack.com/" }}"><img src="{{ asset('storage/__asset/img/uk-flag.png') }}" alt="" style="width: 70px; height:50px; text-decoration:none" class="mt-5"></a>
-                        <a href="{{ "https://us.cashblack.com/" }}" style="text-decoration: none"><p class="fw-bold mt-3 text-danger">United Kingdom</p></a>
+                        <a href="{{ "https://cashblack.com/" }}"><img src="{{ asset('storage/__asset/img/uk-flag.png') }}" alt="" style="width: 70px; height:50px; text-decoration:none" class="mt-5"></a>
+                        <a href="{{ "https://cashblack.com/" }}" style="text-decoration: none"><p class="fw-bold mt-3 text-danger">United Kingdom</p></a>
                     </div>
                     <div>
-                        <a href="{{ "https://www.topcashback.com/" }}"><img src="{{ asset('storage/__asset/img/us-flag.png') }}" alt="" style="width: 70px; height:50px; text-decoration:none" class="mt-5"></a>
-                        <a href="{{ "https://www.topcashback.com/" }}"><p class="fw-bold mt-3 text-danger">United State</p></a>
+                        <a href="{{ "https://us.cashblack.com/" }}"><img src="{{ asset('storage/__asset/img/us-flag.png') }}" alt="" style="width: 70px; height:50px; text-decoration:none" class="mt-5"></a>
+                        <a href="{{ "https://us.cashblack.com/" }}"><p class="fw-bold mt-3 text-danger">United State</p></a>
                     </div>
                 </div>
             </div>
