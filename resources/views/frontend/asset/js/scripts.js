@@ -1,23 +1,50 @@
 $(document).ready(function () {
-    // Check if the current route is the home page
     if (window.location.pathname === "/") {
-        $("#select-web-platform-modal").modal("show");
-
-        // Close modal when close button or X button is clicked
-        $(
-            '#select-web-platform-modal .close, #select-web-platform-modal [data-dismiss="modal"]'
-        ).click(function () {
+        var locationChoice = getCookie("locationChoice");
+        if (locationChoice) {
             $("#select-web-platform-modal").modal("hide");
-            $("#select-web-platform-modal").on("click", function (e) {
-                if (e.target === this) {
-                    $("#select-web-platform-modal").modal("hide");
-                }
-            });
-        });
+            return;
+        }
+        var isAuthenticated = $('meta[name="is_authenticated"]').attr('content') === 'true';
+        var modalShown = getCookie("modalShown");
+
+        if (!isAuthenticated && !modalShown) {
+            $("#select-web-platform-modal").modal("show");
+        }
     }
+    $('#us-link').click(function(e) {
+        e.preventDefault();
+        setCookie("location", "United States", 1);
+        setCookie("locationChoice", "made", 365);
+        $("#select-web-platform-modal").modal("hide");
+    });
+
+    $('#uk-link').click(function(e) {
+        setCookie("locationChoice", "made", 365);
+        $("#select-web-platform-modal").modal("hide");
+    });
 });
 
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
 
 $(document).ready(function () {
     $("#request-cashout").appendTo("body");

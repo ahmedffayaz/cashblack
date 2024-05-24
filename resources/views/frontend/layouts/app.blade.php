@@ -2,6 +2,9 @@
 
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta name="is_authenticated" content="{{ Auth::check() ? 'true' : 'false' }}">
+    </head>
 @include('frontend.layouts.includes.head')
 
 <body class="h-100 before-login" data-user-id="{{ !empty(auth()->user()) ? auth()->user()->id : 0 }}">
