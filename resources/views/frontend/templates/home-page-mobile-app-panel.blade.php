@@ -71,7 +71,7 @@
                     just as you would on your computer. Download to receive
                     exclusive offers and promotions.</p>
 
-                <button class="btn my-4 px-5 text-white">More Info</button>
+               <a href="{{ url('/pages/apps') }}"> <button class="btn my-4 px-5 text-white">More Info</button></a>
                 <div class="mt-3">
                     <img src="{{ asset('storage/__asset/img/home/google-play-badge-logo 1.png') }}" class="google-play" alt="">
                     <img src="{{ asset('storage/__asset/img/home/download-on-the-app-store4659 1.png') }}" class="playstore-icon ms-2" alt="">
