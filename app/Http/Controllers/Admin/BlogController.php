@@ -41,7 +41,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|regex:/^[\w. ]+$/',
+            'title' => 'required|string',
             'featured_image' => 'required',
         ], $messages = [
             'title.required' => 'The Title field is required.',
@@ -103,7 +103,7 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $validated = $request->validate([
-            'title' => 'required|regex:/^[\w. ]+$/',
+            'title' => 'required|string',
         ], $messages = [
             'title.required' => 'The Title field is required.',
         ]);
