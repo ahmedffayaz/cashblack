@@ -55,13 +55,13 @@ id,title,type,value,category,default
 54,Payment Method Charity,payment_method_charity,1,general,1
 55,Google Recaptcha Site Key,google_recaptcha_site_key,6Ldiq0AoAAAAAGXLDHpzKva3Qj_7j6K-KxwBxhBB,general,1
 56,Google Recaptcha Secret Key,google_recaptcha_secret_key,6Ldiq0AoAAAAAKlCaaXoQYwfSOw1izwAbjGDjwoK,general,1
-57,Facebook,facebook,https://www.facebook.com/CashblackHQ,general,1
-58,Twitter,twitter,https://twitter.com/CashblackHQ,general,1
-59,Instagram,instagram,https://instagram.com/CashblackHQ,general,1
+57,Facebook,facebook,https://www.facebook.com/cashblackusa,general,1
+58,Twitter,twitter,https://x.com/cashblackusa,general,1
+59,Instagram,instagram,https://instagram.com/cashblackusa,general,1
 60,Linkedin,linkedin,http://www.linkedin.com/company/cashblack,general,1
-61,Tiktok,tiktok,http://www.tiktok.com/@CashblackHQ,general,1
-62,Pinterest,pinterest,https://www.pinterest.co.uk/CashblackHQ/,general,1
-63,Youtube,youtube,https://www.youtube.com/channel/UCxTrkgiu_9wIoOImumbjzwQ,general,1
+61,Tiktok,tiktok,http://www.tiktok.com/@cashblackusa,general,1
+62,Pinterest,pinterest,https://www.pinterest.co.uk/cashblackusa/,general,1
+63,Youtube,youtube,https://www.youtube.com/@CashblackUSA,general,1
 64,Local Stores Ecommerce Website ID,local_stores_ecommerce_website_id,1,general,1
 65,Local Stores Lead Generation Website ID,local_stores_lead_generation_website_id,11,general,1
 66,Awin Website ID,awin_website_id,779555,general,1
