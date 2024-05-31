@@ -27,10 +27,6 @@
         color: #45a049;
     }
 
-    .btn {
-        background-color: #45a049;
-    }
-
     .google-play {
         max-width: 131px;
         max-height: auto;
@@ -61,7 +57,10 @@
         <div class="row">
             <div class="position-relative col-md-6 text-center order-md-1 image-container containers">
                 <img src="{{ asset('storage/__asset/img/home/Ellipse 9.png') }}" alt="" class="img-circle">
-                <img src="{{ asset('storage/__asset/img/home/cashblack 1.png') }}" alt="" class="position-absolute top-50 start-50 translate-middle img-mobile">
+
+                <img src="{{ asset('storage/__asset/img/home/gif-mobile.jpeg') }}" alt="" class="position-absolute top-50 start-50 translate-middle img-mobile">
+                {{-- <img src="{{ asset('storage/__asset/img/home/Ellipse 9.png') }}" alt="" class="img-circle">
+                <img src="{{ asset('storage/__asset/img/home/cashblack 1.png') }}" alt="" class="position-absolute top-50 start-50 translate-middle img-mobile"> --}}
             </div>
             <div class="col-md-6 col-sm-12 right-content mt-md-5 pt-md-5">
                 <h3 class="mb-3 heading"><b>Cashblack <b class="specific-color">Mobile</b> Businesses App</b> </h3>
@@ -71,7 +70,7 @@
                     just as you would on your computer. Download to receive
                     exclusive offers and promotions.</p>
 
-               <a href="{{ url('/pages/apps') }}"> <button class="btn my-4 px-5 text-white">More Info</button></a>
+               <a href="{{ url('/pages/apps') }}"> <button class="btn btn-secondary my-4 px-5 text-white">More Info</button></a>
                 <div class="mt-3">
                     <img src="{{ asset('storage/__asset/img/home/google-play-badge-logo 1.png') }}" class="google-play" alt="">
                     <img src="{{ asset('storage/__asset/img/home/download-on-the-app-store4659 1.png') }}" class="playstore-icon ms-2" alt="">

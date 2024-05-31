@@ -1,4 +1,4 @@
-<footer id="footer" class="bg-gray">
+<footer id="footer" class="bg-dark">
 
     @include('frontend.layouts.includes.cookie-notice')
 
@@ -11,7 +11,7 @@
     @endphp
 
     @if ($menus->count() > 0)
-        <div class="container">
+        <div class="container text-white">
             <div class="footer-mid">
                 <div class="row">
                     @foreach ($menus as $menu)

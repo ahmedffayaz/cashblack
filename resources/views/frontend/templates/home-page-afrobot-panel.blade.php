@@ -29,10 +29,6 @@
         color: #45a049;
     }
 
-    .btn {
-        background-color: #45a049;
-    }
-
     .paragraph {
         font-size: large;
         height: auto;
@@ -61,7 +57,7 @@
                     cutting edge artificial intelligence to learn how you usually
                     shop and help you find and purchase those same goods
                     and services at Black-owned retailers..</p>
-                    <a href="{{ url('/pages/extensions') }}"><button class="btn my-4 px-5 text-white">More Info</button></a>
+                    <a href="{{ url('/pages/extensions') }}"><button class="btn btn-secondary my-4 px-5 text-white">More Info</button></a>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
        @foreach ($allStores as $store)
            <li class="list-item">
                <a href="javascript:;" class="fav-icon {{ !empty(auth()->user()) ? (checkFavorite($store->id) ? 'liked' : '') : '' }} not-liked"
-                   this-store-id="{{ $store->id }}" this-store-name="{{ $store->name }}">
+                   this-store-id="{{ $store->id }}" this-store-name="{{ $store->description  }}">
                    <i class="fas fa-heart"></i>
                </a>
                <div class="category-item__logo store-grid-img {{ $viewType === 'grid-view' ? 'img-fix-size' : '' }}">
@@ -10,10 +10,12 @@
                        <img alt="{{ $store->name }}" src="{{ getImageUrl($store->logo->first()) }}" class="img-height" onerror="_logo(this)">
                    </a>
                </div>
+               <div class="store-title">
+                <a href="{{ route('stores.show', $store->slug) }}">
+                    <h5 class="brand-name {{ $viewType === 'grid-view'? '' : 'name-fixed-size' }}">{{ $store->name }}</h5>
+                </a>
+               </div>
                <div class="category-item__detail">
-                   <a href="{{ route('stores.show', $store->slug) }}">
-                       <h5 class="brand-name {{ $viewType === 'grid-view'? '' : 'name-fixed-size' }}">{{ $store->name }}</h5>
-                   </a>
                    <h6 class="upto-offer">{{ $store->default_cashback }}</h6>
                    <div class="cta">
                        <a href="{{ route('stores.show', $store->slug) }}" class="btn btn-primary">

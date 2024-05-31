@@ -143,6 +143,20 @@
                                 </h4>
                             </div>
                             <div class="listing-actions">
+                                <form action="{{ route('categories.view', $slug) }}" class="is-alter  search_form filter_by {{ isset($letter) ? 'd-none' : '' }}" method="GET">
+                                    @csrf
+                                    <div class="sort-option dropdown">
+                                        <select class="form-control filter-by btn sort-btn select_search" name="orderBy" id="">
+                                            <option value="">Default</option>
+                                            <option value="name-asc" id="name-asc">Name (A-Z)</option>
+                                            <option value="name-desc" id="name-desc">Name (Z-A)</option>
+                                            <option value="id-desc" id="new-desc">Newest to Oldest</option>
+                                            <option value="popularity" id="popularity">Popularity</option>
+                                            <option value="cashback-amount-desc" id="cashback-amount-desc">Cashback Amount</option>
+                                            <option value="cashback-percentage-desc" id="cashback-percentage-desc">Cashback Percentage</option>
+                                        </select>
+                                    </div>
+                                </form>
                                 <div class="result-preview-option">
                                     <a href="javascript:;" id="gridview" class="grid-view view-btn active"></a>
                                     <a href="javascript:;" id="listview" class="list-view view-btn"></a>
@@ -213,6 +227,10 @@
         // Stores Data Show
         function storesView(page, withMapScript = false) {
             var searchFormData = $('.search_form').serialize();
+            var orderByValue = $('.filter_by select[name="orderBy"]').val();
+            if (orderByValue) {
+                searchFormData += encodeURIComponent(orderByValue);
+            }
             var requestUrl = '{{ route('categories.view', $slug) }}';
             if (page != 0) {
                 requestUrl += '?page=' + page;
@@ -234,7 +252,7 @@
                     stores = data.stores.data;
                     mapStores = Object.keys(stores).map((key) => [key, stores[key]]);
 
-                    if (stores.length === 0 ) {
+                    if (stores.length === 0) {
                         $('#load-more-btn').addClass("d-none");
                     }
                     if (withMapScript)
@@ -475,7 +493,8 @@
                         "</div>" +
                         '<div id="mapPopupHeader">' +
                         '<a href="' + origin + '/cashback/' + mapStores[i][1]['slug'] +
-                        '"><img src="' + getImageUrl(storeLogo) + '" onerror="_logo(this)" style="width: 100px;" /><div id="headerTitleAddress"><h4 id="firstHeading" class="firstHeading">' + mapStores[i][1][
+                        '"><img src="' + getImageUrl(storeLogo) +
+                        '" onerror="_logo(this)" style="width: 100px;" /><div id="headerTitleAddress"><h4 id="firstHeading" class="firstHeading">' + mapStores[i][1][
                             'name'
                         ] + '</h4></a>' +
                         '<p><span class="addressIcon"><i class="ion-location mr2" aria-hidden="true"></i></span>' +
@@ -632,6 +651,9 @@
             $(document).on('change', '.select_search', function() {
                 storesView(0);
             });
+            $(document).on('change', '.filter_by', function() {
+                storesView(0);
+            });
             $(document).on('click', '.page-link', function(event) {
                 event.preventDefault();
                 var pageurl = new URL($(this).attr('href'));
@@ -644,7 +666,7 @@
                 storesView(0);
             });
 
-            $(document).on('change', '.cuisine-select', function (event) {
+            $(document).on('change', '.cuisine-select', function(event) {
                 event.preventDefault();
 
                 offset = 0;
@@ -665,7 +687,7 @@
                         cuisines: $('#cuisine-select').val(),
                         perPage: storesPerPage,
                     },
-                    success: function (response) {
+                    success: function(response) {
                         $('#stores-view').html(response.view);
 
                         // Hide load more button if stores less than per page stores
@@ -680,7 +702,7 @@
                         storesPerPage = 12;
                         filteredLoadedStores = 12;
                     },
-                    error: function (response) {
+                    error: function(response) {
                         console.log(response);
                     }
                 });
@@ -692,18 +714,19 @@
             var storesLoaded = 12;
             storesPerPage = 12;
             var totalStores = {{ $totalCount }};
+
             function loadMoreItems() {
                 if (storesLoaded === 0) {
                     storesLoaded += storesPerPage;
                     offset += storesPerPage;
                     return;
                 }
-                var diff = totalStores - storesLoaded ;
+                var diff = totalStores - storesLoaded;
                 var perpage = 12;
-                if(diff < 12){
+                if (diff < 12) {
                     perpage = diff;
                 }
-                if($('#cuisine-select').val() == "") {
+                if ($('#cuisine-select').val() == "") {
                     if (storesLoaded < totalStores) {
                         stores = Object.entries(stores);
                         $.ajax({
@@ -732,7 +755,7 @@
                         });
                     }
                 } else {
-                    if(filteredLoadedStores < filteredStoresCount){
+                    if (filteredLoadedStores < filteredStoresCount) {
                         stores = Object.entries(stores);
                         $.ajax({
                             url: "{{ route('load-more') }}",
@@ -742,7 +765,7 @@
                                 offset: offset,
                                 perpage: perpage
                             },
-                            success: function (response) {
+                            success: function(response) {
                                 $('#storesListN').append(response.html);
                                 Object.entries(response.stores).forEach(newStores => {
                                     stores = [...stores, newStores[1]];
@@ -755,7 +778,7 @@
                                     $('#load-more-btn').addClass("d-none");
                                 }
                             },
-                            error: function (response) {
+                            error: function(response) {
                                 console.log(response);
                             }
                         });
@@ -771,6 +794,5 @@
                 $('#load-more-btn').addClass("d-none");
             }
         });
-
     </script>
 @endpush
