@@ -2,22 +2,1642 @@ id,title,slug,type,status,content,excerpt,meta_description,meta_keyword,banner_i
 1,Home Page Before Login,/home-page-before-login,system,active,"<!-- wp:paragraph --><p>[home-page-after-login-slider]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-hero]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-stats-quick-view]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-site-features]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-before-login-slider]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-featured-stores]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-mobile-app-panel]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-afrobot-panel]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-cashout-methods]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-charities]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-faqs]</p><!-- /wp:paragraph -->",,,,,Cashback is here to support you supporting Black-owned businesses.
 2,Stores,stores,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[stores-list]</p><!-- /wp:paragraph -->",,,,,Cashback is here to support you supporting Black-owned businesses.
 3,Categories,categories,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[categories-list]</p><!-- /wp:paragraph -->",,,,,Cashback is here to support you supporting Black-owned businesses.
-5,Donate to Charity,charities,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[charities-list]</p><!-- /wp:paragraph -->",,,,,Cashback is here to support you supporting Black-owned businesses.
-6,What is Cashblack?,about-us ,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[about-us-default-text]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[cashblack-support-video]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-7,FAQs,faqs,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[home-page-faqs]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
+5,Donate to Charity,charities,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:html -->
+<p class='mb-4 container container container container container container container container'>As a social impact organisation, one of our goals and responsibilities at Cashblack is to always be positioned to set an example in encouraging others to “give back”. When you receive cashback from your purchases through our site, you have the option of withdrawing your funds for yourself but, also, through Cashblack Giveback, you have the option of donating your funds to one of our affiliated goodwill causes. If you do decide to donate your cashback, we will match your donation with an equal donation of our own. This means that whenever you give, we give.
+
+<br><br>
+
+If you would like to recommend a charity, community interest company or goodwill cause to Cashblack Giveback, complete this <a href='https://docs.google.com/forms/d/e/1FAIpQLSekzD9r88kbfSAXQnZ4HwfO61xCaz_R_2uwKSFCrARWRaAh-Q/viewform?usp=sf_link'>application form</a> and we will get back to you as soon as possible.
+</p>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'> <h4>Goodwill Causes</h4> </div>
+<!-- /wp:html --><p>[charities-list]</p><!-- wp:html -->",,,,,Cashback is here to support you supporting Black-owned businesses.
+6,What is Cashblack?,about-us ,special,active,"<!-- wp:html -->
+<html>
+
+<head>
+	<title></title>
+	<meta content='summary_large_image' name='twitter:card'>
+	<meta content='website' property='og:type'>
+	<meta content='' property='og:description'>
+	<meta content='https://wfblebuvgk.preview-posted-stuff.com/V2-aWPp-aZBr-QPT1-SIwN/' property='og:url'>
+	<meta content='https://pro-bee-beepro-thumbnail.getbee.io/messages/1013764/998648/1944229/9976630_large.jpg' property='og:image'>
+	<meta content='' property='og:title'>
+	<meta content='' name='description'>
+	<meta charset='utf-8'>
+	<meta content='width=device-width' name='viewport'>
+	<link href='https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900' rel='stylesheet' type='text/css'>
+	<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		body {
+			background-color: #fff;
+			color: #000;
+			font-family: Lato, Tahoma, Verdana, Segoe, sans-serif
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1 a,
+		.bee-row-10 .bee-col-2 .bee-block-3 a,
+		.bee-row-11 .bee-col-1 .bee-block-3 a,
+		.bee-row-11 .bee-col-2 .bee-block-1 a,
+		.bee-row-13 .bee-col-1 .bee-block-1 a,
+		.bee-row-13 .bee-col-2 .bee-block-3 a,
+		.bee-row-14 .bee-col-1 .bee-block-3 a,
+		.bee-row-14 .bee-col-2 .bee-block-1 a,
+		.bee-row-15 .bee-col-1 .bee-block-1 a,
+		.bee-row-15 .bee-col-2 .bee-block-3 a,
+		.bee-row-16 .bee-col-1 .bee-block-1 a,
+		.bee-row-2 .bee-col-1 .bee-block-1 a,
+		.bee-row-4 .bee-col-1 .bee-block-1 a,
+		.bee-row-7 .bee-col-1 .bee-block-3 a,
+		.bee-row-9 .bee-col-1 .bee-block-3 a,
+		.bee-row-9 .bee-col-2 .bee-block-1 a,
+		a {
+			color: #3baa34
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		p {
+			margin: 0
+		}
+
+		.bee-row-content {
+			max-width: 1000px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content.reverse,
+		.bee-row-content.reverse .bee-col {
+			-moz-transform: scale(1, -1);
+			-webkit-transform: scale(1, -1);
+			-o-transform: scale(1, -1);
+			-ms-transform: scale(1, -1);
+			transform: scale(1, -1)
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-icon .bee-icon-label-right a {
+			text-decoration: none
+		}
+
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-11 .bee-col-1 .bee-block-2,
+		.bee-row-13 .bee-col-2 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-2,
+		.bee-row-15 .bee-col-2 .bee-block-2,
+		.bee-row-16 .bee-col-1 .bee-block-2,
+		.bee-row-3 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-2,
+		.bee-row-9 .bee-col-1 .bee-block-2 {
+			width: 100%
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.bee-video a {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: block
+		}
+
+		.bee-video img {
+			display: block;
+			width: 100%;
+			height: auto
+		}
+
+		.bee-row-1,
+		.bee-row-11,
+		.bee-row-14,
+		.bee-row-16,
+		.bee-row-2,
+		.bee-row-3,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-8,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-17 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-10 .bee-col-1,
+		.bee-row-10 .bee-col-2,
+		.bee-row-11 .bee-col-1,
+		.bee-row-11 .bee-col-2,
+		.bee-row-12 .bee-col-1,
+		.bee-row-13 .bee-col-1,
+		.bee-row-13 .bee-col-2,
+		.bee-row-14 .bee-col-1,
+		.bee-row-14 .bee-col-2,
+		.bee-row-15 .bee-col-1,
+		.bee-row-15 .bee-col-2,
+		.bee-row-16 .bee-col-1,
+		.bee-row-17 .bee-col-1,
+		.bee-row-2 .bee-col-1,
+		.bee-row-3 .bee-col-1,
+		.bee-row-3 .bee-col-2,
+		.bee-row-3 .bee-col-3,
+		.bee-row-4 .bee-col-1,
+		.bee-row-5 .bee-col-1,
+		.bee-row-6 .bee-col-1,
+		.bee-row-6 .bee-col-2,
+		.bee-row-7 .bee-col-1,
+		.bee-row-8 .bee-col-1,
+		.bee-row-9 .bee-col-1,
+		.bee-row-9 .bee-col-2 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1,
+		.bee-row-10 .bee-col-2 .bee-block-1,
+		.bee-row-11 .bee-col-1 .bee-block-1,
+		.bee-row-12 .bee-col-1 .bee-block-1,
+		.bee-row-13 .bee-col-2 .bee-block-1,
+		.bee-row-14 .bee-col-1 .bee-block-1,
+		.bee-row-15 .bee-col-2 .bee-block-1,
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-1,
+		.bee-row-8 .bee-col-1 .bee-block-1,
+		.bee-row-9 .bee-col-1 .bee-block-1 {
+			padding: 10px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-10 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-12 .bee-row-content,
+		.bee-row-13 .bee-row-content,
+		.bee-row-14 .bee-row-content,
+		.bee-row-15 .bee-row-content,
+		.bee-row-16 .bee-row-content,
+		.bee-row-2 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-11 .bee-col-2 .bee-block-1,
+		.bee-row-13 .bee-col-1 .bee-block-1,
+		.bee-row-13 .bee-col-2 .bee-block-3,
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-2 .bee-block-1,
+		.bee-row-15 .bee-col-1 .bee-block-1,
+		.bee-row-15 .bee-col-2 .bee-block-3,
+		.bee-row-16 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-1,
+		.bee-row-4 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-3,
+		.bee-row-9 .bee-col-2 .bee-block-1 {
+			padding: 10px
+		}
+
+		.bee-row-10,
+		.bee-row-12,
+		.bee-row-13,
+		.bee-row-15,
+		.bee-row-4,
+		.bee-row-7 {
+			background-color: #f0f0f0;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-17 {
+			background-color: #fff;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-1 {
+			color: #1e0e4b;
+			font-family: Inter, sans-serif;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-11 .bee-col-2 .bee-block-1,
+		.bee-row-13 .bee-col-1 .bee-block-1,
+		.bee-row-14 .bee-col-2 .bee-block-1,
+		.bee-row-15 .bee-col-1 .bee-block-1,
+		.bee-row-16 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-1,
+		.bee-row-4 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-3,
+		.bee-row-9 .bee-col-2 .bee-block-1 {
+			color: #101112;
+			direction: ltr;
+			font-size: 24px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-10 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-13 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-15 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-15 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-16 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-2 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-4 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-6 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-7 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-9 .bee-col-2 .bee-block-1 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.bee-row-9 .bee-col-1 .bee-block-3 {
+			color: #101112;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: justify
+		}
+
+		.bee-row-9 .bee-col-1 .bee-block-3 p:not(:last-child) {
+			margin-bottom: 0
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-3,
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-13 .bee-col-2 .bee-block-3,
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-15 .bee-col-2 .bee-block-3 {
+			color: #101112;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		@media (max-width:768px) {
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-10 .bee-col-1 .bee-block-1,
+			.bee-row-11 .bee-col-2 .bee-block-1,
+			.bee-row-13 .bee-col-1 .bee-block-1,
+			.bee-row-14 .bee-col-2 .bee-block-1,
+			.bee-row-15 .bee-col-1 .bee-block-1,
+			.bee-row-16 .bee-col-1 .bee-block-1 {
+				font-size: 20px !important
+			}
+
+			.bee-row-15 .bee-col-2 .bee-block-3 {
+				font-size: 16px !important
+			}
+		}
+
+		.bee-row-6 .bee-col-1 .bee-block-1 a {
+			color: #7747ff
+		}
+	</style>
+</head>
+
+<body>
+	<div class='bee-page-container'>
+		<div class='bee-row bee-row-1'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:45px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>What is Cashblack?</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-2'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Cashblack is a platform that rewards members with cashback when they shop online with Black-owned businesses. Users register with us, browse for products and services from Black-owned retailers, and when they make a purchase, they receive cashback from the affiliate commissions we receive. They can withdraw the cashback for themselves or donate it to one of our affiliated goodwill causes where we match the donations.</p></div>
+						<div class='container'><p> </p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-3'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w4'></div>
+				<div class='bee-col bee-col-2 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-video'>
+						<div style='padding:75% 0 0 0;position:relative;'><iframe allow='fullscreen' allowfullscreen='' frameborder='0' src='https://www.youtube.com/embed/6gg9XakM7xE?controls=0' style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-3 bee-col-w4'></div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-4'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>Founded in 2020, the need for financial and socio-economic empowerment within the Black community was never more apparent - both globally and in the United Kingdom. Cashblack aims to benefit both the Black community and society as a whole by decreasing the racial wealth gap through the promotion of Black-owned businesses and the provision of funds back to consumers of these businesses through cashback.</p></div>
+						<div class='container'><p> </p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-5'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:45px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>How Did Cashblack Start?</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-6'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Cashblack was founded by Matthew, Jonathan, and Nicholas Addai – three brothers from St. Albans, Hertfordshire who came up with the idea in 2020. During that summer’s global anti-racism movement, it became clear to the wider population that there was a direct correlation between socioeconomic issues faced by Black people throughout the world and the lack of support for Black-owned businesses. We felt that a way to address these issues would be to incentivize patronage in Black-owned businesses and have the Black-owned businesses reinvest back into consumers.</p></div>
+						<div class='container'><p>“<strong>How about a cashback website?</strong>” we thought.</p></div>
+						<div class='container'><p>“<strong>A cashback website - for Black-owned businesses.</strong>”</p></div>
+						<div class='container'><p>“<strong>Why don’t we call it – ‘CASHBLACK’</strong>?”</p></div>
+						<div class='container'><p>And what started off as a play on words is now our platform for supporting your support of Black-owned businesses.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/Photokako-print-AI6iGybjyRJP4Qf6.png' style='max-width:500px;'></div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-7'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:45px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'>Why is it Important to Support Black-Owned Businesses? </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/pexels-markus-spiske-2990644%20%281%29.jpg' style='max-width:600px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p>Socio-economic issues and the lack of support for Black-owned businesses are directly correlated. Many issues that impact the Black community and, thus, society as a whole, stem from socio-economic issues. We believe that many of these <strong>social</strong> and <strong>economic</strong> issues can be overcome through the support of such enterprises.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-8'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:45px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Social</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-9'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Underrepresentation</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth bee-fullwidthOnMobile' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/Underrepresentation.jpg' style='max-width:500px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><em>White males make up 62% of boards and occupy 83.8% of executive directorship while male BAMEs 6% and female BAMEs 3.8%. (The DiversityQ FTSE 100 Board Diversity Report, 2020)</em></p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p><em>Over a 16-year period, nearly 30% of the UK Black population had thought about setting up or operating a business venture, nearly twice the level of the non-ethnic population. However, only 3% had actually gone ahead with their plans. (Federation Small Businesses, 2020)</em></p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>Supporting Black-owned businesses has the potential to change the perception of Black people in professional settings, which can lead to more opportunities for both board seats and executive roles at major organizations. Additionally, the 27% of the Black population in the UK that had only thought about starting a business without pursuing it any further would be encouraged with more trailblazers in their demographic to inspire them.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-10'>
+			<div class='bee-row-content reverse'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>Although it may not be feasible to stop racial profiling and potential harassment from law enforcement by business support alone, the support of Black-owned businesses can provide legitimate opportunities for start-up founders who may have otherwise used their entrepreneurial acumen on illegal enterprising activities. Additionally, job opportunities for potential candidates who may have otherwise found difficulty in securing employment due to their personal circumstances would be improved as would the decline in re-offender rates with stable and fulfilling employment.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Crime</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/crime.png' style='max-width:350px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><em>Black people are over 3 times as likely to be arrested as white people. In 2019, there were 32 arrests for every 1,000 Black people, and 10 arrests for every 1,000 White people. (ONS, 2020)<br /><br /></em><em>While Black people account for just 3% of the UK population, they make up 12% of people in prison. (The Lammy Review, 2018)</em></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-11'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Racial Disharmony</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/racial%20disharmony.png' style='max-width:350px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><em>95% of young Black people have witnessed racist language at school. (YMCA, 2020)<br /><br /></em><em>70% of ethnic minority workers said that they have experienced racial harassment at work in the last five years and around 60% said that they had been subjected to unfair treatment by their employer because of their race. (Trade Union Congress, 2019)</em></p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>Supporting Black-owned businesses has the potential to change the perception of Black people in professional settings, which can lead to more opportunities for both board seats and executive roles at major organizations. Additionally, the 27% of the Black population in the UK that had only thought about starting a business without pursuing it any further would be encouraged with more trailblazers in their demographic to inspire them.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-12'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:45px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Economical</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-13'>
+			<div class='bee-row-content reverse'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>The support of Black-owned businesses creates further opportunities for the Black community to increase their quality of life. This can be achieved through an increase in income to lessen the current inequality in earnings and the wealth disparity relative to other ethnic groups. Additionally, as much of this wealth in other communities is mostly made up of housing and private pensions, the creation of generational wealth can be encouraged with the aim of providing a better life for future generations.</p></div>
+						<div class='container'><p> </p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Racial Wealth Gap</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/Racial%20Wealth%20Gap.png' style='max-width:350px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><em>Black, Asian and ethnic minority employees are losing out on £3.2bn a year in wages compared to white colleagues doing the same work. (The Resolution Foundation, 2018)<br /><br /></em><em>The median Black Caribbean and Black African households were worth £89,000 and £24,000 respectively in the middle of the past decade compared to £282,000 for a white British household, and £266,000 for an Indian household, mostly made up of housing and private pensions. Black African and Bangladeshi households had the lowest of just £24,000 and £22,000, respectively. (ONS, 2020) </em></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-14'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Unemployment</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/Unemployment.jpg' style='max-width:350px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><em>In the UK, 8% of Black people are unemployed – the highest rate of all ethnic groups – twice that of white people at 4%. (ONS, 2021)<br /><br /></em><em>Black, Asian and ethnic minority university graduates are two and a half times more likely to be unemployed than their white peers. Research shows that although the overall unemployment rate for white graduates is 2.3%, this rises to 5.9% for BAME graduates. (Trade Union Congress, 2016)</em></p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>It’s a fair summation that “more support for Black-owned businesses means less Black unemployment” due to the obvious increase in opportunities available for both future business owners and future employees. </p></div>
+						<p id='cookieNotice'></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-15'>
+			<div class='bee-row-content reverse'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p> </p></div>
+						<div class='container'><p> </p></div>
+						<div class='container'><p>With increased visibility of Black-owned businesses, it is likely that assumed creditworthiness of these businesses will increase thus helping businesses that would otherwise have found loans harder to come by.<br />Particularly with the uncertainty of Brexit and the associated issues with exporting, it is likely that Black business owners will have to become more innovative and creative in their operations to ensure that they are not impacted too harshly by an increase in export costs and may seek to increase domestic activity which, in turn, affects the UK economy.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>The Economy</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/The%20Economy%20%282%29.jpg' style='max-width:350px;'></div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><em>Even when Black-owned businesses had an overdraft, the interest rate was 2.12 percentage points higher than for White-owned businesses, and that Black-owned businesses were 14.4 per cent more likely to be rejected for a long-term loan. (Warwick Business School, 2012)<br /><br /></em><em>Ethnic minority business owners were more likely to export than non EMB owners in every region. (FSB, 2020)</em></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-16'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>We believe that Cashblack satisfies the demands of our target audience:</p></div>
+						<div class='container'><p>People want “cash” – as evidenced by the economic effects of the post-pandemic global recession, a rise in unemployment and an increased interest in trading and investing among the masses.</p></div>
+						<div class='container'><p>People want to support the “Black” community – as evidenced by the global anti-racism protests, social justice initiatives from major corporations, and increased efforts from governments to end racism.</p></div>
+						<div class='container'><p>More than just in the name, we believe the proposition of “Cashblack” goes far and beyond fulfilling both of these needs and will make every attempt to do so.</p></div>
+						<div class='container'><p> </p></div>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://5859ec6a22.imgdist.com/public/users/Integrators/BeeProAgency/1013764_998648/Cashblack%20Full%20logo%20with%20slogan.png' style='max-width:280px;'></div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-17'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-icons'>
+						<div class='bee-icon bee-icon-last'>
+							<div class='bee-content'>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /wp:html -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
+7,FAQs,faqs,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:html -->
+<section class='section'>
+        <div class='container animate__fadeInUp wow' style='visibility: visible; animation-name: fadeInUp;'>
+            <div class='section-title-wrap text-center'>
+                <h2 class='section-title'>Frequently Asked Questions</h2>
+            </div>
+
+
+            <div class='accordion' id='accordionExample'>
+                                       <div class='accordion-item'>
+                           <h2 class='accordion-header' id='heading1'>
+                               <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse1' aria-expanded='true' aria-controls='collapse1'>New to Cashblack</button>
+                           </h2>
+                                                              <div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>What is Cashblack </u></strong><p style='font-size: 1rem;'>Cashblack is a platform that rewards our members with cashback when they shop online with Black-owned businesses.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>How does cashback work? </u></strong><p style='font-size: 1rem;'>To use Cashblack, simply sign up for an account, browse our selection of Black-owned businesses, and click through to the retailer’s website to make your purchase. Once your purchase is confirmed by the business, we will credit your Cashblack account with the cashback you have earned.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How does Cashblack make money?</u></strong><p style='font-size: 1rem;'>Cashblack makes money from the affiliate commissions we receive from our retail partners. Our retail partners reward us with commissions for the sales we generate through our platform and we share those commissions with our members as cashback.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How do I shop through Cashblack?
+
+</u></strong><p style='font-size: 1rem;'>To shop through Cashblack, simply log in to your Cashblack account, browse our selection of Black-owned businesses, and click through to the business\'s website to make your purchase. Remember to make sure you are logged in and that you click through to the business\'s website from our platform so that we can track your purchase and credit your cashback.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How much cashback will I get?</u></strong>
+
+<p style='font-size: 1rem;'>The amount of cashback you will receive varies depending on the business and the offer at the time of purchase. We work with our partner businesses to offer competitive cashback rates to our members.
+</p>
+                                       </div>
+                                   </div>
+                                                       <div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How do I find products, services or retailers on Cashblack?
+
+</u></strong>
+
+<p style='font-size: 1rem;'>You can browse our selection of Black-owned businesses by category or by using our search bar. If you are looking for a specific business, you can also search for it using our search bar.
+
+</p>
+                                       </div>
+                                   </div><div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>When will I receive the bonus I was offered for joining Cashblack?
+</u></strong>
+
+<p style='font-size: 1rem;'>If you were offered a bonus for joining Cashblack, it will be credited to your account once you make your first purchase through our platform.
+
+</p>
+                                       </div>
+                                   </div><div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>Is Cashback Guaranteed?</u></strong>
+
+<p style='font-size: 1rem;'>We work hard to ensure that our members receive the cashback they are owed for their purchases. However, there may be cases where cashback is not credited due to technical issues or issues with the partner business. In these cases, we will work with our members and partner businesses to resolve the issue and credit the cashback if possible.
+</p>
+                                       </div>
+                                   </div><div id='collapse1' class='accordion-collapse collapse show' aria-labelledby='heading1e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How can I get support?</u></strong>
+
+<p style='font-size: 1rem;'>If you need support or have any questions, you can contact our customer support team through our website or by emailing <a href='mailto:support@cashblack.com.' style='color: #0d6efd;'>here.</a> We are here to help and will do our best to assist you with any issues or questions you may have.</p>
+
+                                       </div>
+                                   </div></div>
+                                           <div class='accordion-item'>
+                           <h2 class='accordion-header' id='heading2'>
+                               <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse2' aria-expanded='false' aria-controls='collapse2'>Cashblack Features</button>
+                           </h2>
+                                                              <div id='collapse2' class='accordion-collapse collapse' aria-labelledby='heading2e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>What is the Cashblack A.F.R.O.B.O.T</u></strong><p style='font-size: 1rem;'>The Cashblack A.F.R.O.B.O.T is Cashblack’s Algorithm For Redirection Of Black-Owned Traffic. It is our intuitive browser extension for Chrome, Firefox and Safari that redirects users from their usual big name retail partners to our Black-owned retail partners. You can find out more information about it <a href='https://soon.cashblack.com/pages/extensions' style='color: #0d6efd;'>here.</a>
+</p></div>
+                                   </div>
+                                                                   <div id='collapse2' class='accordion-collapse collapse' aria-labelledby='heading2e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>What is Cashblack Giveback?</u></strong><p style='font-size: 1rem;'>Cashblack Giveback is our charitable initiative to support our affiliated goodwill causes by promoting them across our platform, encouraging our members to get involved with their activities and by supporting donations towards them through the affiliate commissions we receive. You can find out more <a href='https://soon.cashblack.com/charities' style='color: #0d6efd;'>here.</a>
+</p></div>
+                                   </div>
+
+
+                                                                   <div id='collapse2' class='accordion-collapse collapse' aria-labelledby='heading2e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>What is the Cashblack Mobile App?
+
+</u></strong>
+
+<p style='font-size: 1rem;'>Cashblack is available on iOS and Android devices where you can enjoy all the great features of the Cashblack website but with extra exclusive benefits and bonuses reserved for for members with the app. Find out more information <a href='https://soon.cashblack.com/pages/apps' style='color: #0d6efd;'>here.</a>
+
+
+</p>
+                                       </div>
+                                   </div>
+                                                       <div id='collapse2' class='accordion-collapse collapse' aria-labelledby='heading2e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>What is Cashblack To Your Door?
+</u></strong>
+
+<p style='font-size: 1rem;'>Cashblack To Your Door is our restaurant and takeaway delivery feature that allows our members to order from Black-owned takeaway providers on their favourite delivery apps through Cashblack. We currently work with Deliveroo, Uber Eats and Just Eat to host all of their Black-owned food vendors for our members to discover them locally and order from them. Find out more <a href='https://soon.cashblack.com/categories/cashblack-to-your-door' style='color: #0d6efd;'>here.</a>
+</p>
+                                       </div>
+                                   </div></div>
+                                           <div class='accordion-item'>
+                           <h2 class='accordion-header' id='heading3'>
+                               <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse3' aria-expanded='false' aria-controls='collapse3'>'Black-Owned'?</button>
+                           </h2>
+                                                              <div id='collapse3' class='accordion-collapse collapse' aria-labelledby='heading3e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>Why is cashback only offered for Black-owned businesses?</u></strong><p style='font-size: 1rem;'>Cashblack was established after years of research and development found that there was a direct correlation between the socioeconomic impacts of racism and the lack of support for Black-owned businesses. We found that the most effective way to combat this issue was to create a way to incentivize patronage in these businesses and have the retailers invest back into the patrons. As such, the retailers on Cashblack are all businesses who identify as “Black-owned” but we welcome everyone to join Cashblack to support our support of Black-owned businesses.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse3' class='accordion-collapse collapse' aria-labelledby='heading3e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>What does Cashblack define as a Black-owned business?
+
+</u></strong><p style='font-size: 1rem;'>Cashblack’s definition of Black-owned allows its retail partners to identify as such.
+
+</p></div>
+                                   </div>
+
+
+
+                                                       <div id='collapse3' class='accordion-collapse collapse' aria-labelledby='heading3e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>Can anyone join Cashblack?
+
+</u></strong>
+
+<p style='font-size: 1rem;'>Cashblack is open to everyone over 18 years of age.
+
+</p>
+                                       </div>
+                                   </div></div>
+                                           <div class='accordion-item'>
+                           <h2 class='accordion-header' id='heading4'>
+                               <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse4' aria-expanded='false' aria-controls='collapse4'>Your Cashback</button>
+                           </h2>
+                                                              <div id='collapse4' class='accordion-collapse collapse' aria-labelledby='heading4e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>How long do I have to wait to receive my cashback?</u></strong><p style='font-size: 1rem;'>The time it takes to receive your cashback may vary depending on the retailer and their terms and conditions. Some retailers may provide cashback within a few days of purchase, while others may take several weeks or even months. Cashblack strives to provide timely and accurate information about when you can expect to receive your cashback, but we recommend checking the retailer\'s terms and conditions for more specific information. In general, cashback will be credited to your Cashblack account once it has been approved by the retailer.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse4' class='accordion-collapse collapse' aria-labelledby='heading4e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>How do I withdraw cashback?</u></strong><p style='font-size: 1rem;'>You can withdraw your cashback through a bank transfer, PayPal, gift cards or by donating to one of our affiliated goodwill causes.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse4' class='accordion-collapse collapse' aria-labelledby='heading4e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>What do the different cashback states mean?</u></strong><p style='font-size: 1rem;'><span style='
+    font-weight: 600;
+'>Pending:</span> These are the transactions tracked by Cashblack and awaiting confirmation from the retailer.
+
+
+</p><p style='font-size: 1rem;'><span style='
+    font-weight: 600;
+'>Confirmed:</span>
+These are the transactions that have been confirmed by the retailer and are now awaiting payment from the retailer
+
+
+</p><p style='font-size: 1rem;'><span style='
+    font-weight: 600;
+'>Processing:</span>
+ These are the transactions in process of of being withdrawn or donated.
+
+
+</p><p style='font-size: 1rem;'><span style='
+    font-weight: 600;
+'>Total:</span> This is the total lifetime sum of all your debit and credit amounts for your account.
+</p></div>
+                                   </div>
+                                                                   <div id='collapse4' class='accordion-collapse collapse' aria-labelledby='heading4e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How can I ensure that I correctly receive my cashback?
+</u></strong><p style='font-size: 1rem;'>Tracking can be affected by your browser settings. Please ensure that you have enabled cookies and pop-ups and remember that if your browser has recently undergone an update, you’ll need to check that these are still enabled, as updates may cause them to disable.
+
+
+</p><br>
+<p style='font-size: 1rem;'>If you're still having an issue, please review the following checklist to ensure your browser is setup correctly:
+
+</p><p style='font-size: 1rem;'>Turn off your pop-up blocker/ad-blocker.
+
+</p><p style='font-size: 1rem;'>Ensure JavaScript is enabled in your browser.
+
+</p><p style='font-size: 1rem;'>Ensure cookie tracking is enabled on your firewall.
+</p><p style='font-size: 1rem;'>Try to use a dedicated browser for shopping rather than incognito or private browsing.
+Avoid using other voucher codes
+
+</p><p style='font-size: 1rem;'>Avoid using  saved quotes or previously saved shopping carts.
+
+</p><p style='font-size: 1rem;'>Don't open too many website tabs in the same browser.
+
+</p><p style='font-size: 1rem;'>Try to complete your purchase in a timely manner after clicking “Get Cashback”
+
+</p><p style='font-size: 1rem;'>Avoiding combining products with different rates of cashback in the same purchase as retailers track everything at the lower rate.
+</p></div>
+                                   </div>
+                                                                   <div id='collapse4' class='accordion-collapse collapse' aria-labelledby='heading4e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>What happens if I don’t receive my cashback?
+
+</u></strong>
+
+<p style='font-size: 1rem;'>If you find that there is a problem with your cashback, please open a ticket with us <a href='https://soon.cashblack.com/account/tickets/create' style='color: #0d6efd;'>here
+</a> and we will aim to resolve the issue as soon as possible,
+
+</p>
+                                       </div>
+                                   </div>
+                                                       <div id='collapse4' class='accordion-collapse collapse' aria-labelledby='heading4e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>What happens if there is a problem with my order?
+
+</u></strong>
+
+<p style='font-size: 1rem;'>As Cashblack only deals with the cashback you are due to receive on your purchases, all other issues regarding your order are the responsibility of the retailer who should be contacted directly.
+</p>
+                                       </div>
+                                   </div></div>
+                                <div class='accordion-item'>
+                           <h2 class='accordion-header' id='heading5'>
+                               <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse5' aria-expanded='false' aria-controls='collapse5'>Working with Cashblack</button>
+                           </h2>
+                                                              <div id='collapse5' class='accordion-collapse collapse' aria-labelledby='heading5e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>How can I get my company onto Cashblack?</u></strong><p style='font-size: 1rem;'>All information on applying to have your business on Cashblack can be found <a href='https://soon.cashblack.com/pages/work-with-us' style='color: #0d6efd;'>here
+</a>.
+
+</p></div>
+                                   </div>
+                                                                   <div id='collapse5' class='accordion-collapse collapse' aria-labelledby='heading5e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong> <u>Can my business work with Cashblack?</u></strong><p style='font-size: 1rem;'>Cashblack only offers on cashback on retail partners who identify as Black-owned. However, we have many strategic partnerships with a range of other businesses such as Uber Eats, Just Eat, Deliveroo and Etsy. For more information on working with Cashblack, please visit our <a href='https://soon.cashblack.com/pages/work-with-us' style='color: #0d6efd;'>here
+</a>.
+</p></div>
+                                   </div>
+                                                                   <div id='collapse5' class='accordion-collapse collapse' aria-labelledby='heading5e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How much does it cost to have my store on Cashblack?</u></strong><p style='font-size: 1rem;'>We have a range of options for eligible retailers starting from free of charge. Please visit <a href='https://soon.cashblack.com/pages/work-with-us' style='color: #0d6efd;'>here
+</a> for more information
+</p></div>
+                                   </div>
+
+                                                                   <div id='collapse5' class='accordion-collapse collapse' aria-labelledby='heading5e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>Can I customise the cashback rewards offered to my customers?
+</u></strong>
+
+<p style='font-size: 1rem;'>Yes, you can customise the cashback rewards offered to your customers. We work with you to determine the best rewards program for your business and your customers.</p>
+                                       </div>
+                                   </div>
+                                                       <div id='collapse5' class='accordion-collapse collapse' aria-labelledby='heading5e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How much does it cost to add my business to Cashblack?
+
+</u></strong>
+
+<p style='font-size: 1rem;'>There is no cost to add your business to Cashblack. We offer this service free of charge to all eligible businesses.
+
+</p>
+                                       </div>
+                                   </div><div id='collapse5' class='accordion-collapse collapse' aria-labelledby='heading5e' data-bs-parent='#accordionExample' style=''>
+                                       <div class='accordion-body'>
+                                           <strong><u>How does Cashblack pay out cashback to my customers?
+</u></strong>
+
+<p style='font-size: 1rem;'>Cashback is paid out to your customers through our secure online platform. Customers can request a payout once they have earned a minimum amount of cashback. Once the payout is requested, the funds will be transferred directly to the customer’s designated account.
+</p>
+                                       </div>
+                                   </div></div></div>
+
+        </div>
+    </section>
+<!-- /wp:html -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
 8,Blogs,blogs,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[blog-list]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
 9,Mobile App,apps,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-10,Cashblack A.F.R.O.B.O.T,extensions,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-11,Contact Us,contact,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><div class="container"><div class="row"><div class="col-md-6 pe-sm-0 pt-5"></div><div class="col-md-6 pe-sm-0">[contact-form]</div></div></div>",,,,,Cashback is here to support you supporting Black-owned businesses.
-12,Work With Us,work-with-us,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
+10,Cashblack A.F.R.O.B.O.T,extensions,special,active,"<!-- wp:paragraph <!-- wp:html -->
+<style> .bee-image img,.bee-video a,.bee-video img{display:block;width:100%}.bee-row-content{position:relative;max-width:1000px;margin:0 auto;display:flex}.bee-row-1,.bee-row-2,.bee-row-3,.bee-row-4,.bee-row-5{background-repeat:no-repeat}body{background-color:#fff;color:#000;font-family:Lato,Tahoma,Verdana,Segoe,sans-serif}.bee-row-2 .bee-col-1 .bee-block-1 a,.bee-row-3 .bee-col-1 .bee-block-3 a,.bee-row-3 .bee-col-2 .bee-block-3 a,.bee-row-3 .bee-col-3 .bee-block-2 a,.bee-row-4 .bee-col-1 .bee-block-2 a,.bee-row-4 .bee-col-2 .bee-block-2 a,.bee-row-4 .bee-col-3 .bee-block-2 a,a{color:#3baa34}*{box-sizing:border-box}body,h1,p{margin:0}.bee-row-content .bee-col-w4{flex-basis:33%}.bee-row-content .bee-col-w6{flex-basis:50%}.bee-divider,.bee-image{overflow:auto}.bee-divider .center,.bee-image .bee-center{margin:0 auto}.bee-row-1 .bee-col-1 .bee-block-1,.bee-row-2 .bee-col-2 .bee-block-1,.bee-row-3 .bee-col-1 .bee-block-1,.bee-row-3 .bee-col-2 .bee-block-1,.bee-row-3 .bee-col-3 .bee-block-1,.bee-row-4 .bee-col-1 .bee-block-1,.bee-row-4 .bee-col-2 .bee-block-1,.bee-row-4 .bee-col-3 .bee-block-1,.bee-row-5 .bee-col-1 .bee-block-1{width:100%}.bee-icon{display:inline-block;vertical-align:middle}.bee-icon .bee-content{display:flex;align-items:center}.bee-paragraph{overflow-wrap:anywhere}.bee-video a{position:relative;height:100%}.bee-video img{height:auto}@media (max-width:768px){.bee-row-content:not(.no_stack){display:block}}.bee-row-1 .bee-row-content,.bee-row-2 .bee-row-content,.bee-row-3 .bee-row-content,.bee-row-4 .bee-row-content,.bee-row-5 .bee-row-content{background-repeat:no-repeat;border-radius:0;color:#000}.bee-row-1 .bee-col-1,.bee-row-1 .bee-col-2,.bee-row-2 .bee-col-1,.bee-row-2 .bee-col-2,.bee-row-3 .bee-col-1,.bee-row-3 .bee-col-2,.bee-row-3 .bee-col-3,.bee-row-4 .bee-col-1,.bee-row-4 .bee-col-2,.bee-row-4 .bee-col-3,.bee-row-5 .bee-col-1,.bee-row-5 .bee-col-2{padding-bottom:5px;padding-top:5px}.bee-row-1 .bee-col-2 .bee-block-1{padding:10px;text-align:center;width:100%}.bee-row-1 .bee-col-2 .bee-block-2,.bee-row-5 .bee-col-1 .bee-block-2{color:#000;font-family:inherit;font-size:14px;font-weight:400;text-align:center}.bee-row-2 .bee-col-1 .bee-block-1,.bee-row-3 .bee-col-1 .bee-block-3,.bee-row-3 .bee-col-2 .bee-block-3,.bee-row-5 .bee-col-2 .bee-block-1{color:#101112;direction:ltr;font-weight:400;letter-spacing:0;line-height:120%}.bee-row-3,.bee-row-4{background-color:#f0f0f0}.bee-row-3 .bee-col-1 .bee-block-2,.bee-row-3 .bee-col-1 .bee-block-3,.bee-row-3 .bee-col-2 .bee-block-2,.bee-row-3 .bee-col-2 .bee-block-3{padding:10px}.bee-row-2 .bee-col-1 .bee-block-1{padding:10px;font-size:25px;text-align:justify}.bee-row-2 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-3 .bee-col-1 .bee-block-3 p:not(:last-child),.bee-row-3 .bee-col-2 .bee-block-3 p:not(:last-child),.bee-row-3 .bee-col-3 .bee-block-2 p:not(:last-child),.bee-row-4 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-4 .bee-col-2 .bee-block-2 p:not(:last-child),.bee-row-4 .bee-col-3 .bee-block-2 p:not(:last-child),.bee-row-5 .bee-col-2 .bee-block-1 p:not(:last-child){margin-bottom:16px}.bee-row-1 .bee-col-2 .bee-block-2 .bee-icon-image,.bee-row-5 .bee-col-1 .bee-block-2 .bee-icon-image{padding:5px}.bee-row-1 .bee-col-2 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,.bee-row-5 .bee-col-1 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content{margin-left:0}.bee-row-1 .bee-col-2 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content{margin-right:0}.bee-row-3 .bee-col-1 .bee-block-3,.bee-row-3 .bee-col-2 .bee-block-3{font-size:16px;text-align:left}.bee-row-3 .bee-col-3 .bee-block-2,.bee-row-4 .bee-col-1 .bee-block-2,.bee-row-4 .bee-col-2 .bee-block-2,.bee-row-4 .bee-col-3 .bee-block-2{padding:10px;color:#101112;direction:ltr;font-size:16px;font-weight:400;letter-spacing:0;line-height:120%;text-align:left}.bee-row-5 .bee-col-1 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content{margin-right:0}.bee-row-5 .bee-col-2 .bee-block-1{padding:10px;font-size:25px;text-align:left}.bee-row-5 .bee-col-2 .bee-block-1 a{color:#7747ff} </style>
+	<div class='bee-page-container'>
+		<div class='bee-row bee-row-1'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/Cashblack%20A.F.R.O.B.O.T%20banner.jpg' style='max-width:500px;'></div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Add the Cashblack A.F.R.O.B.O.T. <br />to Your Browser</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-icons'>
+						<div class='bee-icon bee-icon-first'>
+							<div class='bee-content'>
+                              <div class='bee-icon-image'>    <div title='Click here to add to you browser'><a href='https://chrome.google.com/webstore/detail/cashblack-afrobot/idalikdehmnkfjnhkmnedfpmihdllegb'><img height='62px'  src='https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/chrome.png' width='auto'></a>
+    </div></div>
+							</div>
+						</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-2'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>The Cashblack A.F.R.O.B.O.T is our Algorithm For Redirection Of Black-Owned Traffic. Our browser extension uses a bespoke algorithm and cutting-edge artificial intelligence to learn how you usually shop and help you find and purchase those same goods and services at Black-owned retailers.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-video'>
+						<div style='padding:75% 0 0 0;position:relative;'><iframe allow='fullscreen' allowfullscreen='' frameborder='0' src='https://www.youtube.com/embed/6aGsNU19ISk?controls=0' style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-3'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/screely-1695741679237.png' style='max-width:333px;'></div>
+					<div class='bee-block bee-block-2 bee-divider'>
+						<div class='center bee-separator' style='border-top:17px solid #FFFFFF;width:100%;'></div>
+					</div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><strong>Add to Your Browser</strong></p></div>
+						<div class='container'><p>Add the Cashblack A.F.R.O.B.O.T browser extension for Google Chrome</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/screely-1695741719585.png' style='max-width:333px;'></div>
+					<div class='bee-block bee-block-2 bee-divider'>
+						<div class='center bee-separator' style='border-top:4px solid #FFFFFF;width:100%;'></div>
+					</div>
+					<div class='bee-block bee-block-3 bee-paragraph'>
+						<div class='container'><p><strong>Find Search Result Alternatives</strong></p></div>
+						<div class='container'><p>Receive suggestions for Black-owned alternatives in your search results.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-3 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/screely-1695741764997.png' style='max-width:333px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Find Website Alternatives</strong></p></div>
+						<div class='container'><p>Or visit ecommerce websites and get notified of stores selling similar goods or services.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-4'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/screely-1695741836585.png' style='max-width:333px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><span style='font-family: inherit; background-color: transparent;'><strong>Select Your Store </strong></span></p></div>
+						<div class='container'><p><span style='font-family: inherit; background-color: transparent;'>Click on the results suggestions or on the A.F.R.O.B.O.T icon to browse retailers.</span></p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/screely-1695741891191.png' style='max-width:333px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Make Your Purchase</strong></p></div>
+						<div class='container'><p>Select your store and desired offer to be taken to the retailer’s website.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-3 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/screely-1695741950316.png' style='max-width:333px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Earn Your Cashback</strong></p></div>
+						<div class='container'><p>Earn your cashback to spend or donate however you wish.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-5'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/Afrobot%20without%20browser.png' style='max-width:375px;'></div>
+					<div class='bee-block bee-block-2 bee-icons'>
+						<div class='bee-icon bee-icon-first'>
+							<div class='bee-content'>
+								<div class='bee-icon-image'>    <div title='Click here to add to you browser'><a href='https://chrome.google.com/webstore/detail/cashblack-afrobot/idalikdehmnkfjnhkmnedfpmihdllegb'><img height='62px'  src='https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/chrome.png' width='auto'></a>
+    </div></div>
+							</div>
+						</div>
+						</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Add the extension to your browser and unlock a new shopping experience with Cashblack A.F.R.O.B.O.T</p></div>
+						<div class='container'><p>Say goodbye to your usual multinational brands and let our AI-powered browser extension guide you towards our exceptional Black-owned retail partners where you not only support minority businesses but also earn cashback your purchases.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /wp:html --><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
+11,Contact Us,contact,system,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><!-- wp:html --><div class='container'><div class='row'><div class='col-md-6 pe-sm-0 pt-5'><p>We\'d love to hear from you and to ensure you get a timely response, feel free to reach out to us at the following addresses:<br><br>For more information on Cashblack and all general enquiries, contact us at <a href='mailto:info@cashblack.com/'>info@cashblack.com</a><br><br>For help with your account, contact us at <a href='mailto:support@cashblack.com/'>support@cashblack.com</a><br><br>For partnership and collaboration enquiries, contact us at <a href='mailto:partners@cashblack.com/'>partners@cashblack.com</a><br><br>For employment opportunities, contact us at <a href='mailto:jobs@cashblack.com/'>jobs@cashblack.com</a><br><br>For queries regarding our restaurants, takeaway vendors and grocery store services, contact us at<a href='mailto:toyourdoor@cashblack.com/'>toyourdoor@cashblack.com</a><br><br></p></div><div class='col-md-6 pe-sm-0'>[contact-form]</div></div></div><!-- /wp:html -->",,,,,Cashback is here to support you supporting Black-owned businesses.
+12,Work With Us,work-with-us,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->
+<!-- wp:html -->
+	<style> .bee-row-content{position:relative;max-width:1000px;margin:0 auto;display:flex}body{background-color:#fff;color:#000;font-family:Mulish,Helvetica,sans-serif}.bee-row-1 .bee-col-1 .bee-block-2 a,.bee-row-10 .bee-col-1 .bee-block-1 a,.bee-row-12 .bee-col-1 .bee-block-1 a,.bee-row-14 .bee-col-1 .bee-block-2 a,.bee-row-14 .bee-col-2 .bee-block-2 a,.bee-row-15 .bee-col-1 .bee-block-1 a,.bee-row-3 .bee-col-1 .bee-block-1 a,.bee-row-4 .bee-col-1 .bee-block-2 a,.bee-row-4 .bee-col-2 .bee-block-2 a,.bee-row-4 .bee-col-3 .bee-block-2 a,.bee-row-5 .bee-col-1 .bee-block-2 a,.bee-row-5 .bee-col-2 .bee-block-2 a,.bee-row-5 .bee-col-3 .bee-block-2 a,.bee-row-6 .bee-col-1 .bee-block-2 a,.bee-row-6 .bee-col-2 .bee-block-2 a,.bee-row-6 .bee-col-3 .bee-block-2 a,.bee-row-8 .bee-col-1 .bee-block-1 a,.bee-row-9 .bee-col-1 .bee-block-1 a,.bee-row-9 .bee-col-2 .bee-block-2 a,a{color:#3baa34}*{box-sizing:border-box}body,h1,p{margin:0}.bee-row-content .bee-col-w4{flex-basis:33%}.bee-row-content .bee-col-w6{flex-basis:50%}.bee-row-content .bee-col-w12{flex-basis:100%}.bee-image{overflow:auto}.bee-image .bee-center{margin:0 auto}.bee-row-11 .bee-col-2 .bee-block-1,.bee-row-14 .bee-col-1 .bee-block-1,.bee-row-14 .bee-col-2 .bee-block-1,.bee-row-16 .bee-col-1 .bee-block-2,.bee-row-16 .bee-col-2 .bee-block-1,.bee-row-4 .bee-col-1 .bee-block-1,.bee-row-4 .bee-col-2 .bee-block-1,.bee-row-4 .bee-col-3 .bee-block-1,.bee-row-5 .bee-col-1 .bee-block-1,.bee-row-5 .bee-col-2 .bee-block-1,.bee-row-5 .bee-col-3 .bee-block-1,.bee-row-6 .bee-col-1 .bee-block-1,.bee-row-6 .bee-col-2 .bee-block-1,.bee-row-6 .bee-col-3 .bee-block-1,.bee-row-9 .bee-col-2 .bee-block-1{width:100%}.bee-image img{display:block;width:100%}.bee-paragraph{overflow-wrap:anywhere}@media (max-width:768px){.bee-row-content:not(.no_stack){display:block}}.bee-row-1,.bee-row-16{background-repeat:no-repeat}.bee-row-1 .bee-row-content{background-repeat:no-repeat;color:#000}.bee-row-1 .bee-col-1,.bee-row-10 .bee-col-1,.bee-row-11 .bee-col-1,.bee-row-11 .bee-col-2,.bee-row-12 .bee-col-1,.bee-row-13 .bee-col-1,.bee-row-13 .bee-col-2,.bee-row-14 .bee-col-1,.bee-row-14 .bee-col-2,.bee-row-15 .bee-col-1,.bee-row-16 .bee-col-1,.bee-row-16 .bee-col-2,.bee-row-2 .bee-col-1,.bee-row-3 .bee-col-1,.bee-row-4 .bee-col-1,.bee-row-4 .bee-col-2,.bee-row-4 .bee-col-3,.bee-row-5 .bee-col-1,.bee-row-5 .bee-col-2,.bee-row-5 .bee-col-3,.bee-row-6 .bee-col-1,.bee-row-6 .bee-col-2,.bee-row-6 .bee-col-3,.bee-row-7 .bee-col-1,.bee-row-8 .bee-col-1,.bee-row-9 .bee-col-1,.bee-row-9 .bee-col-2{padding-bottom:5px;padding-top:5px}.bee-row-1 .bee-col-1 .bee-block-1,.bee-row-16 .bee-col-1 .bee-block-1,.bee-row-2 .bee-col-1 .bee-block-1,.bee-row-7 .bee-col-1 .bee-block-1{padding:10px;text-align:center;width:100%}.bee-row-10,.bee-row-11,.bee-row-2,.bee-row-3,.bee-row-4,.bee-row-5,.bee-row-6{background-color:#f0f0f0;background-repeat:no-repeat}.bee-row-10 .bee-row-content,.bee-row-11 .bee-row-content,.bee-row-12 .bee-row-content,.bee-row-13 .bee-row-content,.bee-row-14 .bee-row-content,.bee-row-15 .bee-row-content,.bee-row-16 .bee-row-content,.bee-row-2 .bee-row-content,.bee-row-3 .bee-row-content,.bee-row-4 .bee-row-content,.bee-row-5 .bee-row-content,.bee-row-6 .bee-row-content,.bee-row-7 .bee-row-content,.bee-row-8 .bee-row-content,.bee-row-9 .bee-row-content{background-repeat:no-repeat;border-radius:0;color:#000}.bee-row-12,.bee-row-13,.bee-row-14,.bee-row-7{background-color:#d0ddd0;background-repeat:no-repeat}.bee-row-15,.bee-row-8,.bee-row-9{background-color:#fff;background-repeat:no-repeat}.bee-row-1 .bee-col-1 .bee-block-2,.bee-row-11 .bee-col-1 .bee-block-1,.bee-row-13 .bee-col-1 .bee-block-1,.bee-row-15 .bee-col-1 .bee-block-1,.bee-row-3 .bee-col-1 .bee-block-1,.bee-row-4 .bee-col-1 .bee-block-2,.bee-row-4 .bee-col-2 .bee-block-2,.bee-row-4 .bee-col-3 .bee-block-2,.bee-row-5 .bee-col-1 .bee-block-2,.bee-row-5 .bee-col-2 .bee-block-2,.bee-row-5 .bee-col-3 .bee-block-2,.bee-row-6 .bee-col-1 .bee-block-2,.bee-row-6 .bee-col-2 .bee-block-2,.bee-row-6 .bee-col-3 .bee-block-2,.bee-row-7 .bee-col-1 .bee-block-2,.bee-row-9 .bee-col-1 .bee-block-1{padding:10px;color:#101112;direction:ltr;font-size:16px;font-weight:400;letter-spacing:0;line-height:120%;text-align:left}.bee-row-1 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-10 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-11 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-12 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-13 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-14 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-14 .bee-col-2 .bee-block-2 p:not(:last-child),.bee-row-15 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-3 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-4 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-4 .bee-col-2 .bee-block-2 p:not(:last-child),.bee-row-4 .bee-col-3 .bee-block-2 p:not(:last-child),.bee-row-5 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-5 .bee-col-2 .bee-block-2 p:not(:last-child),.bee-row-5 .bee-col-3 .bee-block-2 p:not(:last-child),.bee-row-6 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-6 .bee-col-2 .bee-block-2 p:not(:last-child),.bee-row-6 .bee-col-3 .bee-block-2 p:not(:last-child),.bee-row-7 .bee-col-1 .bee-block-2 p:not(:last-child),.bee-row-8 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-9 .bee-col-1 .bee-block-1 p:not(:last-child),.bee-row-9 .bee-col-2 .bee-block-2 p:not(:last-child){margin-bottom:16px}.bee-row-11 .bee-col-1 .bee-block-1 a,.bee-row-13 .bee-col-1 .bee-block-1 a,.bee-row-7 .bee-col-1 .bee-block-2 a{color:#7747ff}.bee-row-10 .bee-col-1 .bee-block-1,.bee-row-12 .bee-col-1 .bee-block-1,.bee-row-8 .bee-col-1 .bee-block-1{padding:10px;color:#101112;direction:ltr;font-size:24px;font-weight:400;letter-spacing:0;line-height:120%;text-align:left}.bee-row-14 .bee-col-1 .bee-block-2,.bee-row-14 .bee-col-2 .bee-block-2,.bee-row-9 .bee-col-2 .bee-block-2{padding:10px;color:#101112;direction:ltr;font-size:16px;font-weight:400;letter-spacing:0;line-height:120%;text-align:center} </style>
+
+	<div class='bee-page-container'>
+		<div class='bee-row bee-row-1'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:Mulish, Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>Work With Us</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p>Joining Cashblack isn't just about increasing your sales; it's about becoming part of a vibrant community, making a positive impact, and turning shopping into a celebration of culture and diversity. Our platform is a win-win for both businesses and shoppers, and we're here to tell you why. Get ready to boost your sales, reach new heights, and make a difference.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-2'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:Mulish, Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>What Do You Get with Cashblack?</span> </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-3'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Our Black-owned retail partners can get a whole host of benefits from working with Cashblack including these below:</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-4'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/596/596092.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Amplify Your Reach:</strong> Leverage our extensive network and marketing expertise to reach a broader audience. Our platform connects you with consumers who actively seek to support Black-owned businesses.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/3211/3211590.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Boost Sales and Revenue:</strong> Statistics show that businesses partnering with affiliate programs experience an average 30% increase in sales. Joining Cashblack can significantly boost your bottom line.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-3 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/3141/3141158.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Affiliate Marketing Success:</strong> Affiliate marketing accounts for 15% of all digital media revenue. By tapping into our affiliate network, you tap into a proven and lucrative channel for growth.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-5'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/7444/7444875.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Cashback Incentives:</strong> Our cashback rewards program motivates customers to make repeat purchases. On average, businesses offering cashback see a 45% increase in customer loyalty.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/10441/10441554.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Community Impact:</strong> By joining Cashblack, you become a part of a larger movement to empower Black-owned businesses. This is an opportunity to inspire change and support your local community.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-3 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/7642/7642775.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Customized Support:</strong> Our team is committed to helping you succeed. We provide tailored guidance and resources to optimize your affiliate marketing strategy.</p></div>
+						<div class='container'><p> </p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-6'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/11782/11782467.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Data-Driven Insights:</strong> Gain valuable insights into customer behavior, preferences, and trends. Use this data to refine your marketing strategies and enhance your products or services.</p></div>
+						<div class='container'><p> </p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/808/808497.png' style='max-width:128px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>Seamless Integration:</strong> Easily integrate Cashblack into your existing e-commerce platform. Our user-friendly system ensures a hassle-free experience</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-3 bee-col-w4'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/Cashblack_AFROBOT_alone-removebg-preview.png' style='max-width:83px;'></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><strong>A.F.R.O.B.O.T Access:</strong> Benefit from major brand retailer traffic getting redirected to your store and from increased traffic from the A.F.R.O.B.O.T query answers on X (Twitter)</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-7'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:Mulish, Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>How Can I Get My Black-Owned Business on Cashblack?</span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p>You can get your business on Cashblack in 3 simple steps</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-8'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p><strong>1. Join an Affiliate Network</strong></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-9'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>On Cashblack, we onboard companies through their affiliate programmes. If you're not already registered to an affiliate network and you would like to get your business in front of our members, you can sign up to our affiliate network sister company <a href='http://www.afrofiliate.com' rel='noopener' style='text-decoration: underline;' target='_blank'>Afrofiliate </a>where you can also be connected with content creators, media houses and other publishers like Cashblack who’ll promote your business to their audiences.</p></div>
+						<div class='container'><p>Plus, you’ll also be able to convert your loyal customers into incentivised brand ambassadors who you’ll be able to help generate their own passive or active income by driving sales for your businesses through your affiliate programme.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><a href='http://www.afrofiliate.com' target='_blank'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/AFROFILIATE%20SLOGAN.png' style='max-width:500px;'></a></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><a href='https://members.afrofiliate.com/advertiser/signup' rel='noopener' style='text-decoration: underline;' target='_blank'>Click here</a> to start an affiliate programme, loyalty plan or brand ambassador scheme for your Black-owned business</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-10'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p><strong>2. Select Your Membership Package</strong></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-11'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Choosing the right membership tier is the first step on your journey with us. We offer three distinct tiers, each tailored to meet your specific needs with additional features available on request.</p></div>
+						<div class='container'><p>Basic: Free. Intended for retailers on popular marketplaces like Etsy, Deliveroo, Uber Eats, Just Eat, and Amazon.<br /><br />Premium: £14.99 per month. 4 offers, social media promotion, priority ranking search results and A.F.R.O.B.O.T browser extension and Twitter bot.<br /><br />Professional: £29.99 per month. Unlimited offers, access to analytic data on their sales and performance, sponsored results across the platform, and features like Cashblack email blasts and blog features.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-autowidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/Cashblack%20prices.jpg' style='max-width:500px;'></div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-12'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p><strong>3. Complete the Application Form</strong></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-13'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Select an option below to fill out an application form for either an online business on restaurant, grocery store or takeaway vendor.</p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'></div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-14'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><a href='https://docs.google.com/forms/d/e/1FAIpQLSd1sWopUuStIYevdIWmCBvdxXCJ-rVqU94rC8FDEr5aVR2PHw/viewform?usp=sf_link' target='_blank'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/679/679746.png' style='max-width:128px;'></a></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><a href='https://docs.google.com/forms/d/e/1FAIpQLSd1sWopUuStIYevdIWmCBvdxXCJ-rVqU94rC8FDEr5aVR2PHw/viewform?usp=sf_link' rel='noopener' style='text-decoration: underline;' target='_blank'>Online Businesses</a></p></div>
+					</div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><a href='https://docs.google.com/forms/d/e/1FAIpQLSePeTtGC9enkGVB-QiXVRAeBhzZdxnuz5lXphp08fSEegj8VA/viewform?usp=sf_link' target='_blank'><img alt='' class='bee-center bee-autowidth' src='https://cdn-icons-png.flaticon.com/128/3208/3208003.png' style='max-width:128px;'></a></div>
+					<div class='bee-block bee-block-2 bee-paragraph'>
+						<div class='container'><p><a href='https://docs.google.com/forms/d/e/1FAIpQLSePeTtGC9enkGVB-QiXVRAeBhzZdxnuz5lXphp08fSEegj8VA/viewform?usp=sf_link' rel='noopener' style='text-decoration: underline;' target='_blank'>Restaurants, Grocery Stores and Takeaway Vendors</a></p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-15'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w12'>
+					<div class='bee-block bee-block-1 bee-paragraph'>
+						<div class='container'><p>Once you've completed the above, please allow us up to a week to respond and we'll look forward to welcoming you onto our platform. If you would like a full overview of everything Cashblack has to offer your business, please view our <a href='https://drive.google.com/file/d/1wluZuBacZixUAYZrNsGLrTNG6PQmY61u/view?usp=drive_link' rel='noopener' style='text-decoration: underline;' target='_blank'>Retail Partnership Presentation</a> or contact us at <a href='mailto:partners@cashblack.com' rel='noopener' style='text-decoration: underline;' target='_blank'>partners@cashblack.com</a>.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bee-row bee-row-16'>
+			<div class='bee-row-content'>
+				<div class='bee-col bee-col-1 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-heading'>
+						<h1 style='color:#000000;direction:ltr;font-family:Mulish, Helvetica, sans-serif;font-size:45px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>See You Soon!<br /></span> </h1>
+					</div>
+					<div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/Cashblack%20Full%20logo%20with%20slogan_1.png' style='max-width:350px;'></div>
+				</div>
+				<div class='bee-col bee-col-2 bee-col-w6'>
+					<div class='bee-block bee-block-1 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/afrobot_wave-removebg-preview.png' style='max-width:225px;'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /wp:html -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
 13,Media Enquiries,media-enquiries,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-14,Terms & Conditions,terms-conditions,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-15,Privacy Policy,privacy-policy,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-16,Cookies Policy,cookies-policy,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
-17,Browser extension policy,browser-extension-policy,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
+14,Terms & Conditions,terms-conditions,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph -->
+<!-- wp:html -->
+<div class='gutenberg__content wp-embed-responsive'>
+<div class='container'><strong><p style='padding-bottom: 20px;'>PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY BEFORE USING THIS SITE</p></strong></div>
+<div class='container'><h5 style='padding-bottom: 20px;'>1. How the Cashblack Platform Operates
+</h5></div>
+<p class='container container container'>Cashblack operates as a platform designed to offer cashback rewards to our members when they engage in online shopping with retailers that identify as 'Black-owned.' By clicking the 'Get Cashback' button to access a retailer featured on www.cashblack.com, we act as an advertising agent or intermediary, directing traffic from our members to these retailers. As a result of this referral service, we receive commission payments from retailers for generating sales through our members. This commission is then shared with our members as 'cashback.' Our primary aim is to provide greater visibility and support to businesses that may otherwise face marginalization. Our long-term objective is to contribute to reducing the racial wealth gap through entrepreneurship and enterprise. To maintain the efficient functioning of our platform, we have established terms and conditions for site membership, which are outlined on this page.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>2. Acceptance of Terms
+</h5></div>
+<div class='container'><p>2.1 By utilizing Cashblack, you affirm your agreement with and acceptance of our terms and conditions. Should you not concur with these terms, you are not authorized to use our platform.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>3. Additional Applicable Terms
+</h5></div>
+<div class='container'><p>3.1 Our terms and conditions encompass supplementary terms that pertain to your utilization of our site:
+</p></div><br>
+<div class='container'><ul><li>Our <a href='https://cashblack.com/pages/privacy-policy'>Privacy Policy</a> which details terms by which we collect and use your personal data. By using Cashblack, you consent to this data processing and permit that the data you provide is accurate to the best of your knowledge.</li><li>Our <a href='https://cashblack.com/pages/cookies-policy'>Cookies Policy</a> which details information about our use of cookies on our platform</li><li>Our <a href='https://cashblack.com/pages/browser-extension-policy'>Browser Extension Policy</a> which details information regarding the Cashblack A.F.R.O.B.O.T.</li></ul></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'> 4. Membership and Platform Usage
+</h5></div>
+<div class='container'><p>4.1 Only one Cashblack account per individual is permitted. Usage of a friend's or family member's Cashblack account is allowed under fair usage, in accordance with Cashblack's definition of 'fair usage.'
+</p></div><br>
+<div class='container'><p>4.2 Cashblack designates the Cashblack account holder as the legal owner of the email address used for Cashblack registration. Cashback rewards acquired by a third party utilizing the account will be credited to the account from which the transactions originated.
+</p></div><br>
+<div class='container'><p>4.3 Cashblack usage is contingent upon the assumption that all requisite authorization has been lawfully obtained from relevant parties. This encompasses personal and professional relationships with the businesses involved.
+</p></div><br>
+<div class='container'><p>4.4 Cashblack reserves the right to refuse account membership and execute account terminations in alignment with our terms and conditions.
+</p></div><br>
+<div class='container'><p>4.5 By registering with Cashblack, you verify that you are at least 18 years of age.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>5. Earning Cashback Rewards
+</h5></div>
+<div class='container'><p>Upon registration and activation of your account, you are ready to begin earning cashback rewards. Further information regarding Cashblack's operations is provided below:
+</p></div>
+<div class='container'><p>5.1 It is crucial to understand that each transaction is conducted directly with the retailer, not with Cashblack. When a Cashblack member makes a purchase through Cashblack with a selected retailer, the transaction is tracked using technology that informs the retailer that a customer has made a purchase. Once the retailer or affiliated network confirms the purchase, it is listed in your Cashblack account as 'Pending.' Upon receipt of the commission from the retailer for the purchase, this will be reflected in your account as 'Payable Cashback.' Subsequently, you can 'Request Cashout' to withdraw your funds, adhering to any withdrawal terms applicable at that time.
+</p></div><br>
+<div class='container'><p>5.2 Cashback rewards will be granted only for transactions that meet the following criteria:
+</p></div><br>
+<div class='container'><p>a) Accessing the retailer through the primary 'Get Cashback' or 'Visit Store' button on the platform. Accessing a retailer's website from Cashblack via an advertisement or alternative link will not activate the tracking necessary for commission acquisition, and consequently, you will not receive cashback.
+</p></div>
+<div class='container'><p>b) Completing your purchasing journey entirely from the point of accessing the retailer through the aforementioned 'Get Cashback' button. Departing from the platform to another website or failing to complete the purchase after this initial click may result in the failure to track the transaction in your account.
+</p></div></p>
+<div class='container'><p>c) Completing a genuine transaction. Cashback is not awarded for repeat purchases, and all transactions through Cashblack must be made for legitimate consumer purposes. By making a purchase through Cashblack, you acknowledge that the retailer holds sole discretion in determining whether a transaction is genuine, and Cashblack is not liable to pay cashback if the retailer deems a purchase as not genuine.
+</p></div>
+<div class='container'><p>d) Notification from the store or affiliate network confirming that a purchase was tracked from your Cashblack account via an identifying Click ID tag. If you are not logged into your Cashblack account during a purchase, Cashblack will be unable to verify a qualifying transaction.
+</p></div>
+<div class='container'><p>e) Notification from the retailer or affiliate network confirming a purchase. As mentioned earlier, it is at the retailer's discretion to determine if a purchase qualifies for cashback, and Cashblack is not liable to pay cashback if the retailer rejects your purchase as a qualifying transaction.
+</p></div>
+<div class='container'><p>f) Maintaining a valid Cashblack account. In the event of account termination or deactivation, all cashback will be immediately forfeited.
+</p></div>
+<div class='container'><p>g) Cashback will not be granted in cases of cancellations, returns, or modifications.
+</p></div><br>
+<div class='container'><p>5.3 You acknowledge and agree that, in order for Cashblack and the affiliate tracking networks to track and validate your transaction (as detailed in 5.1 above), the affiliate tracking network will supply us with the Order ID related to your purchase through us.
+</p></div><br>
+<div class='container'><p>5.4 If you do not receive confirmation of your purchase through Cashblack within 48 hours, you may submit a 'Missing Cashback' claim. We will make reasonable efforts to investigate such claims with the retailer or tracking agency, always maintaining our right to cease investigations at our sole discretion.
+</p></div><br>
+<div class='container'><p><strong>5.5a You understand that the retailer or affiliate network's ultimate decision regarding a purchase is final with respect to commission payment to us, and subsequently, our ultimate decision is final regarding cashback payment. Cashblack will strive to ensure the payment of expected commission on qualifying purchases, but we cannot guarantee success. If we do not receive the anticipated commission for a purchase, regardless of the reason, we will not be liable to pay any cashback to you.
+</strong></p></div><br>
+<div class='container'><p><strong>5.5b The estimated 'payable' dates displayed for transactions are provided for guidance purposes only and do not guarantee the date of fund receipt. In cases where the estimated payable date for commission on a transaction has passed or the progress is delayed, we will not be liable to pay the corresponding cashback to you.
+</strong></p></div><br>
+<div class='container'><p>5.6 We retain the right to reclaim or adjust any Cashback payments if Cashback has been erroneously paid to you. This may encompass transactions for which Cashback is not rightfully owed to you or cases in which commission for a transaction has not been received from a retailer or its agents but was mistakenly paid to you as Cashback.
+</p></div><br>
+<div class='container'><p><strong>5.7 It is important to note that Cashblack does not hold funds in your account akin to a bank, and legal ownership of any cashback earnings does not transfer to you until you successfully withdraw cashback from your Cashblack account.
+</strong></p></div><br>
+<div class='container'><p><strong>5.8 To clarify and notwithstanding any other provisions in these terms and conditions, you agree and acknowledge that, under all circumstances, the payment of Cashback to you is at our discretion, and we may decline to pay Cashback to you for any reason.
+</strong></p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>6. Requesting Cashback Withdrawals
+</h5></div>
+<div class='container'><p>6.1 You may submit a request to withdraw any Payable Cashback from your account at any time. Please be aware that, for security reasons, changing your payment details will entail a 72-hour delay before you can request your Cashback.
+</p></div><br>
+<div class='container'><p>6.2 You may request only one payout option within any 24-hour period.
+</p></div><br>
+<div class='container'><p>6.3 You can withdraw your Payable Cashback through the available options. Certain payout methods may necessitate reaching a minimum value threshold before allowing withdrawal of Payable Cashback. Prior to withdrawing your Payable Cashback, it is advisable to review the terms of each payout method.
+</p></div><br>
+<div class='container'><p>6.4 It is your responsibility to ensure that accurate payout details are provided. Cashblack will not be held accountable for Payable Cashback being directed to an incorrect destination due to incorrect details. Such payments may be irrecoverable or may incur a recovery fee.
+</p></div><br>
+<div class='container'><p>6.5 The duration between requesting payment for your Payable Cashback and its crediting to your selected payout method may vary. We bear no liability for any delays in this regard or for the consequences of such delays.
+</p></div><br>
+<div class='container'><p>6.6 We retain the right to suspend Payable Cashback payments without prior notice if we have reasonable suspicion of fraudulent activity.
+</p></div><br>
+<div class='container'><p>6.7 Donations of Payable Cashback to select charities on our platform are aggregated until an individual charity reaches a minimum of £30 in donations. This minimizes administrative efforts for both Cashblack and the chosen charity. Once the £30 threshold is reached, we will transfer the entire sum of donations directly to the charity, without any administration charges, ensuring that 100% of the donated Payable Cashback benefits the selected charities.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>7. Cashblack Giveback
+</h5></div>
+<div class='container'><p>7.1 Cashblack Giveback is the payout method by which you can donate your earned cashback to one of our affiliated charities, community interests companies and goodwill causes. Cashblack will make every effort to match these donations where economically viable with our share of the commission earned on purchases by you to the retailer through us.
+</p></div><br>
+<div class='container'><p>7.2 Cashblack makes no guarantees to match donations made by members and we will not be liable for any donations that aren't matched.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>8. Managing Your Account
+</h5></div>
+
+<div class='container'><p>8.1 Ensure that your account maintains an up-to-date email address to receive important account-related information. Failure to provide a functional email address or marking our emails as spam, junk, or abusive may result in the termination of your account.
+
+</p></div></br>
+
+<div class='container'><p>8.2 Account management can be performed within your account profile. You have the option to subscribe to or unsubscribe from any emails we may send; however, please note that you cannot unsubscribe from service emails we deem essential for platform usage. Familiarize yourself with the email section in our Privacy Policy and modify your account settings to reflect your communication preferences.
+
+</p></div></br>
+
+<div class='container'><p>8.3 Agree to maintain a username on the platform that is not offensive and does not infringe upon any trademarks or brand names. If we detect usernames in violation of this provision, we will contact you to request an update. Failure to respond within 14 days may lead to account termination and forfeiture of earnings.
+
+</p></div></br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>9. Termination of Your Account
+</h5></div>
+
+<div class='container'><p>9.1 You have the option to cancel your membership at any time. You can cancel your membership by clicking the appropriate link within your account settings and following the provided instructions.
+
+</p></div></br>
+
+<div class='container'><p>9.2 In cases of fraudulent, abusive, or unfair activity as determined by us, we reserve the right to terminate your account.
+
+</p></div></br>
+
+<div class='container'><p>9.3 Please note that accounts may be disabled if they are deemed dormant at our discretion. To maintain an active account, you must log in at least once every 6 months, with no obligation to make a purchase.
+
+</p></div></br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>10. Voucher codes</h5></div>
+
+<div class='container'><p>10.1 If a voucher code (also known as a discount code or coupon code) is featured on our platform, we do not guarantee its validity and bear no liability if a voucher code fails to apply a discount. Additionally, using a voucher code from our platform in conjunction with a cashback offer may result in the forfeiture of Cashback as stipulated in the platform's terms at the time.
+
+</p></div></br>
+
+<div class='container'><p><strong>10.2 You acknowledge that voucher codes obtained from sources other than our platform, when used in conjunction with a cashback offer, often result in the non-award of Cashback.
+
+</strong></p></div></br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>11. Bonuses</h5></div>
+<div class='container'><p>11.1 Bonuses are awarded at Cashhblack\'s discretion. This includes, but is not limited to, welcome bonuses, referral bonuses and goodwill gestures</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>12. Suspension or Withdrawal of Our Platform
+</h5></div>
+
+<div class='container'><p>12.1 We do not guarantee uninterrupted availability of our platform or its content. We may suspend, withdraw, or restrict access to all or parts of our platform for business and operational reasons. Reasonable notice will be provided for any suspension or withdrawal.
+
+</p></div><br>
+
+<div class='container'><p>12.2 You are responsible for ensuring that all individuals who access our platform through your internet connection are aware of these terms and other applicable terms and conditions and that they comply with them.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>13. Modifications to These Terms
+</h5></div>
+<div class='container'><p>13.1 We may revise these terms periodically to accommodate our members' needs and evolving business priorities. Before using our platform each time, review these terms to ensure understanding of the current applicable terms.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>14. Safeguarding Your Account Details
+</h5></div>
+
+<div class='container'><p>14.1 If you receive a password or any other confidential information as part of our security procedures, treat it as confidential and refrain from disclosing it to third parties. You must not disclose your information to any third party.
+
+</p></div><br>
+
+<div class='container'><p><strong>To prevent fraud, your chosen password or security information must be unique for your Cashblack account.
+
+</strong></p></div><br>
+
+<div class='container'><p>14.2 We retain the right to disable any password, whether chosen by you or provided by us, if, in our reasonable opinion, you fail to comply with any provisions of these terms.
+
+</p></div><br>
+
+<div class='container'><p>14.3 Notify us promptly via a support ticket on the platform if you suspect that anyone other than you is aware of your user identification code or password.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>15. Fraud Prevention</h5></div>
+
+<div class='container'><p>15.1 We have implemented systems on the platform to deter and limit fraudulent use or abuse. We retain the right to apply fraud prevention measures as we deem necessary.
+
+</p></div></br>
+
+<div class='container'><p>15.2 We also reserve the right to investigate any transactions you make on the platform, which may involve sharing your personal data with third parties we collaborate with in providing Cashback. Detailed information on data transfers can be found in our Privacy Policy. If, at our sole discretion, we suspect any abuse or fraudulent use of any offer on the platform, we reserve the right to terminate your account, resulting in the forfeiture of any earnings within it.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>16. Non-Reliance on Platform Information
+</h5></div>
+
+<div class='container'><p>16.1 The content on our platform is provided for general informational purposes only. It should not be relied upon as the basis for any decisions. Before taking or refraining from any action based on the platform's content, you should seek professional or specialist advice.
+
+</p></div><br>
+
+<div class='container'><p>16.2 While we make reasonable efforts to update the information on our platform, we do not make any representations, warranties, or guarantees, whether express or implied, regarding the accuracy, completeness, or timeliness of the content on our platform.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>17. Our Responsibility for Your Loss or Damage
+</h5></div>
+
+<div class='container'><p>17.1 We will exercise reasonable care and skill in fulfilling our obligations to you. However, we do not guarantee that the platform will meet your specific requirements.
+
+</p></div><br>
+
+<div class='container'><p>17.2 We do not exclude or limit our liability to you where it is unlawful to do so. This includes liability for death or personal injury resulting from our negligence or that of our employees, agents, or subcontractors, as well as liability for fraud or fraudulent misrepresentation.
+
+</p></div><br>
+
+<div class='container'><p>17.3 Subject to clause 17.2, we accept no responsibility or liability for any loss or damage you may incur:
+
+</p></div><br>
+
+<div class='container'> <ul><li>Loss of revenue, business, anticipated savings, or profits.
+</li><li>aIndirect, special, or consequential loss, damage, or claims arising in any way.
+</li><li>Resulting from transactions with retailers through the platform.
+</li><li>In connection with the accuracy or content of product or service reviews displayed on our platform or any other website accessed through our platform.
+</li><li>Arising from the inability to access our platform, use the platform, or rely on transmitted data due to events beyond our reasonable control, including issues related to internet data transmission.
+</li></ul></div><br>
+
+<div class='container'><p>17.4 When we are found liable to you, our total liability (regardless of the number of claims) will be capped at the total value of Cashback you received during the preceding 12-month period when the claim was made.
+
+</p></div><br>
+
+<div class='container'><p>17.5 Except as expressly stated elsewhere in these terms, all representations, warranties, conditions, and other terms, whether express or implied, are excluded to the fullest extent permitted by law.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>18. Uploading Content to Our Platform
+</h5></div>
+
+<div class='container'><p>18.1 When using features that allow you to upload content to our platform, you must adhere to the content standards outlined in our Acceptable Use Policy.
+
+</p></div><br>
+
+<div class='container'><p>18.2 You warrant that any contribution complies with these standards, and you will be responsible for any loss or damage we incur due to your breach of this warranty.
+
+</p></div><br>
+
+<div class='container'><p>18.3 Content you upload to our platform is considered non-confidential and non-proprietary. While you retain ownership rights, you grant us and other platform users a limited license to use, store, copy, distribute, and make the content available to third parties.
+
+</p></div><br>
+
+<div class='container'><p>18.4 We have the right to disclose your identity to third parties asserting violations of their intellectual property rights or right to privacy based on content you posted or uploaded.
+
+</p></div><br>
+
+<div class='container'><p>18.5 If we believe your post does not comply with content standards, we may remove it from our platform.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>19. Protection Against Viruses
+</h5></div>
+
+<div class='container'><p>19.1 We do not warrant that our platform will be secure or free from bugs or viruses. We are not responsible for any loss, damage, or disruption you experience while using materials from the platform.
+
+
+</p></div></br>
+
+<div class='container'><p>19.2 You are responsible for configuring your IT, software, and platform to access our platform. You should use your own virus protection software.
+
+</p></div><br>
+
+<div class='container'><p>19.3 You must not introduce viruses, trojans, worms, logic bombs, or other harmful material to our platform. Unauthorized access attempts or attacks are strictly prohibited. Any breach of this provision may result in criminal prosecution.
+
+</p></div></br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>20. Rules for Linking to Our Platform
+</h5></div>
+
+<div class='container'><p>20.1 You may link to our platform in a fair and legal manner that does not harm our reputation or misrepresent any association with us.
+</p></div><br>
+
+<div class='container'><p>20.2 Your link must not suggest any form of endorsement from us if none exists.
+
+</p></div><br>
+
+<div class='container'><p>20.3 Framing our platform on another site is not permitted.
+
+</p></div><br>
+
+<div class='container'><p>20.4 We reserve the right to withdraw linking permission without notice.
+
+</p></div><br>
+
+<div class='container'><p>20.5 For any link or use of content beyond the above guidelines, please contact support@cashblack.com.
+
+</p></div><br>
+
+<div class='container'><p>20.6 You must not link to inappropriate, explicit, immoral, or offensive content.
+
+</p></div><br>
+
+<div class='container'><p>20.7 Redirecting other domain names to our platform is prohibited.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>21. Links to Other Websites
+</h5></div>
+
+<div class='container'><p>21.1 Our platform may include links to third-party sites and resources. These links are provided for informational purposes, and we do not endorse or control the linked websites or their content.
+
+</p></div><br>
+
+<div class='container'><p>21.2 We are not responsible for the content of linked sites or resources. Links may not always be operational, and we cannot guarantee their availability.
+
+</p></div><br>
+
+<div class='container'><p>21.3 If you find a link inappropriate, offensive, or non-functional, please inform us, and we will consider its removal.
+
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>22. Unauthorized Use of Our Platform
+
+</h5></div>
+
+<div class='container'><p>22.1 Any unauthorized tampering with our platform, including URL modification, posting unauthorized URLs on public media, spidering, email cloaking, automatic scripts, or any abnormal use, may result in the termination of your account without prior notice, with any earnings forfeited by you.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>23. Miscellaneous
+</h5></div>
+
+<div class='container'><p>23.1 Our failure to enforce any of these terms will not waive our rights to enforce them later.
+
+</p></div><br>
+
+<div class='container'><p>23.2 If any part of these terms is found invalid or unenforceable, it will be replaced by a valid and enforceable provision that aligns with the original intent, and the rest of these terms will remain in effect.
+</p></div><br>
+<!-- /wp:html -->
+<!-- wp:html -->
+<div class='container'><h5 style='padding-bottom: 20px;'>24. Governing Law and Jurisdiction
+</h5></div>
+
+<div class='container'><p>24.1 If you are a consumer, these terms are governed by English law. Any disputes will be heard in the courts of England and Wales, with the option for Northern Ireland residents to bring proceedings in Northern Ireland and Scotland residents to bring proceedings in Scotland.
+
+</p></div><br>
+
+<div class='container'><p>24.2 If you are a business, these terms are governed by English law, and disputes will be settled in the courts of England and Wales.
+
+</p></div><br>
+<!-- /wp:html -->",,,,,Cashblack is here to support you supporting Black-owned businesses.
+15,Privacy Policy,privacy-policy,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><style> .bee-row, .bee-row-content {position: relative;} .bee-row-1, .bee-row-1 .bee-row-content {background-repeat: no-repeat;} body {background-color: #fff;color: #000;font-family: Arial, Helvetica, sans-serif;} a {color: #7747ff;} * {box-sizing: border-box;} body, p {margin: 0;} .bee-row-content {max-width: 1145px;margin: 0 auto;display: flex;} .bee-row-content .bee-col-w12 {flex-basis: 100%;} .bee-paragraph {overflow-wrap: anywhere;} @media (max-width:768px) { .bee-row-content:not(.no_stack) { display: block;} } .bee-row-1 .bee-row-content {color: #000;} .bee-row-1 .bee-col-1 {padding-bottom: 5px;padding-top: 5px;} .bee-row-1 .bee-col-1 .bee-block-1 {padding: 10px; color: #101112; direction: ltr; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 120%; text-align: left;} .bee-row-1 .bee-col-1 .bee-block-1 a {color: #3baa34;} .bee-row-1 .bee-col-1 .bee-block-1 p:not(:last-child) {margin-bottom: 16px;} </style> <div class='bee-page-container'><div class='bee-row bee-row-1'><div class='bee-row-content'><div class='bee-col bee-col-1 bee-col-w12'><div class='bee-block bee-block-1 bee-paragraph'><div class='container'><p><strong>INTRODUCTION</strong> Cashblack values your privacy and is dedicated to safeguarding your personal data. This privacy policy outlines how we protect and process your personal data when you visit our site or app ('platform'). It also explains your privacy rights and the legal protections in place. We encourage you to refer to our Glossary for explanations of key terms used in this policy.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>1. IMPORTANT INFORMATION AND WHO WE ARE</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>PURPOSE OF THIS PRIVACY NOTICE</strong> This privacy notice provides you with information on how Cashblack collects and processes your personal data through your use of this platform. This includes any data you may provide when you sign up for our platform, browse or make purchases, enter contests, or engage with us through our platform or email communications. Please read this notice alongside any other privacy or fair processing notices we may provide on specific occasions to fully understand how and why we use your data. This privacy notice complements those notices and does not supersede them.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>CONTROLLER</strong> Cashblack is the controller and responsible for your personal data. Throughout this privacy notice, 'Cashblack,' 'we,' 'us,' or 'our' refer to Cashblack Ltd. For inquiries unrelated to this privacy notice, please contact us at <a href='mailto:info@cashblack.org.uk' style='text-decoration: underline;' target='_new'>support@cashblack.com</a>. Our postal address is 71-75 Shelton Street, Covent Garden, London, WC2H 9QJ.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>CONTACT DETAILS</strong> You have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK data protection authority (<a href='http://www.ico.org.uk/' style='text-decoration: underline;' target='_new'>www.ico.org.uk</a>), at any time. However, we appreciate the opportunity to address your concerns before contacting the ICO. Please reach out to our data privacy manager for inquiries related to this privacy notice at the following address:</p></div><div class='container'><p>Full name of legal entity: Cashblack Ltd (For queries unrelated to this privacy notice, please use <a href='mailto:info@cashblack.org.uk' style='text-decoration: underline;' target='_new'>support@cashblack.com</a>) Postal address: 71-75 Shelton Street, Covent Garden, London, WC2H 9QJ</p></div><div class='container'><p> </p></div><div class='container'><p><strong>CHANGES TO THE PRIVACY NOTICE AND YOUR DUTY TO INFORM US OF CHANGES</strong> This policy may change and be updated periodically, so please check it regularly. To ensure the accuracy of the personal data we hold, please inform us promptly of any changes to your personal information during your engagement with us.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>THIRD-PARTY LINKS</strong> Our platform may contain links to third-party platforms, plug-ins, and applications. Clicking on these links or enabling connections may allow third parties to collect or share data about you. We do not control these third-party platforms and are not responsible for their privacy policies. When leaving our platform, we recommend reviewing the privacy notice of every website you visit.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>2. THE DATA WE COLLECT ABOUT YOU</strong></p></div><div class='container'><p><strong>Personal Data Categories</strong> We collect various types of personal data about you, which we have grouped as follows:</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Identity Data:</strong> Includes first name, last name, username, marital status, title, date of birth, and gender.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Contact Data:</strong> Comprises billing address, delivery address, and email address.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Financial Data:</strong> Encompasses bank account and payment card details.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Transaction Data:</strong> Includes details about payments to retailers featured on our platform and information about products and services you purchase through our platform.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Technical Data:</strong> Comprises internet protocol (IP) address, login data, browser type, version, time zone, location, browser plug-ins, operating system, and other technology information related to your device usage on our platform.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Profile Data:</strong> Encompasses your username, password, purchase history, preferences, feedback, and survey responses.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Usage Data:</strong> Provides insights into how you use our platform, products, and services.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Marketing and Communications Data:</strong> Includes your preferences regarding marketing communications from us and third parties, as well as your communication preferences.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Aggregated Data</strong> We may use Aggregated Data for various purposes. Aggregated Data is data that has been anonymized and does not directly or indirectly identify you. While we may aggregate your Usage Data, combining it with your personal data to identify you, we treat the merged data as personal data, subject to this privacy notice. We do not collect Special Categories of Personal Data about you, such as race, religion, sexual orientation, or health information, unless explicitly stated.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>IF YOU FAIL TO PROVIDE PERSONAL DATA</strong> If you fail to provide personal data we require by law or under a contract with you, we may be unable to perform the contract's obligations, such as providing our cashback service. In such cases, you won't be able to join Cashblack.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>3. HOW IS YOUR PERSONAL DATA COLLECTED?</strong> We employ various methods to collect data from and about you, including:</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Direct Interactions:</strong> You provide your Identity, Contact, Transaction, or Financial Data when completing forms, corresponding with us via post, email, or other means. This includes data you provide when you create an account, subscribe to our On Card service, submit transaction claims or inquiries, enter contests or provide feedback.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Automated Technologies or Interactions:</strong> We automatically collect Technical Data about your device and how you interact with our platform through cookies, server logs, and similar technologies. We may also receive Technical Data if you visit other platforms using our cookies. Please refer to our Cookie Policy for more information.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Essential Third Parties:</strong> To facilitate the cashback service, we receive personal data from various third parties. These include Affiliate Networks, retailers featured on our platform, and On Card data matching providers (for subscribers). To enhance our service, we may also receive Technical Data from analytics providers, Profile Data from mosaic profile providers, Contact and Technical Data through third-party marketing activities, and Contact Data from third parties.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>4. HOW WE USE YOUR PERSONAL DATA</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>Legal Bases for Processing</strong> We only process your personal data when legally permitted. Commonly, we use your data under the following circumstances:</p></div><div class='container'><p>To fulfill a contract we are about to enter into or have entered into with you.</p></div><div class='container'><p>For our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Purposes for Using Your Personal Data</strong> We have outlined in a table format how we plan to use your personal data, along with the legal basis for each use. We've also identified our legitimate interests where applicable.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>MARKETING</strong> We aim to provide you with choices regarding certain personal data uses, especially marketing and advertising. Within your account, you can manage your personal data preferences related to marketing emails.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>PROMOTIONAL OFFERS FROM US</strong> We may use your personal data to tailor our marketing efforts and offer products or services that may interest you. You will receive marketing communications from us unless you opt out.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>THIRD-PARTY MARKETING</strong> Cashblack may share your Contact or Identity Data with select third parties (e.g., email providers and social media publishers) to target our marketing effectively and make it relevant to Cashblack members.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>OPTING OUT</strong> You can stop receiving marketing emails at any time by adjusting your marketing preferences in your platform account or by following opt-out links in marketing emails.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>COOKIES</strong> You can configure your browser settings to reject some or all browser cookies or receive alerts when websites set or access cookies. Disabling cookies may render some parts of our platform inaccessible or malfunctioning, affecting cashback tracking. Refer to our Cookie Policy for more details.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>CHANGE OF PURPOSE</strong> We will only use your personal data for the purposes we collected it for, except where we reasonably believe another purpose is compatible with the original one. If we need to use your personal data for an unrelated purpose, we will inform you and explain the legal basis for it.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>5. DISCLOSURES OF YOUR PERSONAL DATA</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>External Third Parties</strong> We may share your personal data with various external third parties for the purposes outlined in section 4 of this policy. We ensure that third-party service providers respect your personal data's security and process it in compliance with the law.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>6. INTERNATIONAL TRANSFERS</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>International Transfers Outside the EEA</strong> Certain external third parties, such as payout providers, may be based outside the European Economic Area (EEA), resulting in data transfers outside the EEA. We ensure adequate protection for your data during these transfers by:</p></div><div class='container'><p>Transferring data only to countries approved by the European Commission.</p></div><div class='container'><p>Using specific contracts approved by the European Commission.</p></div><div class='container'><p>Ensuring third-party providers in the US adhere to the Privacy Shield framework.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>7. DATA SECURITY</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>Data Security Measures</strong> We implement security measures to prevent unauthorized access, use, disclosure, alteration, or loss of your personal data. We restrict access to your data to employees, agents, contractors, and third parties who require it for legitimate purposes. They process your data per our instructions and maintain confidentiality.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Data Breach Procedures</strong> In the event of a suspected data breach, we have established procedures to promptly address and report the breach to you and relevant regulators, as required by law.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>8. DATA RETENTION: HOW LONG WILL YOU USE MY PERSONAL DATA FOR?</strong> We retain your personal data only for as long as necessary to fulfill the purposes for which we collected it, including legal, accounting, or reporting requirements. The retention period depends on factors such as the data's nature, sensitivity, and legal requirements.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Requesting Data Deletion</strong> You may request deletion of your data. In some cases, we may anonymize your personal data for research or statistical purposes without notifying you.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>9. YOUR LEGAL RIGHTS</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>Access to Your Data</strong> You have the right to request access to your personal data, often referred to as a 'data subject access request.'</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Data Correction</strong> You can request correction of your inaccurate or incomplete personal data.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Data Erasure</strong> You have the right to request erasure of your personal data, often referred to as the 'right to be forgotten.'</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Object to Processing</strong> You can object to processing of your personal data, including processing based on legitimate interests and for direct marketing.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Data Restriction</strong> You can request the restriction of processing of your personal data in specific situations.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Data Portability</strong> You can request the transfer of your personal data to you or to a third party.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Withdraw Consent</strong> If we process your data based on your consent, you can withdraw your consent at any time.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>No Fee Usually Required</strong> We typically do not charge a fee for exercising your rights. However, we may charge a reasonable fee or refuse your request if it is unfounded or excessive.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Information Required</strong> We may need specific information from you to verify your identity and respond to your requests. We may contact you for additional information to expedite our response.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Response Time</strong> We aim to respond to all legitimate requests within one month. Complex or multiple requests may require more time, in which case we will notify you.</p></div><div class='container'><p> </p></div><div class='container'><p> </p></div><div class='container'><p><strong>10. GLOSSARY</strong></p></div><div class='container'><p> </p></div><div class='container'><p><strong>External Third Parties</strong> Third-party service providers who offer IT and system administration services, Affiliate Networks, retailers featured on our platform, regulators, third-party providers to Cashblack, payout providers, and third-party email providers.</p></div><div class='container'><p> </p></div><div class='container'><p><strong>Affiliate Networks</strong> Intermediaries between our platform and retailers, responsible for tracking cashback, processing payments, and assisting with untracked sales.</p></div><div class='container'><p>This Privacy Policy provides information on how Cashblack collects and processes your personal data. Please refer to our Glossary for definitions of key terms used in this policy.</p></div></div></div></div></div></div>",,,,,Cashblack is here to support you supporting Black-owned businesses.
+16,Cookies Policy,cookies-policy,special,active,"<!-- wp:paragraph --><p>[page-banner]</p><!-- /wp:paragraph --><h1 div='' class='container' style='padding-bottom: 20px;'>Cookies Policy</h1><div class='container'><p style='padding-bottom: 20px;'>This Cookies Policy explains how Cashblack.com ('we,' 'us,' or 'our') uses cookies and similar technologies to recognize you when you visit our website at Cashblack.com (the 'Website'). It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p></div><h2 div='' class='container' style='padding-bottom: 20px;'>What are cookies?</h2><div class='container'><p style='padding-bottom: 20px;'>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work or to enhance the user experience.</p></div><h2 class='container' style='padding-bottom: 20px;'>How do we use cookies?</h2><div class='container'><p>We use cookies to:</p></div><ul><li class='container'>Facilitate and enhance your experience on our Website.</li><li class='container'>Understand and save your preferences for future visits.</li><li class='container' style='padding-bottom: 20px;'>Compile aggregate data about Website traffic and Website interactions to improve our Website and deliver a better user experience.</li></ul><h2 class='container' style='padding-bottom: 20px;'>What types of cookies do we use?</h2><div class='container'><p>We use the following types of cookies:</p></div><ul class='container'><li><strong>Essential cookies:</strong> These cookies are necessary for the Website to function properly. They enable basic functions such as page navigation and access to secure areas of the Website. The Website cannot function properly without these cookies.</li><li><strong>Analytical/performance cookies:</strong> These cookies allow us to recognize and count the number of visitors and to see how visitors move around our Website when they are using it. This helps us improve the way our Website works, for example, by ensuring that users find what they are looking for easily.</li><li><strong>Functionality cookies:</strong> These cookies are used to recognize you when you return to our Website. They enable us to personalize our content for you, greet you by name, and remember your preferences (such as your choice of language or region).</li><li style='padding-bottom: 20px;'><strong>Advertising/targeting cookies:</strong> These cookies record your visit to our Website, the pages you have visited, and the links you have followed. We will use this information to make our Website and the advertising displayed on it more relevant to your interests. We may also share this information with third parties for this purpose.</li></ul><h2 class='container' style='padding-bottom: 20px;'>How can you control cookies?</h2><div class='container'><p style='padding-bottom: 20px;'>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer, and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site, and some services and functionalities may not work.</p></div><h2 class='container' style='padding-bottom: 20px;'>Changes to this Cookies Policy</h2><div class='container'><p>We may update our Cookies Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p></div><div style='padding-bottom: 40px;'><div class='container'><p>This Cookies Policy was last updated on <strong>May 12, 2023</strong>.</p></div></div>",,,,,Cashblack is here to support you supporting Black-owned businesses.
+17,Browser extension policy,browser-extension-policy,special,active,"<div class='container mb-2'><h2 style= 'margin-top: 30px;'>Cashblack A.F.R.O.B.O.T Browser Extension Policy</h2></div><div class='container'><p style='padding-top: 20px;'>The Cashblack A.F.R.O.B.O.T is a browser extension that helps you find and purchase goods and services at Black-owned retailers. Our algorithm uses artificial intelligence and machine learning to learn how you usually shop and redirects you to Black-owned retailers that offer similar products.</p></div></p><div class='container'><p>By installing the A.F.R.O.B.O.T browser extension, you agree to our <a href='http://soon.cashblack.com/pages/terms-conditions'>Terms and Conditions</a> and <a href='http://soon.cashblack.com/pages/privacy-policy'>Privacy Policy</a>.</p></div></div></p><div class='container mb-2'><h3 style= 'margin-top: 30px;'>How the A.F.R.O.B.O.T Works</h3></div><div class='container'><p style='padding-top: 20px;'>The A.F.R.O.B.O.T browser extension uses a bespoke algorithm that analyzes your browsing history and search queries to learn how you usually shop. It then identifies Black-owned retailers that offer similar products and redirects you to their websites. This helps you discover and support Black-owned businesses and earn cashback at the same time.</p></div></p><div class='container mb-2'><h3 style= 'margin-top: 30px;'>Cookies</h3></div><div style='margin-bottom: 20px;'><div class='container'><p style='padding-top: 20px; padding-bottom: 20px;'>We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. For more information on how we use cookies, please see our <a href='http://soon.cashblack.com/pages/cookies-policy'>Cookie Policy</a>.</p></div></div>",,,,,Cashblack is here to support you supporting Black-owned businesses.
 19,Mobile Home,mobile-home,system,active,,,,,,Mobile home page.
 20,Home Page After Login,/home-page-after-login,system,active,"<!-- wp:paragraph --><p>[home-page-after-login-slider]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[top-offer]</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>[top-child-category-stores]</p><!-- /wp:paragraph --><div class="container mb-5"><div class="row"><div class="col"><div class="add-banner test"><img src="https://www.cashblack.com/resources/upload/images/291587648515974361650094303.jpg" style="width: 100%;" class="img-fluid" alt=""></div></div></div></div>,,,,,Cashback is here to support you supporting Black-owned businesses.
-21,404,404,system,active,"<img src='/frontend/images/404 error.png' alt=''><h1>Page not Found!</h1><div><p>We&rsquo;re sorry, the page you requested could not be found. Please go back to the <a href='/'>Homepage</a>.</p></div>",,,,,Cashback is here to support you supporting Black-owned businesses.
+21,404,404,system,active,"<style> .bee-row, .bee-row-content { position: relative; } .bee-row-1, .bee-row-1 .bee-row-content { background-repeat: no-repeat; } body {background-color: #fff; color: #000; font-family: Mulish;} a {color: #7747ff;} * {box-sizing: border-box;} body, h1, p {margin: 0;} .bee-row-content {max-width: 1280px; margin: 0 auto; display: flex;} .bee-row-content .bee-col-w12 {flex-basis: 100%;} .bee-image {overflow: auto;} .bee-image .bee-center {margin: 0 auto;} .bee-row-1 .bee-col-1 .bee-block-2 {width: 100%;} .bee-image img {display: block; width: 100%;} .bee-paragraph {overflow-wrap: anywhere;} @media (max-width:768px) {.bee-row-content:not(.no_stack) {display: block;}} .bee-row-1 .bee-row-content {color: #000;} .bee-row-1 .bee-col-1 {padding-bottom: 5px; padding-top: 5px;} .bee-row-1 .bee-col-1 .bee-block-1 {padding: 10px; text-align: center; width: 100%;} .bee-row-1 .bee-col-1 .bee-block-3 {padding: 10px; color: #101112; direction: ltr; font-size: 25px; font-weight: 400; letter-spacing: 0; line-height: 120%; text-align: center;} .bee-row-1 .bee-col-1 .bee-block-3 a {color: #3baa34;} .bee-row-1 .bee-col-1 .bee-block-3 p:not(:last-child) {margin-bottom: 16px;} </style> <div class='bee-page-container'><div class='bee-row bee-row-1'><div class='bee-row-content'><div class='bee-col bee-col-1 bee-col-w12'><div class='bee-block bee-block-1 bee-heading'><h1 style='color:#3baa34;direction:ltr;font-family:Mulish;font-size:60px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;'><span class='tinyMce-placeholder'>404 Page Not Found</span> </h1></div><div class='bee-block bee-block-2 bee-image'><img alt='' class='bee-center bee-fixedwidth' src='https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/1013764_998648/Cashblack_AFROBOT_alone-removebg-preview.png' style='max-width:256px;'></div><div class='bee-block bee-block-3 bee-paragraph'><div class='container'><p>We’re sorry, the page you requested could not be found.</p></div><div class='container'><p><a href='/' style='text-decoration: underline;'>Click here</a> to return to the homepage.</p></div></div></div></div></div></div>",,,,,Cashback is here to support you supporting Black-owned businesses.
 22,Maintenance,maintenance,system,active,"<img src='admin-dashboard/images/Maintenance-bro.png' alt='503'><h1>We&rsquo;ll be back soon!</h1><div><p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. We&rsquo;ll be back online shortly!</p></div>",,,,,Cashblack is here to support you supporting Black-owned businesses.
 23,401,401,system,active,"<img src='/frontend/images/401-error.jpg' alt='' width='200'><h1>Unauthorized!</h1><div><p>We&rsquo;re sorry, you don't have access this module. Please go back to the <a href='/'>Homepage</a>.</p></div>",,,,,Cashback is here to support you supporting Black-owned businesses.
 24,Search,search,special,active,'<div class="add-banner category-banner mb-4"> <a href="javascript:;"><img src="/storage/__asset/img/search-page-banner.jpg" class="img-fluid" alt="Search Banner" onerror="_banner(this)"></a> </div>',,,,,Cashback is here to support you supporting Black-owned businesses.
