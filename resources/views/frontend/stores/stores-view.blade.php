@@ -3,7 +3,7 @@
     <li class="list-item my-cards">
         <div class="hover-content d-none">{!! substr($store->description, 0, 70) !!}</div>
         <a href="javascript:;"
-            class="fav-icon {{ !empty(auth()->user()) ? (checkFavorite($store->id) ? 'liked' : '') : '' }} not-liked"
+            class="ui-notify  fav-icon {{ !empty(auth()->user()) ? (checkFavorite($store->id) ? 'liked' : '') : '' }} not-liked"
             this-store-id="{{ $store->id }}" this-store-name="{{ $store->description }}">
             <i class="fas fa-heart"></i>
         </a>

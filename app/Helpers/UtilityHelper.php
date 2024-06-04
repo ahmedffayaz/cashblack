@@ -215,14 +215,6 @@ function firstTopCategoryofStore($topStore)
     return $category;
 }
 
-function firstTopChildCategoryOfStore($topStore)
-{
-    $category = $topStore->categories()->whereHas('tags', function ($query) {
-        $query->where('title', 'top_child_categories');
-    })->orderby('updated_at')->first();
-    return $category;
-}
-
 function getFeaturesCharities($featureTag)
 {
     $charities = Charity::whereHas('tags', function ($query) use ($featureTag) {

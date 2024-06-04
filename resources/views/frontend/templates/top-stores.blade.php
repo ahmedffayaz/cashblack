@@ -22,8 +22,6 @@
                             </a>
                             @php $topStores = getFeaturesStores('top_stores', $topCategory->slug); @endphp
                             @foreach ($topStores as $topStore)
-                                @php $topCategoryOfStore = firstTopCategoryofStore($topStore); @endphp
-                                @if (isset($topCategoryOfStore) && $topCategoryOfStore->slug == $topCategory->slug)
                                     <ul class="cat-offers-list">
                                         <li class="list-item">
                                             <div class="list-icon">
@@ -40,7 +38,6 @@
                                             </div>
                                         </li>
                                     </ul>
-                                @endif
                             @endforeach
                         </div>
                     @endforeach

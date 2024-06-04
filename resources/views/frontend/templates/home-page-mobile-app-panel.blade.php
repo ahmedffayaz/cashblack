@@ -57,10 +57,10 @@
         <div class="row">
             <div class="position-relative col-md-6 text-center order-md-1 image-container containers">
                 <img src="{{ asset('storage/__asset/img/home/Ellipse 9.png') }}" alt="" class="img-circle">
-                <img src="{{ asset('storage/__asset/img/home/gif-mobile.jpeg') }}" alt="" class="position-absolute top-50 start-50 translate-middle img-mobile">
+                <img src="{{ asset('storage/__asset/img/home/gif-mobile.gif') }}" alt="" class="position-absolute top-50 start-50 translate-middle img-mobile">
             </div>
             <div class="col-md-6 col-sm-12 right-content mt-md-5 pt-md-5">
-                <h3 class="mb-3 heading"><b>Cashblack <b class="specific-color">Mobile</b> Businesses App</b> </h3>
+                <h3 class="mb-3 heading"><b>Cashblack <b class="specific-color">Mobile</b>  App</b> </h3>
                 <p class="paragraph" style="">With the Cashblack
                     mobile app, you can use your
                     Android or iOS device to browse, shop and earn cashback
