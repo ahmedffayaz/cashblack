@@ -35,7 +35,7 @@ class StoreController extends Controller
 
     public function storesView(Request $request)
     {
-        $allStores = Store::select('id', 'name', 'slug', 'status', 'latitude', 'longitude', 'created_at', 'deleted_at')->where('status', 'active')->with('cashback')->withCount('cashbacks');
+        $allStores = Store::select('id', 'name', 'slug', 'description', 'status', 'latitude', 'longitude', 'created_at', 'deleted_at')->where('status', 'active')->with('cashback')->withCount('cashbacks');
         if (!empty($request->storesType)) {
             $allStores = $allStores->has('vouchers');
         }

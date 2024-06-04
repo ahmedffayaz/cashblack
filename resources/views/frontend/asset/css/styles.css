@@ -6098,7 +6098,92 @@ div.activity span {
     cursor: pointer;
 }
 
-.store-title {
-    flex: 1 1 auto;
-    padding: 1rem 1rem;
+
+.my-cards {
+    position: relative;
+    background-size: cover;
+    background-position:  center;
+    overflow: hidden;
+    align-items: center;
+}
+.hover-content{
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    opacity: 0;
+    padding: 1rem 1rem 2rem 1rem;
+    transition: all 0.4s ease 0s;
+    height: fit-content;
+    width: 100%;
+    padding-right: 39px;
+}
+
+.my-cards:hover .hover-content {
+    opacity: 0.8;
+}
+
+.list-view-hover-content {
+    background-color: black;
+    color: #fff;
+    top: 0px;
+    bottom: 0px;
+    left: 15px;
+    right: 85px;
+    width: 20%;
+    opacity: 0;
+    padding: 1rem 1rem 2rem 1rem;
+    transition: all 0.4s ease 0s;
+    height: fit-content;
+    width: fit-content;
+}
+
+.my-cards:hover .list-view-hover-content {
+    opacity: 0.8;
+}
+.ui-notify {
+    z-index: 100;
+}
+@media screen and (max-width: 768px) {
+    .list-view-hover-content {
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .list-view-hover-content {
+        width: 25%; /* Adjusted width for screens up to 1200px */
+    }
+    .category-listing.list-view .cta button {
+        width: 106px;
+    }
+}
+@media screen and (max-width: 1454px) {
+    .list-view-hover-content {
+        width: 25%; /* Adjusted width for screens up to 1200px */
+    }
+    .category-listing.list-view .cta button {
+        width: 106px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .list-view-hover-content {
+        width: 30%; /* Adjusted width for screens up to 992px */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .list-view-hover-content {
+        width: 40%; /* Adjusted width for screens up to 768px */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .list-view-hover-content {
+        width: 50%; /* Adjusted width for screens up to 576px */
+    }
+
 }
