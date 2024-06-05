@@ -83,7 +83,7 @@ class PaymentController extends Controller
             if ($balance < $min) {
                 $data = [
                     'status' => 406,
-                    'message' => "You have insufficient balance for withdrawl. You need to have at least £".$min." in your balance for withdrawal.",
+                    'message' => "You have insufficient balance for withdrawl. You need to have at least $".$min." in your balance for withdrawal.",
                     'data' => []
                 ];
                 return response()->json($data, 500);
@@ -195,7 +195,7 @@ class PaymentController extends Controller
             DB::commit();
             $data = [
                 'status' => 200,
-                'message' => "We're processing your withdrawal. Please allow 4 working days for £".$balance." to reach your " . $request->payment_method . " account.",
+                'message' => "We're processing your withdrawal. Please allow 4 working days for $".$balance." to reach your " . $request->payment_method . " account.",
                 'data' => '',
             ];
             return response()->json($data, 200);
@@ -231,7 +231,7 @@ class PaymentController extends Controller
             if ($balanceOld < $min) {
                 $data = [
                     'status' => 406,
-                    'message' => "You have insufficient balance for withdrawal. You need to have at least £" .$min. " in your balance for withdrawal.",
+                    'message' => "You have insufficient balance for withdrawal. You need to have at least $" .$min. " in your balance for withdrawal.",
                     'data' => []
                 ];
                 return response()->json($data, 500);
@@ -300,7 +300,7 @@ class PaymentController extends Controller
             DB::commit();
             $data = [
                 'status' => 200,
-                'message' => "We're processing your withdrawal. Please allow 4 working days for £" . $request->amount  . " to reach your " . $request->payment_method . " account.",
+                'message' => "We're processing your withdrawal. Please allow 4 working days for $" . $request->amount  . " to reach your " . $request->payment_method . " account.",
                 'data' => '',
             ];
             return response()->json($data, 200);

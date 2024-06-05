@@ -16,12 +16,12 @@
             </div>
             <div class="col-6 col-sm-3">
                 <div class="icon"><img src="{{ asset('storage/__asset/img/icons/cash-in-hand.png') }}" alt="Cashback Paid Out" /></div>
-                <h5 class="stats-fig">£500+</h5>
+                <h5 class="stats-fig">$500+</h5>
                 <p>Cashback</p>
             </div>
             <div class="col-6 col-sm-3">
                 <div class="icon"><img src="{{ asset('storage/__asset/img/icons/donation.png') }}" alt="Funds Donated" /></div>
-                <h5 class="stats-fig">£100</h5>
+                <h5 class="stats-fig">R100</h5>
                 <p>Donations</p>
             </div>
         </div>

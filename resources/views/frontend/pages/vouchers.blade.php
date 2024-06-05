@@ -60,7 +60,7 @@
                                         <option value="exit_clicks">Popularity</option>
 
                                         <option value="hcb_percent">Cashback Percentage (%)</option>
-                                        <option value="hcb_pound">Cashback Amount (£)</option>
+                                        <option value="hcb_pound">Cashback Amount ($)</option>
                                     </select>
                                 </div>
 

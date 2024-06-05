@@ -37,7 +37,7 @@ class DashboardResources extends JsonResource
         ];
         $data = [
             'user' => $user,
-            'currency' => "£",
+            'currency' => "$",
             "Pending" => [
                 "title" => "Pending",
                 "description" => "Transactions tracked by Cashblack and awaiting retailer confirmation.",

@@ -128,7 +128,7 @@ class CategoryController extends Controller
                 })->when($request->orderBy == 'cashback-amount', function ($query) {
                     $query->whereHas('cashback', function ($query) {
                         $query->where('type', 'fixed')->whereHas('currencyData', function ($query) {
-                            $query->where('symbol', '£');
+                            $query->where('symbol', '$');
                         });
                     });
                 })->when($request->orderBy == 'cashback-amount-asc' || $request->orderBy == 'cashback-amount-desc', function ($query) {

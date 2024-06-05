@@ -247,7 +247,7 @@ class PaymentController extends Controller
             $deviceToken = $admin->devices()->where('type', 'web')->latest()->first();
             $deviceToken != null ? $this->sendNotification($cashout, $deviceToken->fcm_token, $admin) :'';
 
-            flash()->success("We're processing your withdrawal. Please allow 4 working days for £" . $balance . " to reach your " . $request->payment_method . " account.");
+            flash()->success("We're processing your withdrawal. Please allow 4 working days for $" . $balance . " to reach your " . $request->payment_method . " account.");
             return redirect()->back();
         } catch (Exception $e) {
             flash()->error("Something went wrong, try again later.");
@@ -346,7 +346,7 @@ class PaymentController extends Controller
             $deviceToken = optional($admin->devices()->whereType('web')->latest()->first())->fcm_token;
             $deviceToken != null ? $this->sendNotification($request, $deviceToken, $admin) : '';
 
-            flash()->success("We're processing your withdrawal. Please allow 4 working days for £" . $request->amount . " to reach your " . $request->payment_method . " account.");
+            flash()->success("We're processing your withdrawal. Please allow 4 working days for $" . $request->amount . " to reach your " . $request->payment_method . " account.");
             return redirect()->back();
         } catch (Exception $e) {
             DB::rollBack();

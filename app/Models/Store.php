@@ -166,8 +166,8 @@ class Store extends Model
         if (isset($this->cashback)) {
             if ($this->cashback->type === 'fixed') {
                 if ($this->cashbacks_count > 1)
-                    return 'Up to £' . number_format((float) $this->cashback_integer, 2, '.', '') . ' Cashback';
-                return '£' . number_format((float) $this->cashback_integer, 2, '.', '') . ' Cashback';
+                    return 'Up to $' . number_format((float) $this->cashback_integer, 2, '.', '') . ' Cashback';
+                return '$' . number_format((float) $this->cashback_integer, 2, '.', '') . ' Cashback';
             }
 
             if ($this->cashback->type === 'percentage') {
