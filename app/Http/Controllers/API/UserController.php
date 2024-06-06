@@ -615,23 +615,23 @@ class UserController extends Controller
             return response()->json($data, 406);
         }
         try {
-            $isPushNotification = auth()->user()->metaData()->whereType('is_notification_enable')->first()->pluck('value');
+            $isPushNotification = auth()->user()->metaData()->whereType('is_notification_enable')->first();
 
-            if ($isPushNotification) {
+            if (isset($isPushNotification)) {
                 auth()->user()->metaData()->whereType('is_notification_enable')->update([
                     'value' => $request->input('is_notification_enable')
                 ]);
-                if ($isPushNotification === true) {
+                if ($request->is_notification_enable ==1) {
                     return response()->json(['message' => 'Notifications enabled'], 200);
                 } else {
                     return response()->json(['message' => 'Notifications disabled'], 200);
                 }
             } else {
-                auth()->user()->metaData()->whereType('is_notification_enable')->create([
+                $notification = auth()->user()->metaData()->whereType('is_notification_enable')->Create([
                     'type' => 'is_notification_enable',
-                'value' => $isPushNotification
+                'value' => $request->input('is_notification_enable')
                 ]);
-                if ($isPushNotification === true) {
+                if ($request->is_notification_enable ==1) {
                     return response()->json(['message' => 'Notifications enabled'], 200);
                 } else {
                     return response()->json(['message' => 'Notifications disabled'], 200);
