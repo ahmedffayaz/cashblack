@@ -191,12 +191,4 @@ class User extends Authenticatable implements MustVerifyEmail
                     ->where('value', '!=', null)
                     ->join('appeals', 'appeals.id', '=', 'user_metas.value');
     }
-
-    public function checkPushNotification()
-    {
-        return $this->hasOne(UserMeta::class, 'user_id')
-                    ->where('type', 'is_notification_enable')
-                    ->where('value', '!=', null)
-                    ->join('users', 'users.id', '=', 'user_metas.user_id');
-    }
 }

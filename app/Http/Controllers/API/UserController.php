@@ -29,6 +29,7 @@ use App\Http\Resources\ReferralResource;
 use App\Http\Resources\Home\UserResource;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\UserCashbackResource;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -608,7 +609,8 @@ class UserController extends Controller
         if ($validator->fails()) {
             $data = [
                 'status' => 406,
-                'message' => $validator->errors()->first(),
+                'message' => 'Something went wrong',
+                'validator_error' => $validator->errors()->first()
             ];
             return response()->json($data, 406);
         }
