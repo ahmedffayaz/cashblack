@@ -100,8 +100,10 @@ class UserController extends Controller
                 }
             }
 
-            $type = (object) ['type' => 'update-newsletter'];
-            $this->updateNewsletter($type, true);
+            if (auth()->user()->email_preference) {
+                $type = (object) ['type' => 'update-newsletter'];
+                $this->updateNewsletter($type, true);
+            }
 
             $user = new UserResource(auth()->user());
             $response = [
@@ -597,4 +599,52 @@ class UserController extends Controller
             ], JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+    public function notificationSetting(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'is_notification_enable' => 'required|boolean',
+        ]);
+
+        if ($validator->fails()) {
+            $data = [
+                'status' => 406,
+                'message' => $validator->errors()->first(),
+            ];
+            return response()->json($data, 406);
+        }
+        try {
+            $isPushNotification = auth()->user()->metaData()->whereType('is_notification_enable')->first()->pluck('value');
+
+            if ($isPushNotification) {
+                auth()->user()->metaData()->whereType('is_notification_enable')->update([
+                    'value' => $request->input('is_notification_enable')
+                ]);
+                if ($isPushNotification === true) {
+                    return response()->json(['message' => 'Notifications enabled'], 200);
+                } else {
+                    return response()->json(['message' => 'Notifications disabled'], 200);
+                }
+            } else {
+                auth()->user()->metaData()->whereType('is_notification_enable')->create([
+                    'type' => 'is_notification_enable',
+                'value' => $isPushNotification
+                ]);
+                if ($isPushNotification === true) {
+                    return response()->json(['message' => 'Notifications enabled'], 200);
+                } else {
+                    return response()->json(['message' => 'Notifications disabled'], 200);
+                }
+            }
+
+        } catch (Exception $e) {
+            $data = [
+                'status' => 500,
+                'message' => 'Something went wrong, try again.',
+                'data' => []
+            ];
+            return response()->json($data, 500);
+        }
+
+    }
 }
+
