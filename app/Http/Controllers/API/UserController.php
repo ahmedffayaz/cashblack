@@ -671,9 +671,9 @@ class UserController extends Controller
     public function getNotification()
     {
         try {
-            $notification = auth()->user()->metaData()->where('type', 'is_notification_enable')->whereIn('value', [0, 1])->first();
-
-            $isNotification = isset($notification) && $notification->value == 1 ? 1 : 0;
+            $notification = auth()->user()->metaData()->where('type', 'is_notification_enable')->orderBy('id', 'desc')->first();
+// dd($notification);
+            $isNotification = (isset($notification) && $notification->value == 1) ? 1 : 0;
             $data = [
                 'code' => 200,
                 'status' => 'success',
