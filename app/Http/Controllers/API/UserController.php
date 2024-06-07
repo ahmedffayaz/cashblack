@@ -622,9 +622,19 @@ class UserController extends Controller
                     'value' => $request->input('is_notification_enable')
                 ]);
                 if ($request->is_notification_enable ==1) {
-                    return response()->json(['message' => 'Notifications enabled'], 200);
+                    $data = [
+                        'code' => 200,
+                        'message' => 'Notifications enabled.',
+                        'status' => 'success',
+                    ];
+                    return response()->json($data);
                 } else {
-                    return response()->json(['message' => 'Notifications disabled'], 200);
+                    $data = [
+                        'code' => 200,
+                        'message' => 'Notifications disabled.',
+                        'status' => 'success'
+                    ];
+                    return response()->json($data);
                 }
             } else {
                 $notification = auth()->user()->metaData()->Create([
@@ -632,17 +642,26 @@ class UserController extends Controller
                     'value' => $request->input('is_notification_enable')
                 ]);
                 if ($request->is_notification_enable ==1) {
-                    return response()->json(['message' => 'Notifications enabled'], 200);
+                    $data = [
+                        'code' => 200,
+                        'message' => 'Notifications enabled.',
+                        'status' => 'success'
+                    ];
                 } else {
-                    return response()->json(['message' => 'Notifications disabled'], 200);
+                    $data = [
+                        'code' => 200,
+                        'message' => 'Notifications disabled.',
+                        'status' => 'success'
+                    ];
+                    return response()->json($data);
                 }
             }
 
         } catch (Exception $e) {
             $data = [
-                'status' => 500,
+                'code' => 500,
                 'message' => 'Something went wrong, try again.',
-                'data' => []
+                'status' => 'fail'
             ];
             return response()->json($data, 500);
         }

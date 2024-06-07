@@ -63,7 +63,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::post('subscribe-newsletter', [API\SubscribeNewsletterController::class, 'index']);
     Route::get('get_appeals', [API\AppealController::class, 'index']);
-    Route::post('/set_notification', [API\UserController::class, 'notificationSetting']);
+    Route::post('/set_cashblack_notification', [API\UserController::class, 'notificationSetting']);
 });
 
 Route::apiResource('stores', API\StoreController::class)->only(['index', 'show']);
