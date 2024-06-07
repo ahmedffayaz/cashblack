@@ -667,5 +667,27 @@ class UserController extends Controller
         }
 
     }
+
+    public function getNotification()
+    {
+        try {
+            $notification = auth()->user()->metaData()->where('type', 'is_notification_enable')->whereIn('value', [0, 1])->first();
+
+            $isNotification = isset($notification) && $notification->value == 1 ? 1 : 0;
+            $data = [
+                'code' => 200,
+                'status' => 'success',
+                'is_notification_enable' => $isNotification
+            ];
+            return response()->json($data);
+        } catch (Exception $e) {
+            $data = [
+                'code' => 500,
+                'message' => 'Something went wrong, try again.',
+                'status' => 'fail'
+            ];
+            return response()->json($data, 500);
+        }
+    }
 }
 
