@@ -1,7 +1,7 @@
 <ul class="category-listing store-listing {{ $viewType }}">
     @foreach ($allStores as $store)
     <li class="list-item my-cards">
-        <div class="hover-content d-none">{!! substr($store->description, 0, 70) !!}</div>
+        <div class="hover-content d-none">{{ addEllipsis(strip_tags($store->description), 70) }}</div>
         <a href="javascript:;"
             class="ui-notify  fav-icon {{ !empty(auth()->user()) ? (checkFavorite($store->id) ? 'liked' : '') : '' }} not-liked"
             this-store-id="{{ $store->id }}" this-store-name="{{ $store->description }}">
@@ -19,7 +19,7 @@
                     <h5 class="brand-name {{ $viewType === 'grid-view' ? '' : 'name-fixed-size' }}">{{ $store->name }}</h5>
                 </a>
             </div>
-            <div class="list-view-hover-content d-none">{!! substr($store->description, 0, 70) !!}</div>
+            <div class="list-view-hover-content d-none">{{ addEllipsis(strip_tags($store->description), 70) }}</div>
             <h6 class="upto-offer">{{ $store->default_cashback }}</h6>
             <div class="cta">
                 <a href="{{ route('stores.show', $store->slug) }}" class="btn btn-primary">

@@ -101,7 +101,7 @@ class CategoryController extends Controller
         $storesCount = NULL;
         $ip =  request()->ip(); //Dynamic IP address get
         $data = Location::get($ip);
-        $allStores = Store::select('id', 'name', 'slug', 'status', 'latitude', 'longitude', 'created_at')
+        $allStores = Store::select('id', 'name', 'slug', 'description', 'status', 'latitude', 'longitude', 'created_at')
         ->when($request->has('cuisine') && $request->cuisine != null, function ($query) use ($request) {
             $query->whereHas('categories', function ($query) use ($request) {
                 $query->where('name', $request->cuisine);
