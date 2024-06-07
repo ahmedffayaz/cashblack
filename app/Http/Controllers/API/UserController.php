@@ -627,7 +627,7 @@ class UserController extends Controller
                     return response()->json(['message' => 'Notifications disabled'], 200);
                 }
             } else {
-                $notification = auth()->user()->metaData()->whereType('is_notification_enable')->Create([
+                $notification = auth()->user()->metaData()->Create([
                     'type' => 'is_notification_enable',
                 'value' => $request->input('is_notification_enable')
                 ]);
