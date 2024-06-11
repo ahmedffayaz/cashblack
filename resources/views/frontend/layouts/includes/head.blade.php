@@ -40,7 +40,9 @@
 	<meta property="og:url" content="{{ $socialSEORules['url'] }}"/>
 	<meta property="og:site_name" content="{{ SiteSetting()['website_title'] }}"/>
 	<meta name="twitter:card" content="summary_large_image"/>
+    <meta property="fb:app_id" content="{{ SiteSetting()['facebook_client_id'] }}" />
     <meta name="is_authenticated" content="{{ Auth::check() ? 'true' : 'false' }}">
+
     @if(getSlug($currentUrl) != "/")
         <meta property="og:description" content="{{ $socialSEORules['description'] }}"/>
         <meta property="article:published_time" content="{{ $socialSEORules['published_time'] }}"/>
