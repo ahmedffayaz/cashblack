@@ -389,7 +389,13 @@ class PaymentController extends Controller
         $message = 'New Cashout request received';
         $url = url(getAdminPrefix(). '/cashouts');
         $admin = getAdminUser();
-        $deviceToken = optional($admin->devices()->whereType('api')->latest()->first())->fcm_token;
+        $deviceToken = optional($admin->devices()->where(function($query) {
+            $query->where('type', 'api')
+                  ->orWhere('type', 'web');
+        })
+        ->latest()
+        ->first()
+        )->fcm_token;
         $deviceToken != null ? dispatch(new SendNotification($title, $message, $deviceToken, $url, $admin)) : '';
     }
 }

@@ -46,7 +46,14 @@ class RepliesController extends Controller
 
             sendEmailNotification($ticket);
 
-            $deviceToken = optional($ticket->user->devices()->whereType('web')->latest()->first())->fcm_token;
+            $deviceToken = optional($ticket->user->devices()->where(function($query) {
+                $query->where('type', 'api')
+                      ->orWhere('type', 'web');
+            })
+            ->latest()
+            ->first()
+            )->fcm_token;
+
             if ($deviceToken != null) {
                 $title = 'Ticket Replied';
                 $message = 'Your ticket has a reply';

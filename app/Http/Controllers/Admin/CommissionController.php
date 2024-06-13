@@ -348,7 +348,13 @@ class CommissionController extends Controller
                     $this->sendEmail($commission);
 
                     // Send Push Norification
-                    $deviceToken = optional($commission->user->devices()->whereType('web')->latest()->first())->fcm_token;
+                    $deviceToken = optional($commission->user->devices()->where(function($query) {
+                        $query->where('type', 'api')
+                              ->orWhere('type', 'web');
+                    })
+                    ->latest()
+                    ->first()
+                    )->fcm_token;
                     $deviceToken != null ? $this->sendNotification($commission, $deviceToken) : '';
                 }
             }

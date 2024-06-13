@@ -117,7 +117,13 @@ class CashoutController extends Controller
                 $this->sendEmail($cashout, $userEmailTemplateKey, $filterMessageVariables, $requestFilteredMessage);
 
                 // Send Push Norification
-                $deviceToken = optional($cashout->user->devices()->whereType('web')->latest()->first())->fcm_token;
+                $deviceToken = optional($cashout->user->devices()->where(function($query) {
+                    $query->where('type', 'api')
+                          ->orWhere('type', 'web');
+                })
+                ->latest()
+                ->first()
+                  )->fcm_token;
                 $title = 'Successful Withdrawal Confirmation';
                 $message = 'Your Transaction is Completed through ' . $cashout->payment_method;
                 $deviceToken != null ? $this->sendNotification($title, $message, $cashout, $deviceToken) : '';
@@ -144,7 +150,13 @@ class CashoutController extends Controller
                 $this->sendEmail($cashout, $userEmailTemplateKey, $filterMessageVariables, $requestFilteredMessage);
 
                 // Send Push Norification
-                $deviceToken = optional($cashout->user->devices()->whereType('web')->latest()->first())->fcm_token;
+                $deviceToken = optional($cashout->user->devices()->where(function($query) {
+                    $query->where('type', 'api')
+                          ->orWhere('type', 'web');
+                })
+                ->latest()
+                ->first()
+                )->fcm_token;
                 $title = 'Cashback donated';
                 $message = 'Your cashback is donated with charity';
                 $deviceToken != null ? $this->sendNotification($title, $message, $cashout, $deviceToken) : '';
