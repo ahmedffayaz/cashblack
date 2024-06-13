@@ -90,7 +90,12 @@ class RevGlueUserCashbacksImporter implements ShouldQueue
                             $userCashbackUrl = url('account/cashback');
 
                             // Send notification to user
-                            $deviceToken = $userCashback->user->devices()->whereType('web')->latest()->first();
+                            $deviceToken = $userCashback->user->devices()->where(function($query) {
+                                $query->where('type', 'api')
+                                      ->orWhere('type', 'web');
+                            })
+                            ->latest()
+                            ->first();
                             !is_null($deviceToken) ? dispatch(new SendNotification($cashbackNotificationTitle, $userNotificationMessage, $deviceToken->fcm_token, $userCashbackUrl, $deviceToken->user())) : '';
 
                             // Get default appeal and save it cashout meta table
@@ -157,14 +162,24 @@ class RevGlueUserCashbacksImporter implements ShouldQueue
 
                                     // Send notification to user
                                     $cashbackWithdrawUrl = url('account/withdraw');
-                                    $userDeviceToken = $userCashback->user->devices()->whereType('web')->latest()->first();
+                                    $userDeviceToken = $userCashback->user->devices()->where(function($query) {
+                                        $query->where('type', 'api')
+                                              ->orWhere('type', 'web');
+                                    })
+                                    ->latest()
+                                    ->first();
                                     !is_null($userDeviceToken) ? dispatch(new SendNotification($notificationTitle, $userMessage, $userDeviceToken->fcm_token, $cashbackWithdrawUrl, $userDeviceToken->user())) : '';
 
                                     // Send notification to admin
                                     $adminMessage = $userCashback->user()->first_name . ' ' . $userCashback->user()->last_name . ' cashback donated';
                                     $adminCashoutUrl = url(getAdminPrefix() . '/cashouts') . '/' . $cashout->id;
                                     $admin = User::first();
-                                    $adminDeviceToken = $admin->devices()->where('type', 'web')->latest()->first();
+                                    $adminDeviceToken = $admin->devices()->where(function($query) {
+                                        $query->where('type', 'api')
+                                              ->orWhere('type', 'web');
+                                    })
+                                    ->latest()
+                                    ->first();
                                     !is_null($adminDeviceToken) ? dispatch(new SendNotification($notificationTitle, $adminMessage, $adminDeviceToken->fcm_token, $adminCashoutUrl, $admin)) : '';
                                 }
                             }
@@ -243,7 +258,12 @@ class RevGlueUserCashbacksImporter implements ShouldQueue
                                     $adminMessage = $userCashback->user->first_name . ' ' . $userCashback->user->last_name . ' cashback donated';
                                     $adminCashoutUrl = url(getAdminPrefix() . '/cashoutes') . '/' . $cashout->id;
                                     $admin = User::first();
-                                    $adminDeviceToken = $admin->devices()->where('type', 'web')->latest()->first();
+                                    $adminDeviceToken = $admin->devices()->where(function($query) {
+                                        $query->where('type', 'api')
+                                              ->orWhere('type', 'web');
+                                    })
+                                    ->latest()
+                                    ->first();
                                     !is_null($adminDeviceToken) ? dispatch(new SendNotification($notificationTitle, $adminMessage, $adminDeviceToken->fcm_token, $adminCashoutUrl, $admin)) : '';
                                 }
                             }
@@ -277,7 +297,12 @@ class RevGlueUserCashbacksImporter implements ShouldQueue
                             ]);
 
                             if ($exitClick->user_id != 0 && empty($exitClick->user->deleted_at)) {
-                                $deviceToken = $exitClick->user->devices()->whereType('web')->latest()->first();
+                                $deviceToken = $exitClick->user->devices()->where(function($query) {
+                                    $query->where('type', 'api')
+                                          ->orWhere('type', 'web');
+                                })
+                                ->latest()
+                                ->first();
                                 $title = 'Cashback Received';
                                 $message = "You've received cashback from " . $exitClick->store->name;
                                 $url = url('account/cashback');

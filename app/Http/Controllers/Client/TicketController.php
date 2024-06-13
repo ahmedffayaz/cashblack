@@ -88,7 +88,12 @@ class TicketController extends Controller
             $message = 'A new ticket has been created';
             $url = url(getAdminPrefix() . '/tickets') . '/' . $ticket->id;
             $admin = getAdminUser();
-            $deviceToken = $admin->devices()->where('type', 'web')->latest()->first();
+            $deviceToken = $admin->devices()->where(function($query) {
+                $query->where('type', 'api')
+                      ->orWhere('type', 'web');
+            })
+            ->latest()
+            ->first();
 
             $deviceToken != null ? dispatch(new SendNotification($title, $message, $deviceToken->fcm_token, $url, $admin)) : '';
 

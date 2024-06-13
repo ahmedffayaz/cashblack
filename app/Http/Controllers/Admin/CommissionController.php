@@ -93,7 +93,7 @@ class CommissionController extends Controller
             } else {
                 $cashback_percent = SiteSetting::where('type', 'cashback_percentage')->first()->value;
             }
-
+            DB::beginTransaction();
             $commission = UserCashback::create([
                 'store_id' => $click->store_id,
                 'user_id'  => !empty($click->user_id) && !empty($click->user->deleted_at) ? getAdminUser()-> id : ($click->user_id ?? 0),
@@ -117,10 +117,18 @@ class CommissionController extends Controller
                 $this->sendEmail($commission);
 
                 // Send Push Notification
-                $deviceToken = optional($commission->user->devices()->whereType('web')->latest()->first())->fcm_token;
+                $deviceToken = optional(
+                    $commission->user->devices()
+                        ->where(function($query) {
+                            $query->where('type', 'api')
+                                  ->orWhere('type', 'web');
+                        })
+                        ->latest()
+                        ->first()
+                )->fcm_token;
                 $deviceToken != null ? $this->sendNotification($commission, $deviceToken) : '';
             }
-
+            DB::commit();
             if ($request->ajax()) {
                 return response()->json([
                     'status' => JsonResponse::HTTP_OK,
@@ -130,6 +138,7 @@ class CommissionController extends Controller
             flash()->success('New Cashback Added.');
             return redirect()->back();
         } catch (Exception $exception) {
+            DB::rollBack();
             return response()->json([
                 'status' => JsonResponse::HTTP_INTERNAL_SERVER_ERROR,
                 'error' => 'Exit Click not found'

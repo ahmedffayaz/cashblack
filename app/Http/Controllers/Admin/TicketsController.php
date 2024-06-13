@@ -83,7 +83,13 @@ class TicketsController extends Controller
         $title = 'Ticket Closed';
         $message = 'Your ticket has been closed.';
         $url = url('account/tickets') . '/' . $ticket->ticket_id;
-        $deviceToken = optional($ticket->user->devices()->whereType('web')->latest()->first())->fcm_token;
+        $deviceToken = optional($ticket->user->devices()->where(function($query) {
+            $query->where('type', 'api')
+                  ->orWhere('type', 'web');
+        })
+        ->latest()
+        ->first()
+        )->fcm_token;
         $user = $ticket->user()->get();
 
         $deviceToken != null ? dispatch(new SendNotification($title, $message, $deviceToken, $url, $user)) : '';
