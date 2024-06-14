@@ -688,5 +688,71 @@ class UserController extends Controller
             return response()->json($data, 500);
         }
     }
+
+    public function setOfferNotification(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'is_offer_notification_enable' => 'required|boolean',
+        ]);
+
+        if ($validator->fails()) {
+            $data = [
+                'status' => 406,
+                'message' => 'Something went wrong',
+                'validator_error' => $validator->errors()->first()
+            ];
+            return response()->json($data, 406);
+        }
+        try {
+            $user = auth()->user();
+            $user->update([
+                'email_preference' => $request->is_offer_notification_enable
+            ]);
+            if ($request->is_offer_notification_enable ==1) {
+                $data = [
+                    'code' => 200,
+                    'message' => 'Offers Notifications enabled.',
+                    'status' => 'success',
+                ];
+                return response()->json($data);
+            } else {
+                $data = [
+                    'code' => 200,
+                    'message' => 'Offers  Notifications disabled.',
+                    'status' => 'success'
+                ];
+                return response()->json($data);
+            }
+        } catch (Exception $e) {
+            $data = [
+                'code' => 500,
+                'message' => 'Something went wrong, try again.',
+                'status' => 'fail'
+            ];
+            return response()->json($data, 500);
+        }
+
+    }
+
+    public function getOffersNotification()
+    {
+        try {
+            $user = auth()->user();
+            $isNotification = (isset($user) && $user->email_preference == 1) ? 1 : 0;
+            $data = [
+                'code' => 200,
+                'status' => 'success',
+                'is_offers_notification_enable' => $isNotification
+            ];
+            return response()->json($data);
+        } catch (Exception $e) {
+            $data = [
+                'code' => 500,
+                'message' => 'Something went wrong, try again.',
+                'status' => 'fail'
+            ];
+            return response()->json($data, 500);
+        }
+    }
 }
 
