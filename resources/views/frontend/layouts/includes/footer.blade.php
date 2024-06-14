@@ -67,42 +67,42 @@
                             @endif
                             @if (isset($settings['twitter']) && !empty($settings['twitter']))
                                 <li>
-                                    <a href="https://twitter.com/CashblackHQ" class="primary-text-color" target="_blank">
+                                    <a href="{{ $settings['twitter'] }}" class="primary-text-color" target="_blank">
                                         <img src="{{ asset('storage/__asset/img/social/twitter-x.png') }}" alt="Twitter">
                                     </a>
                                 </li>
                             @endif
                             @if (isset($settings['instagram']) && !empty($settings['instagram']))
                                 <li>
-                                    <a href="https://instagram.com/CashblackHQ" class="primary-text-color" target="_blank">
+                                    <a href="{{ $settings['instagram'] }}" class="primary-text-color" target="_blank">
                                         <img src="{{ asset('storage/__asset/img/social/instagram.png') }}" alt="Instagram">
                                     </a>
                                 </li>
                             @endif
                             @if (isset($settings['tiktok']) && !empty($settings['tiktok']))
                                 <li>
-                                    <a href="http://www.tiktok.com/@CashblackHQ" class="primary-text-color" target="_blank">
+                                    <a href="{{ $settings['tiktok'] }}" class="primary-text-color" target="_blank">
                                         <img src="{{ asset('storage/__asset/img/social/tiktok.png') }}" alt="Tiktok">
                                     </a>
                                 </li>
                             @endif
                             @if (isset($settings['linkedin']) && !empty($settings['linkedin']))
                                 <li>
-                                    <a href="http://www.linkedin.com/company/cashblack" class="primary-text-color" target="_blank">
+                                    <a href="{{ $settings['linkedin'] }}" class="primary-text-color" target="_blank">
                                         <img src="{{ asset('storage/__asset/img/social/linkedin.png') }}" alt="Linkedin">
                                     </a>
                                 </li>
                             @endif
                             @if (isset($settings['pinterest']) && !empty($settings['pinterest']))
                                 <li>
-                                    <a href="https://www.pinterest.co.uk/CashblackHQ/" class="primary-text-color" target="_blank">
+                                    <a href="{{ $settings['pinterest'] }}" class="primary-text-color" target="_blank">
                                         <img src="{{ asset('storage/__asset/img/social/pinterest.png') }}" alt="Pinterest">
                                     </a>
                                 </li>
                             @endif
                             @if (isset($settings['youtube']) && !empty($settings['youtube']))
                                 <li>
-                                    <a href="https://www.youtube.com/channel/UCxTrkgiu_9wIoOImumbjzwQ?app=desktop" class="primary-text-color" target="_blank">
+                                    <a href="{{ $settings['youtube'] }}" class="primary-text-color" target="_blank">
                                         <img src="{{ asset('storage/__asset/img/social/youtube.png') }}" alt="Youtube">
                                     </a>
                                 </li>
