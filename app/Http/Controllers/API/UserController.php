@@ -708,21 +708,13 @@ class UserController extends Controller
             $user->update([
                 'email_preference' => $request->is_offer_notification_enable
             ]);
-            if ($request->is_offer_notification_enable ==1) {
                 $data = [
+
                     'code' => 200,
-                    'message' => 'Offers Notifications enabled.',
+                    'message' => auth()->user()->email_preference ? 'Offers Notifications enabled.' : 'Offers Notifications disabled.',
                     'status' => 'success',
                 ];
                 return response()->json($data);
-            } else {
-                $data = [
-                    'code' => 200,
-                    'message' => 'Offers  Notifications disabled.',
-                    'status' => 'success'
-                ];
-                return response()->json($data);
-            }
         } catch (Exception $e) {
             $data = [
                 'code' => 500,
@@ -737,12 +729,10 @@ class UserController extends Controller
     public function getOffersNotification()
     {
         try {
-            $user = auth()->user();
-            $isNotification = (isset($user) && $user->email_preference == 1) ? 1 : 0;
             $data = [
                 'code' => 200,
                 'status' => 'success',
-                'is_offers_notification_enable' => $isNotification
+                'is_offers_notification_enable' => auth()->user()->email_preference ? 1 : 0
             ];
             return response()->json($data);
         } catch (Exception $e) {
