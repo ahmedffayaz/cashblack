@@ -697,7 +697,7 @@ class UserController extends Controller
 
         if ($validator->fails()) {
             $data = [
-                'status' => 406,
+                'code' => 406,
                 'message' => 'Something went wrong',
                 'validator_error' => $validator->errors()->first()
             ];
